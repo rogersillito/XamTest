@@ -1,9 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:App3"
-             x:Class="App3.MainPage">
-
+             xmlns:local="clr-namespace:XamTest"
+             xmlns:xamTest="clr-namespace:XamTest;assembly=XamTest"
+             x:Class="XamTest.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xamTest:ValueToAngleStringReverseBindingConverter x:Key="ValueToAngle" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <!--<ContentPage.Resources>
         <StyleSheet Source="/Assets/styles.css" />
     </ContentPage.Resources>-->
@@ -20,18 +25,15 @@
                VerticalOptions="CenterAndExpand" />
             <Label x:Name="sliderLabel"
                HorizontalOptions="Center"
-               Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='{0:#}'}"
+               Text="0°"
                VerticalOptions="CenterAndExpand" />
         </StackLayout>
-
-        <!-- TODO: add a vegetable -->
 
         <Label x:Name="rotatingLabel"
                HorizontalOptions="Center"
                BindingContext="{x:Reference slider}"
                Rotation="{Binding Value}"
                VerticalOptions="CenterAndExpand" />
-               <!--Text="{Binding Source={x:Reference textChoice}, Path=SelectedItem}"-->
 
         <StackLayout Orientation="Horizontal" x:Name="textChoiceStack">
 
@@ -43,9 +45,15 @@
                     ItemsSource="{Binding TextChoices}" />
 
         </StackLayout>
-
+ 
+        <!-- This demonstrates reverse binding, non-default binding mode and value conversion -->
         <Slider x:Name="slider"
                 Maximum="360"
+                Minimum="0"
+                Value="{Binding Source={x:Reference sliderLabel}, 
+                                Path=Text, 
+                                Converter={StaticResource ValueToAngle}, 
+                                Mode=OneWayToSource}"
                 VerticalOptions="CenterAndExpand" />
 
         <Button Text="Add Thing" Clicked="Button_OnClicked" />

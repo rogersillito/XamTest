@@ -1,11 +1,8 @@
-﻿using Microsoft.WindowsAzure.MobileServices;
-using System;
-using System.Linq;
+﻿using System;
 using Xamarin.Forms;
-using XamTest;
 using XamTest.ViewModels;
 
-namespace App3
+namespace XamTest
 {
     public partial class MainPage : ContentPage
     {
@@ -20,6 +17,7 @@ namespace App3
             textChoice.SelectedIndex = 0;
 
             // setting custom fonts doesn't seem to work via CSS:
+            // https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/fonts
             switch (Device.RuntimePlatform)
             {
                 case Device.Android:
