@@ -19,7 +19,7 @@ namespace XamTest.ViewModels
             Navigation.PopAsync(true);
         }
 
-        public Command AddThing { get; private set; }
+        public Command AddThing { get; }
 
         private Test1 _test1 = new Test1 { SomeProp = "XYZ" };
         public Test1 Test1

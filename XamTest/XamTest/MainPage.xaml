@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:XamTest"
              xmlns:xamTest="clr-namespace:XamTest;assembly=XamTest"
              x:Class="XamTest.MainPage">
     <ContentPage.Resources>
@@ -9,10 +8,8 @@
             <xamTest:ValueToAngleStringReverseBindingConverter x:Key="ValueToAngle" />
         </ResourceDictionary>
     </ContentPage.Resources>
-    <!--<ContentPage.Resources>
-        <StyleSheet Source="/Assets/styles.css" />
-    </ContentPage.Resources>-->
-    <StackLayout>
+
+    <StackLayout x:Name="mainStack">
         <!-- Place new controls here -->
         <StackLayout Orientation="Horizontal" x:Name="topStack">
             <Label x:Name="ageLabel"
@@ -38,7 +35,7 @@
         <StackLayout Orientation="Horizontal" x:Name="textChoiceStack">
 
             <Label x:Name="textChoiceLabel"
-                   Text="Display What?"
+                   Text="Rotate:"
                    FontSize="20" />
             <Picker x:Name="textChoice" Title="choose wisely" 
                     SelectedItem="{Binding Source={x:Reference rotatingLabel}, Path=Text}"
