@@ -1,0 +1,48 @@
+﻿slider {
+    color: blue;
+    background-color: lightgoldenrodyellow;
+}
+
+navigationpage {
+    -xf-bar-background-color: fuchsia;
+}
+
+^contentpage {
+    background-color: orange;
+}
+
+#topStack {
+    background-color: darkblue;
+}
+
+
+#rotatingLabel {
+    background-color: purple;
+    color: orange;
+    font-family: "Circus.ttf#Circus", cursive, sans-serif
+}
+
+#topStack label {
+    width: 100;
+    text-align: center;
+    font-size: 20;
+}
+
+#ageLabel {
+    background-color: yellowgreen;
+}
+
+#test1Label {
+    background-color: pink;
+}
+
+#sliderLabel {
+    background-color: saddlebrown;
+    color: white;
+}
+
+#textChoiceStack {
+    padding: 4;
+    vertical-align: bottom;
+    background-color: skyblue;
+}

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App3"
+             x:Class="App3.MainPage">
+
+    <!--<ContentPage.Resources>
+        <StyleSheet Source="/Assets/styles.css" />
+    </ContentPage.Resources>-->
+    <StackLayout>
+        <!-- Place new controls here -->
+        <StackLayout Orientation="Horizontal" x:Name="topStack">
+            <Label x:Name="ageLabel"
+               HorizontalOptions="Center"
+               Text="{Binding MyAge}"
+               VerticalOptions="CenterAndExpand" />
+            <Label x:Name="test1Label"
+               HorizontalOptions="Center"
+               Text="{Binding Path=Test1.SomeProp}"
+               VerticalOptions="CenterAndExpand" />
+            <Label x:Name="sliderLabel"
+               HorizontalOptions="Center"
+               Text="{Binding Source={x:Reference slider}, Path=Value, StringFormat='{0:#}'}"
+               VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        <!-- TODO: add a vegetable -->
+
+        <Label x:Name="rotatingLabel"
+               FontSize="48"
+               HorizontalOptions="Center"
+               BindingContext="{x:Reference slider}"
+               Rotation="{Binding Value}"
+               VerticalOptions="CenterAndExpand" />
+               <!--Text="{Binding Source={x:Reference textChoice}, Path=SelectedItem}"-->
+
+        <StackLayout Orientation="Horizontal" x:Name="textChoiceStack">
+
+            <Label x:Name="textChoiceLabel"
+                   Text="Display What?"
+                   FontSize="20" />
+            <Picker x:Name="textChoice" Title="choose wisely" 
+                    SelectedItem="{Binding Source={x:Reference rotatingLabel}, Path=Text}"
+                    ItemsSource="{Binding TextChoices}" />
+
+        </StackLayout>
+
+        <Slider x:Name="slider"
+                Maximum="360"
+                VerticalOptions="CenterAndExpand" />
+
+        <Button Text="Add Thing" Clicked="Button_OnClicked" />
+
+    </StackLayout>
+
+</ContentPage>
