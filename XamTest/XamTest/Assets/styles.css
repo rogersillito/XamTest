@@ -1,5 +1,7 @@
 ﻿slider {
-    color: blue;
+    -xf-thumb-color: red;
+    -xf-max-track-color: goldenrod;
+    -xf-min-track-color: red;
     background-color: lightgoldenrodyellow;
 }
 
@@ -19,7 +21,9 @@ navigationpage {
 #rotatingLabel {
     background-color: purple;
     color: orange;
-    font-family: "Circus.ttf#Circus", cursive, sans-serif
+    /* custom font doesn't seem to work here */
+    font-family: "Circus.ttf#Circus", "Circus", cursive, sans-serif;
+    font-size: 38;
 }
 
 #topStack label {

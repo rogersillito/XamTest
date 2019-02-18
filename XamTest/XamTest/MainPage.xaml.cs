@@ -19,8 +19,16 @@ namespace App3
 
             textChoice.SelectedIndex = 0;
 
-            //label.BindingContext = slider;
-            //label.SetBinding(Label.RotationProperty, "Value");
+            // setting custom fonts doesn't seem to work via CSS:
+            switch (Device.RuntimePlatform)
+            {
+                case Device.Android:
+                    rotatingLabel.FontFamily = "Circus.ttf#Circus";
+                    break;
+                case Device.iOS:
+                    rotatingLabel.FontFamily = "Circus";
+                    break;
+            }
         }
 
         //private async void Button_OnClicked(object sender, EventArgs e)

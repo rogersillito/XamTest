@@ -27,7 +27,6 @@
         <!-- TODO: add a vegetable -->
 
         <Label x:Name="rotatingLabel"
-               FontSize="48"
                HorizontalOptions="Center"
                BindingContext="{x:Reference slider}"
                Rotation="{Binding Value}"
