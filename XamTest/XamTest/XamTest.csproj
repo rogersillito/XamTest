@@ -11,10 +11,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\sunflower.jpg" />
+    <None Remove="Assets\sunflower.png" />
     <None Remove="Assets\vegetables.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Assets\sunflower.png" />
     <EmbeddedResource Include="Assets\vegetables.jpg" />
   </ItemGroup>
 

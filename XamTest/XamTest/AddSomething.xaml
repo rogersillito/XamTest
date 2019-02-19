@@ -1,10 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xamTest="clr-namespace:XamTest;assembly=XamTest"
              x:Class="XamTest.AddSomething">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
             <Entry x:Name="newThing" Text="{Binding NewThingText}"></Entry>
+            <Grid ColumnSpacing="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                </Grid.ColumnDefinitions>
+                <!-- loading image from resource in shared lib -->
+                <Image x:Name="sunflower" 
+                       Source="{xamTest:ImageResource XamTest.Assets.sunflower.png}"
+                       HorizontalOptions="FillAndExpand"
+                       Grid.Column="1"></Image>
+                <!-- loading image saved locally in native projects -->
+                <Image x:Name="emoji" 
+                       Source="emoji.png"
+                       HorizontalOptions="FillAndExpand"
+                       Grid.Column="2"></Image>
+            </Grid>
             <Button Text="Add Thing" Command="{Binding AddThing}" />
         </StackLayout>
     </ContentPage.Content>

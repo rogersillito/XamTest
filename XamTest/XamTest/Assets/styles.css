@@ -32,6 +32,10 @@ navigationpage {
     font-size: 20;
 }
 
+#SunflowerLayout {
+    background-color: azure;
+}
+
 #ageLabel {
     background-color: yellowgreen;
 }
