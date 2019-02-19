@@ -15,13 +15,14 @@ namespace XamTest.ViewModels
         private void DoAddThing()
         {
             TextChoices.Add(NewThingText);
+            RotatedThing = NewThingText;
             NewThingText = null;
             Navigation.PopAsync(true);
         }
 
         public Command AddThing { get; }
 
-        private Test1 _test1 = new Test1 { SomeProp = "XYZ" };
+        private Test1 _test1 = new Test1 { OtherTest1 = new Test1 { SomeProp = "XYZ" } };
         public Test1 Test1
         {
             get => _test1;
@@ -54,6 +55,17 @@ namespace XamTest.ViewModels
             }
         }
 
+        private string _rotatedThing = "";
+        public string RotatedThing
+        {
+            get => _rotatedThing;
+            set
+            {
+                NotifyPropertyChanged(nameof(RotatedThing));
+                _rotatedThing = value;
+            }
+        }
+
         private ObservableCollection<string> _textChoices = new ObservableCollection<string>(new List<string>
         {
             "Onion",
@@ -75,6 +87,7 @@ namespace XamTest.ViewModels
 
     public class Test1
     {
+        public Test1 OtherTest1 { get; set; }
         public string SomeProp { get; set; }
     }
 }

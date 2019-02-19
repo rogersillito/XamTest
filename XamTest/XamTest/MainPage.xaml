@@ -6,6 +6,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <xamTest:ValueToAngleStringReverseBindingConverter x:Key="ValueToAngle" />
+            <xamTest:ValueToColorConverter x:Key="ValueToColor" />
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -18,9 +19,9 @@
                VerticalOptions="CenterAndExpand" />
             <Label x:Name="test1Label"
                HorizontalOptions="Center"
-               Text="{Binding Path=Test1.SomeProp}"
+               Text="{Binding Path=Test1.OtherTest1.SomeProp}"
                VerticalOptions="CenterAndExpand" />
-            <Label x:Name="sliderLabel"
+            <Label x:Name="angleLabel"
                HorizontalOptions="Center"
                Text="0°"
                VerticalOptions="CenterAndExpand" />
@@ -28,29 +29,36 @@
 
         <Label x:Name="rotatingLabel"
                HorizontalOptions="Center"
-               BindingContext="{x:Reference slider}"
-               Rotation="{Binding Value}"
+               Rotation="{Binding Value, Source={x:Reference slider}}"
+               Text="{Binding RotatedThing}"
                VerticalOptions="CenterAndExpand" />
+               <!--BindingContext="{x:Reference slider}"
+               Rotation="{Binding Value}"-->
 
         <StackLayout Orientation="Horizontal" x:Name="textChoiceStack">
 
             <Label x:Name="textChoiceLabel"
                    Text="Rotate:"
+                   VerticalOptions="CenterAndExpand"
                    FontSize="20" />
             <Picker x:Name="textChoice" Title="choose wisely" 
-                    SelectedItem="{Binding Source={x:Reference rotatingLabel}, Path=Text}"
+                    VerticalOptions="CenterAndExpand"
+                    SelectedItem="{Binding RotatedThing}"
                     ItemsSource="{Binding TextChoices}" />
 
         </StackLayout>
- 
+
         <!-- This demonstrates reverse binding, non-default binding mode and value conversion -->
         <Slider x:Name="slider"
                 Maximum="360"
                 Minimum="0"
-                Value="{Binding Source={x:Reference sliderLabel}, 
-                                Path=Text, 
-                                Converter={StaticResource ValueToAngle}, 
-                                Mode=OneWayToSource}"
+                BackgroundColor="{Binding Source={x:Reference slider},
+                                  Path=Value, 
+                                  Converter={StaticResource ValueToColor}}"
+                Value="{Binding Source={x:Reference angleLabel}, 
+                        Path=Text, 
+                        Converter={StaticResource ValueToAngle}, 
+                        Mode=OneWayToSource}"
                 VerticalOptions="CenterAndExpand" />
 
         <Button Text="Add Thing" Clicked="Button_OnClicked" />

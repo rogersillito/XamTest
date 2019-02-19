@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamTest.ViewModels;
 
@@ -17,6 +11,9 @@ namespace XamTest
         {
             InitializeComponent();
             BindingContext = mainPageViewModel;
+
+            var imageSource = ImageSource.FromResource("XamTest.Assets.vegetables.jpg");
+            NavigationPage.SetTitleView(this, MainPage.CreateImageTitleView(imageSource));
         }
     }
 }

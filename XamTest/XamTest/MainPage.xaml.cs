@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection;
 using Xamarin.Forms;
 using XamTest.ViewModels;
 
@@ -7,8 +6,6 @@ namespace XamTest
 {
     public partial class MainPage : ContentPage
     {
-        public string MyAge { get; set; } = "33";
-
         public MainPage()
         {
             InitializeComponent();
@@ -23,17 +20,8 @@ namespace XamTest
             //    System.Diagnostics.Debug.WriteLine("found resource: " + res);
             //}
 
-            var defaultVegImage = new Image
-            {
-                Source = ImageSource.FromResource("XamTest.Assets.vegetables.jpg"),
-                HeightRequest = 40,
-                Aspect = Aspect.AspectFill
-            };
-
-            mainStack.Children.Add(defaultVegImage);
-            NavigationPage.SetTitleView(this, CreateTitleView(defaultVegImage));
-            //NavigationPage.SetTitleView(this, new Label {Text = "I AM NAV"});
-
+            var imageSource = ImageSource.FromResource("XamTest.Assets.vegetables.jpg");
+            NavigationPage.SetTitleView(this, CreateImageTitleView(imageSource));
 
             // setting custom fonts doesn't seem to work via CSS:
             // https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/fonts
@@ -48,16 +36,19 @@ namespace XamTest
             }
         }
 
-
-        View CreateTitleView(View view)
+        public static View CreateImageTitleView(ImageSource imageSource)
         {
-            view.HorizontalOptions = LayoutOptions.Fill;
-            view.VerticalOptions = LayoutOptions.CenterAndExpand;
-
+            var view = new Image
+            {
+                Source = imageSource,
+                HeightRequest = 40,
+                Aspect = Aspect.AspectFill,
+                HorizontalOptions = LayoutOptions.Fill,
+                VerticalOptions = LayoutOptions.FillAndExpand
+            };
             var titleView = new StackLayout
             {
                 Children = { view },
-                BackgroundColor = Color.DarkGreen,
                 Margin = new Thickness(0, 0)
             };
             return titleView;
