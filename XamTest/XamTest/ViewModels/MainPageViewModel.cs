@@ -10,6 +10,12 @@ namespace XamTest.ViewModels
         public MainPageViewModel(INavigation navigation) : base(navigation)
         {
             AddThing = new Command(DoAddThing);
+            NavigateTransactions = new Command(DoNavigateTransactions);
+        }
+
+        private void DoNavigateTransactions()
+        {
+            Navigation.PushAsync(new NavigationPage(new Transactions()));
         }
 
         private void DoAddThing()
@@ -21,6 +27,7 @@ namespace XamTest.ViewModels
         }
 
         public Command AddThing { get; }
+        public Command NavigateTransactions { get; set; }
 
         private Test1 _test1 = new Test1 { OtherTest1 = new Test1 { SomeProp = "XYZ" } };
         public Test1 Test1
