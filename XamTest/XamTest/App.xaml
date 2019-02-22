@@ -4,5 +4,31 @@
              x:Class="XamTest.App">
     <Application.Resources>
         <StyleSheet Source="/Assets/styles.css" />
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily">
+                    <OnPlatform x:TypeArguments="x:String">
+                        <OnPlatform.iOS>Verdana</OnPlatform.iOS>
+                        <OnPlatform.Android>verdana.ttf#Verdana</OnPlatform.Android>
+                    </OnPlatform>
+                </Setter>
+            </Style>
+            <Style x:Key="BoldLabel" TargetType="Label">
+                <Setter Property="FontFamily">
+                    <OnPlatform x:TypeArguments="x:String">
+                        <OnPlatform.iOS>Verdana Bold</OnPlatform.iOS>
+                        <OnPlatform.Android>verdanab.ttf#Verdana Bold</OnPlatform.Android>
+                    </OnPlatform>
+                </Setter>
+            </Style>
+            <Style x:Key="rotatingLabel" TargetType="Label">
+                <Setter Property="FontFamily">
+                    <OnPlatform x:TypeArguments="x:String">
+                        <OnPlatform.iOS>Circus</OnPlatform.iOS>
+                        <OnPlatform.Android>Circus.ttf#Circus</OnPlatform.Android>
+                    </OnPlatform>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

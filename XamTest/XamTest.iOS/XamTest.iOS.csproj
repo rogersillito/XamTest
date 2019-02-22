@@ -64,12 +64,21 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <BundleResource Include="..\XamTest.Android\Assets\Circus.ttf">
       <Link>Resources\Circus.ttf</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="..\XamTest.Android\Assets\verdana.ttf">
+      <Link>Resources\verdana.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\XamTest.Android\Assets\verdanab.ttf">
+      <Link>Resources\verdanab.ttf</Link>
     </BundleResource>
     <None Include="Entitlements.plist" />
     <None Include="Info.plist">

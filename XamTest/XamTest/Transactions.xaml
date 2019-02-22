@@ -5,12 +5,46 @@
              x:Class="XamTest.Transactions">
     <ListView x:Name="MyListView"
             ItemsSource="{x:Static xamTest:TransactionData.Transactions}"
-            ItemTapped="Handle_ItemTapped"
             CachingStrategy="RecycleElement">
+
+            <!--ItemTapped="Handle_ItemTapped"-->
 
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding Amount, StringFormat='£{0:#.00}'}" Detail="{Binding Description}" />
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="AUTO"></RowDefinition>
+                            <RowDefinition Height="AUTO"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Label x:Name="TransactionDate" Text="{Binding Date}" Grid.Column="0" Grid.Row="0"></Label>
+                        <Label x:Name="TransactionAmount" Text="{Binding Amount}" Grid.Column="1" Grid.Row="0"></Label>
+                        <Label x:Name="TransactionDescription" Text="{Binding Description}" Grid.Column="0" Grid.Row="1"></Label>
+                        <Label x:Name="TransactionBalance" Text="{Binding Balance}" Grid.Column="1" Grid.Row="1"></Label>
+                    </Grid>
+<!--StyleClass="{Binding AmountStyleClass}"--> 
+
+                        <!--<BoxView x:Name="TransactionDate" Grid.Column="0" Grid.Row="0">
+                            <Label Text="{Binding Date}"></Label>
+                        </BoxView>
+                    <BoxView x:Name="TransactionAmount" Grid.Column="1" Grid.Row="0">
+                        <Label Text="{Binding Amount}" Grid.Column="1" Grid.Row="0"></Label>
+                        </BoxView>
+                    <BoxView x:Name="TransactionDescription" Grid.Column="0" Grid.Row="1">
+                        <Label Text="{Binding Description}" Grid.Column="0" Grid.Row="1"></Label>
+                        </BoxView>
+                    <BoxView x:Name="TransactionBalance" Grid.Column="1" Grid.Row="1">
+                        <Label StyleClass="{Binding AmountStyleClass}" Text="{Binding Balance}" Grid.Column="1" Grid.Row="1"></Label>
+                        </BoxView>-->
+
+                </ViewCell>
+                <!--<TextCell Text="{Binding Amount}" Detail="{Binding Description}" />-->
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

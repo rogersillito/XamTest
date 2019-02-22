@@ -22,7 +22,7 @@ navigationpage {
     background-color: purple;
     color: orange;
     /* custom font doesn't seem to work here */
-    font-family: "Circus.ttf#Circus", "Circus", cursive, sans-serif;
+    /*font-family: "Circus.ttf#Circus", "Circus", cursive, sans-serif;*/
     font-size: 38;
 }
 
@@ -54,3 +54,19 @@ navigationpage {
     vertical-align: bottom;
     background-color: skyblue;
 }
+
+#TransactionAmount, #TransactionBalance {
+    text-align: right;
+}
+
+/*
+positiveAmount #003366 (+ currentBalance)
+negativeAmount #F35E5E
+balance #6685A3
+TRANSACTION_HISTORY #7995AF
+date #8C8C8C
+description #505050
+accountTypeDescription #383838
+accountNumberEtc #b9b9b9
+remainingAllowance #B0C568
+*/
