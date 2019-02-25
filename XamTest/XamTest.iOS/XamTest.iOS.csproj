@@ -74,17 +74,13 @@
       <Link>Resources\Circus.ttf</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </BundleResource>
-    <BundleResource Include="..\XamTest.Android\Assets\verdana.ttf">
-      <Link>Resources\verdana.ttf</Link>
-    </BundleResource>
-    <BundleResource Include="..\XamTest.Android\Assets\verdanab.ttf">
-      <Link>Resources\verdanab.ttf</Link>
-    </BundleResource>
     <None Include="Entitlements.plist" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
     </None>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\sourcesanspro-bold.ttf" />
+    <BundleResource Include="Resources\sourcesanspro-semibold.ttf" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\LaunchImages.launchimage\Contents.json">

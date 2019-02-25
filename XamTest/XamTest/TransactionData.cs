@@ -47,30 +47,23 @@ namespace XamTest
 
     public class Transaction
     {
-        public enum AmountCssStyleClass
-        {
-            Credit,
-            Debit
-        }
-
         public int Id { get; set; }
         public string Date { get; set; }
         public string Description { get; set; }
         public string Amount { get; set; }
+        public bool IsPositiveAmount { get; set; }
         public string Balance { get; set; }
-        public AmountCssStyleClass AmountStyleClass { get; set; }
 
         public static Transaction DummyTransaction(DateTime date, decimal balance, decimal amountVal, int sign)
         {
+            var isPositiveAmount = sign > -1;
             var t = new Transaction
             {
-                Amount = $"{(sign == -1 ? "-" : "+")} £{Math.Abs(amountVal):##,#.00}",
+                IsPositiveAmount = isPositiveAmount,
+                Amount = $"{(isPositiveAmount ? "+" : "-")} £{Math.Abs(amountVal):##,#.00}",
                 Balance = $"£{balance:##,#.00}",
                 Date = date.ToString("dd MMMM yyyy"),
                 Id = RandomDataHelper.CreateId(),
-                AmountStyleClass = sign == -1
-                    ? AmountCssStyleClass.Debit
-                    : AmountCssStyleClass.Credit,
                 Description = sign == 0 // DIRTY alert!
                     ? "Gross Interest"
                     : $"Transfer - {RandomDataHelper.CreateAccountNumber()}"

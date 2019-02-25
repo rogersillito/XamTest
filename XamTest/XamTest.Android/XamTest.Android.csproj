@@ -71,8 +71,8 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Circus.ttf" />
-    <AndroidAsset Include="Assets\verdanab.ttf" />
-    <AndroidAsset Include="Assets\verdana.ttf" />
+    <AndroidAsset Include="Assets\sourcesanspro-bold.ttf" />
+    <AndroidAsset Include="Assets\sourcesanspro-semibold.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

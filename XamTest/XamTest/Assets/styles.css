@@ -10,7 +10,7 @@ navigationpage {
 }
 
 ^contentpage {
-    background-color: orange;
+    background-color: white;
 }
 
 #topStack {
@@ -20,7 +20,7 @@ navigationpage {
 
 #rotatingLabel {
     background-color: purple;
-    color: orange;
+    color: white;
     /* custom font doesn't seem to work here */
     /*font-family: "Circus.ttf#Circus", "Circus", cursive, sans-serif;*/
     font-size: 38;
@@ -55,8 +55,38 @@ navigationpage {
     background-color: skyblue;
 }
 
+.TransactionGridRow Label {
+    margin: 3;
+}
 #TransactionAmount, #TransactionBalance {
     text-align: right;
+}
+#TransactionDate {
+    font-size: Micro;
+    color: #8C8C8C;
+}
+#TransactionDescription {
+    margin-top: -3;
+    color: #505050;
+}
+#TransactionAmount  {
+    font-style: bold;
+}
+.PositiveNumber  {
+    color: #003366;
+}
+.NegativeNumber  {
+    color: #F35E5E
+}
+/* balance, transaction history */
+.LightColouredText  {
+    font-size: Micro;
+    color: #6685A3;
+}
+.HeaderRightPanel Label {
+    font-size: Micro;
+    text-align: right;
+    color: #b9b9b9;
 }
 
 /*
