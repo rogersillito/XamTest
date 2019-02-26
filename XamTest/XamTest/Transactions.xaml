@@ -4,13 +4,28 @@
              xmlns:xamTest="clr-namespace:XamTest;assembly=XamTest"
              x:Class="XamTest.Transactions">
     <ContentPage.Resources>
+
         <ResourceDictionary>
             <Color x:Key="NegativeNumber">#F35E5E</Color>
             <Color x:Key="PositiveNumber">#003366</Color>
             <Color x:Key="HighlightedNumber">#B0C568</Color>
-            <Style x:Key="Highlighted" TargetType="Label">
+            <Color x:Key="LighterTextColor">#6685A3</Color>
+            <Color x:Key="LightestTextColor">#b9b9b9</Color>
+            <x:Double x:Key="MarginValue">3</x:Double>
+            <x:Double x:Key="ReducedVerticalSpacingMarginValue">-2</x:Double>
+            <x:Double x:Key="CondensedTextLineHeight">0.8</x:Double>
+            <Thickness x:Key="ReducedVerticalSpacing" Top="{StaticResource ReducedVerticalSpacingMarginValue}" Bottom="{StaticResource ReducedVerticalSpacingMarginValue}"></Thickness>
+            <Thickness x:Key="SideMargins" Right="{StaticResource MarginValue}" Left="{StaticResource MarginValue}"></Thickness>
+            <Style x:Key="HighlightedText" TargetType="Label">
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="FontSize" Value="Small"></Setter>
+                <Setter Property="LineBreakMode" Value="WordWrap"></Setter>
                 <Setter Property="TextColor" Value="{StaticResource HighlightedNumber}"></Setter>
+            </Style>
+            <Style x:Key="LightText" TargetType="Label" BasedOn="{StaticResource HighlightedText}">
+                <Setter Property="Margin" Value="{StaticResource ReducedVerticalSpacing}"></Setter>
+                <Setter Property="FontSize" Value="Micro"></Setter>
+                <Setter Property="TextColor" Value="{StaticResource LightestTextColor}"></Setter>
             </Style>
 
             <xamTest:NegationConverter x:Key="NegationConverter"></xamTest:NegationConverter>
@@ -20,57 +35,73 @@
     <ListView x:Name="MyListView"
              ItemsSource="{x:Static xamTest:TransactionData.Transactions}"
              HasUnevenRows="True"
+             SelectionMode="None"
              CachingStrategy="RecycleElement">
              <ListView.Header>
                  <StackLayout StyleClass="TransactionGridRow" Orientation="Vertical">
-                <Label LineBreakMode="WordWrap"
-                           TextColor="#383838"
-                           FontAttributes="Bold"
-                           Text="Newcastle Cash Lifetime ISA"></Label>
-                    <Label LineBreakMode="WordWrap"
-                           TextColor="#b9b9b9"
-                           Text="49-29-91  298381771"></Label>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"></ColumnDefinition>
-                            <ColumnDefinition Width="*"></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
+                      <StackLayout Orientation="Vertical" Padding="{StaticResource SideMargins}">
+                          <Label LineBreakMode="WordWrap"
+                                 TextColor="#383838"
+                                 FontAttributes="Bold"
+                                 FontSize="Medium"
+                                 Text="Newcastle Cash Lifetime ISA"></Label>
+                          <Label LineBreakMode="WordWrap"
+                                 TextColor="#b9b9b9"
+                                 Text="49-29-91  298381771"></Label>
+                     </StackLayout>
+                     <Grid Padding="{StaticResource SideMargins}">
+                         <Grid.ColumnDefinitions>
+                             <ColumnDefinition Width="*"></ColumnDefinition>
+                             <ColumnDefinition Width="*"></ColumnDefinition>
+                         </Grid.ColumnDefinitions>
 
-                        <StackLayout Grid.Column="0" Orientation="Vertical">
-                            <Label LineBreakMode="WordWrap"
-                                   StyleClass="PositiveNumber"
-                                   FontSize="Medium"
-                                   Text="£12,246.50"></Label>
-                            <Label LineBreakMode="WordWrap"
-                                   StyleClass="LightColouredText"
-                                   Text="Available Balance"></Label>
-                        </StackLayout>
+                         <StackLayout Grid.Column="0" Orientation="Vertical">
+                             <Label LineBreakMode="WordWrap"
+                                    StyleClass="PositiveNumber"
+                                    FontAttributes="Bold"
+                                    TextColor="{StaticResource PositiveNumber}">
+                                 <Label.FormattedText>
+                                     <FormattedString>
+                                         <Span FontAttributes="Bold" FontSize="Medium">£ 12,246</Span>
+                                         <Span FontSize="Small">.50</Span>
+                                     </FormattedString>
+                                 </Label.FormattedText>
+                             </Label>
+                             <Label Style="{StaticResource LightText}"
+                                    TextColor="{StaticResource LighterTextColor}"
+                                    FontSize="Micro">Available Balance</Label>
+                         </StackLayout>
 
-                        <StackLayout Grid.Column="1" Orientation="Vertical" StyleClass="HeaderRightPanel">
-                            <Label LineBreakMode="WordWrap">
+                         <StackLayout Grid.Column="1" Orientation="Vertical" StyleClass="HeaderRightPanel">
+                            <Label Style="{StaticResource LightText}" HorizontalTextAlignment="End">
                                 <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Style="{StaticResource Highlighted}">0.75%</Span>
-                                        <Span>AER</Span>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                            <Label LineBreakMode="WordWrap">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Style="{StaticResource Highlighted}">£7,753.5</Span>
-                                        <Span>left this year</Span>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                            <Label LineBreakMode="WordWrap"
-                                   Text="out of £20,000 allowance"></Label>
-                        </StackLayout>
-                    </Grid>
+                                     <FormattedString>
+                                         <Span Style="{StaticResource HighlightedText}">0.75%</Span>
+                                         <Span Text=" "></Span>
+                                         <Span>AER</Span>
+                                     </FormattedString>
+                                 </Label.FormattedText>
+                             </Label>
+                             <Label Style="{StaticResource LightText}" HorizontalTextAlignment="End">
+                                 <Label.FormattedText>
+                                     <FormattedString>
+                                         <Span Style="{StaticResource HighlightedText}">£7,753.50</Span>
+                                         <Span Text=" "></Span>
+                                         <Span>left this year</Span>
+                                     </FormattedString>
+                                 </Label.FormattedText>
+                             </Label>
+                             <Label Style="{StaticResource LightText}" HorizontalTextAlignment="End"
+                                    Text="out of £20,000 allowance"></Label>
+                         </StackLayout>
+                     </Grid>
 
-                    <Label Text="TRANSACTION HISTORY"
-                           BackgroundColor="#f2f5f7"
-                           StyleClass="LightColouredText"></Label>
+                    <StackLayout BackgroundColor="#f2f5f7">
+                        <Label Text="TRANSACTION HISTORY"
+                                Margin="3,3,3,3"
+                                TextColor="{StaticResource LighterTextColor}"
+                                StyleClass="LightColouredText"></Label>
+                     </StackLayout>
 
                  </StackLayout>
              </ListView.Header>
@@ -104,10 +135,10 @@
                                 </DataTrigger>
                             </Label.Triggers>
                         </Label>-->
-                        <StackLayout Grid.Column="0" Grid.Row="1" VerticalOptions="EndAndExpand">
+                        <StackLayout Grid.Column="0" Grid.Row="1" VerticalOptions="EndAndExpand" Margin="{StaticResource ReducedVerticalSpacing}">
                             <Label x:Name="TransactionDescription" LineBreakMode="WordWrap" Text="{Binding Description}"></Label>
                         </StackLayout>
-                        <StackLayout Grid.Column="1" Grid.Row="1" VerticalOptions="EndAndExpand">
+                        <StackLayout Grid.Column="1" Grid.Row="1" VerticalOptions="EndAndExpand" Margin="{StaticResource ReducedVerticalSpacing}">
                             <Label x:Name="TransactionBalance" LineBreakMode="WordWrap" Text="{Binding Balance}" StyleClass="LightColouredText"></Label>
                         </StackLayout>
                     </Grid>

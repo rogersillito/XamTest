@@ -83,7 +83,7 @@ navigationpage {
     font-size: Micro;
     color: #6685A3;
 }
-.HeaderRightPanel Label {
+.HeaderRightPanel Label, .HeaderRightPanel Span, .HeaderRightPanel FormattedString {
     font-size: Micro;
     text-align: right;
     color: #b9b9b9;
