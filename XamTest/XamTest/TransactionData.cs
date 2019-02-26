@@ -10,12 +10,14 @@ namespace XamTest
         public static int AccountNumber { get; private set; }
 
         public static List<Transaction> Transactions = CreateTransactionData(50).ToList();
+        public static decimal Balance { get; private set; }
 
         public static IEnumerable<Transaction> CreateTransactionData(int count)
         {
             AccountNumber = RandomDataHelper.CreateAccountNumber();
             var dt = StartDate;
             var balance = RandomDataHelper.Random.Next(10000, 20000) * 1.01m;
+            Balance = balance;
             for (var i = 0; i < count; i++)
             {
                 dt = dt.AddDays(-RandomDataHelper.Random.Next(1, 30)).AddSeconds(-RandomDataHelper.Random.Next(30, 9000));

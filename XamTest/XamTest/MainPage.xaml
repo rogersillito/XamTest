@@ -31,6 +31,7 @@
                HorizontalOptions="Center"
                Rotation="{Binding Value, Source={x:Reference slider}}"
                Text="{Binding RotatedThing}"
+               Style="{StaticResource rotatingLabel}"
                VerticalOptions="CenterAndExpand" />
                <!--BindingContext="{x:Reference slider}"
                Rotation="{Binding Value}"-->

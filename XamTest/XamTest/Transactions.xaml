@@ -33,7 +33,7 @@
     </ContentPage.Resources>
 
     <ListView x:Name="MyListView"
-             ItemsSource="{x:Static xamTest:TransactionData.Transactions}"
+             ItemsSource="{Binding Transactions}"
              HasUnevenRows="True"
              SelectionMode="None"
              CachingStrategy="RecycleElement">
@@ -62,7 +62,7 @@
                                     TextColor="{StaticResource PositiveNumber}">
                                  <Label.FormattedText>
                                      <FormattedString>
-                                         <Span FontAttributes="Bold" FontSize="Medium">£ 12,246</Span>
+                                         <Span FontAttributes="Bold" FontSize="Medium" Text="{Binding Balance, StringFormat='£ {0:##,#}'}"></Span>
                                          <Span FontSize="Small">.50</Span>
                                      </FormattedString>
                                  </Label.FormattedText>

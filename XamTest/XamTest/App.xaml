@@ -12,7 +12,7 @@
                     <OnPlatform x:TypeArguments="x:String">
                         <OnPlatform.Platforms>
                             <On Platform="iOS" Value="Source Sans Pro Semibold" />
-                            <On Platform="Android" Value="sourcesanspro-semibold.ttf#Source Sans Pro Semibold" />
+                            <On Platform="Android" Value="sourcesanspro-semibold.ttf#Source Sans Pro old" />
                         </OnPlatform.Platforms>
                     </OnPlatform>
                 </Setter>
@@ -33,8 +33,10 @@
             <Style x:Key="rotatingLabel" TargetType="Label">
                 <Setter Property="FontFamily">
                     <OnPlatform x:TypeArguments="x:String">
-                        <OnPlatform.iOS>Circus</OnPlatform.iOS>
-                        <OnPlatform.Android>Circus.ttf#Circus</OnPlatform.Android>
+                        <OnPlatform.Platforms>
+                            <On Platform="iOS" Value="Circus" />
+                            <On Platform="Android" Value="Circus.ttf#Circus" />
+                        </OnPlatform.Platforms>
                     </OnPlatform>
                 </Setter>
             </Style>
