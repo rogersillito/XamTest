@@ -6,9 +6,8 @@ namespace XamTest
 {
     public class TransactionData
     {
-        private static readonly DateTime StartDate = DateTime.Today.AddYears(-10);
+        private static readonly DateTime StartDate = DateTime.Today.AddYears(-1);
         public static int AccountNumber { get; private set; }
-        private List<Transaction> _transactions;
 
         public static List<Transaction> Transactions = CreateTransactionData(50).ToList();
 
@@ -16,62 +15,15 @@ namespace XamTest
         {
             AccountNumber = RandomDataHelper.CreateAccountNumber();
             var dt = StartDate;
+            var balance = RandomDataHelper.Random.Next(10000, 20000) * 1.01m;
             for (var i = 0; i < count; i++)
             {
-                dt = dt.AddDays(RandomDataHelper.Random.Next(1, 20)).AddSeconds(RandomDataHelper.Random.Next(30, 900));
-                yield return new Transaction(dt, AccountNumber);
-            }
-        }
-    }
-
-    public class Transaction
-    {
-        private int CreateId() => RandomDataHelper.Random.Next(10000, 99999);
-
-        public enum TransactionType
-        {
-            Credit,
-            Transfer,
-            Debit
-        }
-
-        public int Id { get; }
-        public DateTime Date { get; }
-        public TransactionType Type { get; }
-        public string Description { get; }
-        public int SourceAccount { get; }
-        public int DestinationAccount { get; }
-        public decimal Amount { get; }
-
-        public Transaction(DateTime date, int accountNumber)
-        {
-            Date = date;
-            Id = CreateId();
-            SourceAccount = accountNumber;
-            Type = (TransactionType)Enum.GetValues(typeof(TransactionType)).GetValue(RandomDataHelper.Random.Next(0, 2));
-            Amount = RandomDataHelper.Random.Next(1, 1000) / 100.0m;
-            switch (Type)
-            {
-                case TransactionType.Credit:
-                    Description = "Money Deposited";
-                    break;
-                case TransactionType.Transfer:
-                    if (RandomDataHelper.Random.Next(0, 1) == 1)
-                    {
-                        DestinationAccount = RandomDataHelper.CreateAccountNumber();
-                        Description = "Money Transferred Out";
-                        Amount = Amount * -1;
-                    }
-                    else
-                    {
-                        DestinationAccount = SourceAccount;
-                        SourceAccount = RandomDataHelper.CreateAccountNumber();
-                        Description = "Money Transferred In";
-                    }
-                    break;
-                case TransactionType.Debit:
-                    Description = "Money Withdrawn";
-                    break;
+                dt = dt.AddDays(-RandomDataHelper.Random.Next(1, 30)).AddSeconds(-RandomDataHelper.Random.Next(30, 9000));
+                var sign = RandomDataHelper.Random.Next(-1, 2);
+                var amountVal = RandomDataHelper.Random.Next(100, 200) * 1.01m;
+                if (sign != 0) amountVal *= sign;
+                balance += amountVal;
+                yield return Transaction.DummyTransaction(dt, balance, amountVal, sign);
             }
         }
     }
@@ -79,6 +31,44 @@ namespace XamTest
     public class RandomDataHelper
     {
         public static readonly Random Random = new Random();
-        public static int CreateAccountNumber() => RandomDataHelper.Random.Next(10000000, 99999999);
+        public static int CreateAccountNumber() => RandomDataHelper.Random.Next(100000000, 999999999);
+        public static int CreateId() => RandomDataHelper.Random.Next(10000, 99999);
+    }
+
+    /*
+    Transaction     OBTransaction4
+        Amount			OBActiveOrHistoricCurrencyAndAmount.Amount
+        currency		OBActiveOrHistoricCurrencyAndAmount.Currency
+        balance			OBTransactionCashBalance
+        description		TransactionInformation
+        date            ValueDateTime
+        ??
+     */
+
+    public class Transaction
+    {
+        public int Id { get; set; }
+        public string Date { get; set; }
+        public string Description { get; set; }
+        public string Amount { get; set; }
+        public bool IsPositiveAmount { get; set; }
+        public string Balance { get; set; }
+
+        public static Transaction DummyTransaction(DateTime date, decimal balance, decimal amountVal, int sign)
+        {
+            var isPositiveAmount = sign > -1;
+            var t = new Transaction
+            {
+                IsPositiveAmount = isPositiveAmount,
+                Amount = $"{(isPositiveAmount ? "+" : "-")} £{Math.Abs(amountVal):##,#.00}",
+                Balance = $"£{balance:##,#.00}",
+                Date = date.ToString("dd MMMM yyyy"),
+                Id = RandomDataHelper.CreateId(),
+                Description = sign == 0 // DIRTY alert!
+                    ? "Gross Interest"
+                    : $"Transfer - {RandomDataHelper.CreateAccountNumber()}"
+            };
+            return t;
+        }
     }
 }

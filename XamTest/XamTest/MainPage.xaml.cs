@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Xamarin.Forms;
 using XamTest.ViewModels;
 
@@ -25,6 +26,9 @@ namespace XamTest
 
             // setting custom fonts doesn't seem to work via CSS:
             // https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/text/fonts
+
+            // I've moved this to the xaml... here's how you do it in code for a specific control:
+            /*
             switch (Device.RuntimePlatform)
             {
                 case Device.Android:
@@ -34,6 +38,7 @@ namespace XamTest
                     rotatingLabel.FontFamily = "Circus";
                     break;
             }
+            */
         }
 
         public static View CreateImageTitleView(ImageSource imageSource)

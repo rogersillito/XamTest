@@ -3,14 +3,116 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xamTest="clr-namespace:XamTest;assembly=XamTest"
              x:Class="XamTest.Transactions">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="NegativeNumber">#F35E5E</Color>
+            <Color x:Key="PositiveNumber">#003366</Color>
+            <Color x:Key="HighlightedNumber">#B0C568</Color>
+            <Style x:Key="Highlighted" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="TextColor" Value="{StaticResource HighlightedNumber}"></Setter>
+            </Style>
+
+            <xamTest:NegationConverter x:Key="NegationConverter"></xamTest:NegationConverter>
+         </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ListView x:Name="MyListView"
-            ItemsSource="{x:Static xamTest:TransactionData.Transactions}"
-            ItemTapped="Handle_ItemTapped"
-            CachingStrategy="RecycleElement">
+             ItemsSource="{x:Static xamTest:TransactionData.Transactions}"
+             HasUnevenRows="True"
+             CachingStrategy="RecycleElement">
+             <ListView.Header>
+                 <StackLayout StyleClass="TransactionGridRow" Orientation="Vertical">
+                <Label LineBreakMode="WordWrap"
+                           TextColor="#383838"
+                           FontAttributes="Bold"
+                           Text="Newcastle Cash Lifetime ISA"></Label>
+                    <Label LineBreakMode="WordWrap"
+                           TextColor="#b9b9b9"
+                           Text="49-29-91  298381771"></Label>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Grid.Column="0" Orientation="Vertical">
+                            <Label LineBreakMode="WordWrap"
+                                   StyleClass="PositiveNumber"
+                                   FontSize="Medium"
+                                   Text="£12,246.50"></Label>
+                            <Label LineBreakMode="WordWrap"
+                                   StyleClass="LightColouredText"
+                                   Text="Available Balance"></Label>
+                        </StackLayout>
+
+                        <StackLayout Grid.Column="1" Orientation="Vertical" StyleClass="HeaderRightPanel">
+                            <Label LineBreakMode="WordWrap">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Style="{StaticResource Highlighted}">0.75%</Span>
+                                        <Span>AER</Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label LineBreakMode="WordWrap">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Style="{StaticResource Highlighted}">£7,753.5</Span>
+                                        <Span>left this year</Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Label LineBreakMode="WordWrap"
+                                   Text="out of £20,000 allowance"></Label>
+                        </StackLayout>
+                    </Grid>
+
+                    <Label Text="TRANSACTION HISTORY"
+                           BackgroundColor="#f2f5f7"
+                           StyleClass="LightColouredText"></Label>
+
+                 </StackLayout>
+             </ListView.Header>
 
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding Amount, StringFormat='£{0:#.00}'}" Detail="{Binding Description}" />
+                <ViewCell>
+                    <Grid StyleClass="TransactionGridRow">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Label x:Name="TransactionDate" VerticalOptions="StartAndExpand" Text="{Binding Date}" Grid.Column="0" Grid.Row="0"></Label>
+                        <Label  x:Name="TransactionAmount" VerticalOptions="StartAndExpand" Text="{Binding Amount}" TextColor="{StaticResource NegativeNumber}" FontAttributes="Bold" Grid.Column="1" Grid.Row="0">
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsPositiveAmount}" Value="True">
+                                    <Setter Property="TextColor" Value="{StaticResource PositiveNumber}"></Setter>
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <!--<Label  x:Name="TransactionAmount" VerticalOptions="StartAndExpand" Text="{Binding Amount}" StyleClass="PositiveNumber" Grid.Column="1" Grid.Row="0">
+                            <Label.Triggers>
+                                <DataTrigger TargetType="Label" Binding="{Binding IsPositiveAmount}" Value="True">
+                                    <Setter Property="Label.StyleClass" Value="NegativeNumber"></Setter>
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>-->
+                        <StackLayout Grid.Column="0" Grid.Row="1" VerticalOptions="EndAndExpand">
+                            <Label x:Name="TransactionDescription" LineBreakMode="WordWrap" Text="{Binding Description}"></Label>
+                        </StackLayout>
+                        <StackLayout Grid.Column="1" Grid.Row="1" VerticalOptions="EndAndExpand">
+                            <Label x:Name="TransactionBalance" LineBreakMode="WordWrap" Text="{Binding Balance}" StyleClass="LightColouredText"></Label>
+                        </StackLayout>
+                    </Grid>
+
+                </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

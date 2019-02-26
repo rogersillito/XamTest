@@ -4,5 +4,41 @@
              x:Class="XamTest.App">
     <Application.Resources>
         <StyleSheet Source="/Assets/styles.css" />
+        <ResourceDictionary>
+
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="FontFamily">
+                    <OnPlatform x:TypeArguments="x:String">
+                        <OnPlatform.Platforms>
+                            <On Platform="iOS" Value="Source Sans Pro Semibold" />
+                            <On Platform="Android" Value="sourcesanspro-semibold.ttf#Source Sans Pro Semibold" />
+                        </OnPlatform.Platforms>
+                    </OnPlatform>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger TargetType="Label" Property="FontAttributes" Value="Bold">
+                        <Setter Property="FontFamily">
+                            <OnPlatform x:TypeArguments="x:String">
+                                <OnPlatform.Platforms>
+                                    <On Platform="iOS" Value="Source Sans Pro Bold" />
+                                    <On Platform="Android" Value="sourcesanspro-bold.ttf#Source Sans Pro Bold" />
+                                </OnPlatform.Platforms>
+                            </OnPlatform>
+                        </Setter>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="rotatingLabel" TargetType="Label">
+                <Setter Property="FontFamily">
+                    <OnPlatform x:TypeArguments="x:String">
+                        <OnPlatform.iOS>Circus</OnPlatform.iOS>
+                        <OnPlatform.Android>Circus.ttf#Circus</OnPlatform.Android>
+                    </OnPlatform>
+                </Setter>
+            </Style>
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
