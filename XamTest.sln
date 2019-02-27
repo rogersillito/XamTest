@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xPlatAuction.Backend", "xPl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenBankingApi", "OpenBankingApi\OpenBankingApi.csproj", "{2023B9DC-D0EE-4473-B223-A3ED15C37A1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGenerator", "ApiGenerator\ApiGenerator.csproj", "{A1C952CF-1AA9-490E-AD85-EDA6466AECCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,18 @@ Global
 		{2023B9DC-D0EE-4473-B223-A3ED15C37A1D}.Release|iPhone.Build.0 = Release|Any CPU
 		{2023B9DC-D0EE-4473-B223-A3ED15C37A1D}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{2023B9DC-D0EE-4473-B223-A3ED15C37A1D}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{A1C952CF-1AA9-490E-AD85-EDA6466AECCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1C952CF-1AA9-490E-AD85-EDA6466AECCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1C952CF-1AA9-490E-AD85-EDA6466AECCF}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{A1C952CF-1AA9-490E-AD85-EDA6466AECCF}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{A1C952CF-1AA9-490E-AD85-EDA6466AECCF}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{A1C952CF-1AA9-490E-AD85-EDA6466AECCF}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{A1C952CF-1AA9-490E-AD85-EDA6466AECCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1C952CF-1AA9-490E-AD85-EDA6466AECCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1C952CF-1AA9-490E-AD85-EDA6466AECCF}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{A1C952CF-1AA9-490E-AD85-EDA6466AECCF}.Release|iPhone.Build.0 = Release|Any CPU
+		{A1C952CF-1AA9-490E-AD85-EDA6466AECCF}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{A1C952CF-1AA9-490E-AD85-EDA6466AECCF}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
