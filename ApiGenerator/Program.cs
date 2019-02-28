@@ -1,40 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using NSwag;
-using NSwag.CodeGeneration.CSharp;
+using NConsole;
+using NSwag.Commands;
+using NSwagCommandProcessor = ApiGenerator.NSwagWrapper.Commands.NSwagCommandProcessor;
 
 namespace ApiGenerator
 {
-
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
-            var url = "https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/v3.1.0/dist/account-info-swagger.json";
-            var document = SwaggerDocument.FromUrlAsync(url).Result;
+            //var url = "https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/v3.1.0/dist/account-info-swagger.json";
+            //var document = SwaggerDocument.FromUrlAsync(url).Result;
 
-            var requiredPathItemKeys = new List<string>
-            {
-                "/accounts",
-                "/accounts/{AccountId}",
-                "/accounts/{AccountId}/balances",
-                "/accounts/{AccountId}/transactions",
-                "/accounts/{AccountId}/statements",
-                "/accounts/{AccountId}/statements/{StatementId}"
-            };
+            OpenBankingToNmslSwaggerDocumentPreProcessor.ApplyToCommands();
 
-            var pathItemKeys = document.Paths.Keys.OrderBy(k => k).ToList();
-            for (var i = pathItemKeys.Count - 1; i >= 0; i--)
-            {
-                var pathKey = pathItemKeys[i];
-                if (!requiredPathItemKeys.Contains(pathKey))
-                {
-                    document.Paths.Remove(pathKey);
-                }
-            }
-
-
+            Console.Write("NSwag command line tool for .NET Core (with pre-processing!) " + RuntimeUtilities.CurrentRuntime + ", ");
+            var processor = new NSwagCommandProcessor(new ConsoleHost());
+            return processor.Process(args);
         }
     }
 }
