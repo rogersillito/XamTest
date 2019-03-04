@@ -90,6 +90,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="OpenBankingApi.Client.cs" />
+    <Compile Include="OpenBankingApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

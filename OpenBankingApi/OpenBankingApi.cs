@@ -150,7 +150,7 @@ namespace OpenBankingApi
     
         /// <summary>Provides the details to identify an account.</summary>
         [Newtonsoft.Json.JsonProperty("Account", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBCashAccount5> Account { get; set; }
+        public System.Collections.Generic.ICollection<OBCashAccount5> Account { get; set; }
     
         [Newtonsoft.Json.JsonProperty("Servicer", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public OBBranchAndFinancialInstitutionIdentification5 Servicer { get; set; }
@@ -254,7 +254,7 @@ namespace OpenBankingApi
         /// <summary>Provides the details to identify an account.</summary>
         [Newtonsoft.Json.JsonProperty("Account", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<OBCashAccount5> Account { get; set; } = new System.Collections.ObjectModel.Collection<OBCashAccount5>();
+        public System.Collections.Generic.ICollection<OBCashAccount5> Account { get; set; } = new System.Collections.ObjectModel.Collection<OBCashAccount5>();
     
         [Newtonsoft.Json.JsonProperty("Servicer", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public OBBranchAndFinancialInstitutionIdentification5 Servicer { get; set; }
@@ -343,7 +343,7 @@ namespace OpenBankingApi
     
         /// <summary>Contains details of fees and charges which are not associated with either Overdraft or features/benefits</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeesCharges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous> OtherFeesCharges { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous> OtherFeesCharges { get; set; }
     
         public string ToJson() 
         {
@@ -565,7 +565,7 @@ namespace OpenBankingApi
     
         /// <summary>Set of elements used to provide details on the credit line.</summary>
         [Newtonsoft.Json.JsonProperty("CreditLine", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBCreditLine1> CreditLine { get; set; }
+        public System.Collections.Generic.ICollection<OBCreditLine1> CreditLine { get; set; }
     
         public string ToJson() 
         {
@@ -1206,7 +1206,7 @@ namespace OpenBankingApi
     
         /// <summary>Postal address of a party.</summary>
         [Newtonsoft.Json.JsonProperty("Address", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBPostalAddress8> Address { get; set; }
+        public System.Collections.Generic.ICollection<OBPostalAddress8> Address { get; set; }
     
         public string ToJson() 
         {
@@ -1270,7 +1270,7 @@ namespace OpenBankingApi
     
         /// <summary>Information that locates and identifies a specific address, as defined by postal services, presented in free format text.</summary>
         [Newtonsoft.Json.JsonProperty("AddressLine", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> AddressLine { get; set; }
+        public System.Collections.Generic.ICollection<string> AddressLine { get; set; }
     
         public string ToJson() 
         {
@@ -1294,7 +1294,7 @@ namespace OpenBankingApi
     
         /// <summary>Information that locates and identifies a specific address, as defined by postal services, that is presented in free format text.</summary>
         [Newtonsoft.Json.JsonProperty("AddressLine", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> AddressLine { get; set; }
+        public System.Collections.Generic.ICollection<string> AddressLine { get; set; }
     
         /// <summary>Name of a street or thoroughfare.</summary>
         [Newtonsoft.Json.JsonProperty("StreetName", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -1532,7 +1532,7 @@ namespace OpenBankingApi
         /// <summary>Specifies the Open Banking account access data types. This is a list of the data clusters being consented by the PSU, and requested for authorisation with the ASPSP.</summary>
         [Newtonsoft.Json.JsonProperty("Permissions", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<OBExternalPermissions1Code> Permissions { get; set; } = new System.Collections.ObjectModel.Collection<OBExternalPermissions1Code>();
+        public System.Collections.Generic.ICollection<OBExternalPermissions1Code> Permissions { get; set; } = new System.Collections.ObjectModel.Collection<OBExternalPermissions1Code>();
     
         /// <summary>Specified date and time the permissions will expire.
         /// If this is not populated, the permissions will be open ended.
@@ -2305,35 +2305,35 @@ namespace OpenBankingApi
     
         /// <summary>Other descriptions that may be available for the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementDescription", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> StatementDescription { get; set; }
+        public System.Collections.Generic.ICollection<string> StatementDescription { get; set; }
     
         /// <summary>Set of elements used to provide details of a benefit or reward amount for the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementBenefit", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementBenefit1> StatementBenefit { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementBenefit1> StatementBenefit { get; set; }
     
         /// <summary>Set of elements used to provide details of a fee for the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementFee", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementFee1> StatementFee { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementFee1> StatementFee { get; set; }
     
         /// <summary>Set of elements used to provide details of a generic interest amount related to the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementInterest", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementInterest1> StatementInterest { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementInterest1> StatementInterest { get; set; }
     
         /// <summary>Set of elements used to provide details of a generic date time for the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementDateTime1> StatementDateTime { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementDateTime1> StatementDateTime { get; set; }
     
         /// <summary>Set of elements used to provide details of a generic rate related to the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementRate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementRate1> StatementRate { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementRate1> StatementRate { get; set; }
     
         /// <summary>Set of elements used to provide details of a generic number value related to the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementValue", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementValue1> StatementValue { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementValue1> StatementValue { get; set; }
     
         /// <summary>Set of elements used to provide details of a generic amount for the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementAmount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementAmount1> StatementAmount { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementAmount1> StatementAmount { get; set; }
     
         public string ToJson() 
         {
@@ -2396,31 +2396,31 @@ namespace OpenBankingApi
     
         /// <summary>Other descriptions that may be available for the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementDescription", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> StatementDescription { get; set; }
+        public System.Collections.Generic.ICollection<string> StatementDescription { get; set; }
     
         /// <summary>Set of elements used to provide details of a benefit or reward amount for the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementBenefit", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementBenefit1> StatementBenefit { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementBenefit1> StatementBenefit { get; set; }
     
         /// <summary>Set of elements used to provide details of a fee for the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementFee", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementFee1> StatementFee { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementFee1> StatementFee { get; set; }
     
         /// <summary>Set of elements used to provide details of a generic interest amount related to the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementInterest", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementInterest1> StatementInterest { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementInterest1> StatementInterest { get; set; }
     
         /// <summary>Set of elements used to provide details of a generic date time for the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementDateTime1> StatementDateTime { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementDateTime1> StatementDateTime { get; set; }
     
         /// <summary>Set of elements used to provide details of a generic rate related to the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementRate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementRate1> StatementRate { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementRate1> StatementRate { get; set; }
     
         /// <summary>Set of elements used to provide details of a generic number value related to the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementValue", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementValue1> StatementValue { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementValue1> StatementValue { get; set; }
     
         public string ToJson() 
         {
@@ -2483,35 +2483,35 @@ namespace OpenBankingApi
     
         /// <summary>Other descriptions that may be available for the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementDescription", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> StatementDescription { get; set; }
+        public System.Collections.Generic.ICollection<string> StatementDescription { get; set; }
     
         /// <summary>Set of elements used to provide details of a benefit or reward amount for the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementBenefit", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementBenefit1> StatementBenefit { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementBenefit1> StatementBenefit { get; set; }
     
         /// <summary>Set of elements used to provide details of a fee for the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementFee", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementFee1> StatementFee { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementFee1> StatementFee { get; set; }
     
         /// <summary>Set of elements used to provide details of a generic interest amount related to the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementInterest", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementInterest1> StatementInterest { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementInterest1> StatementInterest { get; set; }
     
         /// <summary>Set of elements used to provide details of a generic date time for the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementDateTime", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementDateTime1> StatementDateTime { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementDateTime1> StatementDateTime { get; set; }
     
         /// <summary>Set of elements used to provide details of a generic rate related to the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementRate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementRate1> StatementRate { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementRate1> StatementRate { get; set; }
     
         /// <summary>Set of elements used to provide details of a generic number value related to the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementValue", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementValue1> StatementValue { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementValue1> StatementValue { get; set; }
     
         /// <summary>Set of elements used to provide details of a generic amount for the statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("StatementAmount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatementAmount1> StatementAmount { get; set; }
+        public System.Collections.Generic.ICollection<OBStatementAmount1> StatementAmount { get; set; }
     
         public string ToJson() 
         {
@@ -2741,7 +2741,7 @@ namespace OpenBankingApi
     
         /// <summary>Unique reference for the statement. This reference may be optionally populated if available.</summary>
         [Newtonsoft.Json.JsonProperty("StatementReference", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> StatementReference { get; set; }
+        public System.Collections.Generic.ICollection<string> StatementReference { get; set; }
     
         /// <summary>Indicates whether the transaction is a credit or a debit entry.</summary>
         [Newtonsoft.Json.JsonProperty("CreditDebitIndicator", Required = Newtonsoft.Json.Required.Always)]
@@ -2853,7 +2853,7 @@ namespace OpenBankingApi
     
         /// <summary>Unique reference for the statement. This reference may be optionally populated if available.</summary>
         [Newtonsoft.Json.JsonProperty("StatementReference", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> StatementReference { get; set; }
+        public System.Collections.Generic.ICollection<string> StatementReference { get; set; }
     
         /// <summary>Indicates whether the transaction is a credit or a debit entry.</summary>
         [Newtonsoft.Json.JsonProperty("CreditDebitIndicator", Required = Newtonsoft.Json.Required.Always)]
@@ -2944,7 +2944,7 @@ namespace OpenBankingApi
     
         /// <summary>Unique reference for the statement. This reference may be optionally populated if available.</summary>
         [Newtonsoft.Json.JsonProperty("StatementReference", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> StatementReference { get; set; }
+        public System.Collections.Generic.ICollection<string> StatementReference { get; set; }
     
         /// <summary>Indicates whether the transaction is a credit or a debit entry.</summary>
         [Newtonsoft.Json.JsonProperty("CreditDebitIndicator", Required = Newtonsoft.Json.Required.Always)]
@@ -3341,7 +3341,7 @@ namespace OpenBankingApi
     
         [Newtonsoft.Json.JsonProperty("Errors", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<OBError1> Errors { get; set; } = new System.Collections.ObjectModel.Collection<OBError1>();
+        public System.Collections.Generic.ICollection<OBError1> Errors { get; set; } = new System.Collections.ObjectModel.Collection<OBError1>();
     
         public string ToJson() 
         {
@@ -3436,7 +3436,7 @@ namespace OpenBankingApi
         /// Read more: Market Segmentation http://www.investopedia.com/terms/m/marketsegmentation.asp#ixzz4gfEEalTd 
         /// With respect to BCA products, they are segmented in relation to different markets that they wish to focus on. </summary>
         [Newtonsoft.Json.JsonProperty("Segment", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public System.Collections.Generic.List<Anonymous2> Segment { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous2> Segment { get; set; }
     
         /// <summary>The length/duration of the fee free period</summary>
         [Newtonsoft.Json.JsonProperty("FeeFreeLength", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -3449,7 +3449,7 @@ namespace OpenBankingApi
     
         /// <summary>Optional additional notes to supplement the Core product details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         public string ToJson() 
         {
@@ -3469,7 +3469,7 @@ namespace OpenBankingApi
         /// <summary>The group of tiers or bands for which credit interest can be applied.</summary>
         [Newtonsoft.Json.JsonProperty("TierBandSet", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous3> TierBandSet { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous3>();
+        public System.Collections.Generic.ICollection<Anonymous3> TierBandSet { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous3>();
     
         public string ToJson() 
         {
@@ -3488,12 +3488,12 @@ namespace OpenBankingApi
     {
         /// <summary>Associated Notes about the overdraft rates</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Tier band set details</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftTierBandSet", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous4> OverdraftTierBandSet { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous4>();
+        public System.Collections.Generic.ICollection<Anonymous4> OverdraftTierBandSet { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous4>();
     
         public string ToJson() 
         {
@@ -3528,11 +3528,11 @@ namespace OpenBankingApi
         /// <summary>Other fees/charges details</summary>
         [Newtonsoft.Json.JsonProperty("FeeChargeDetail", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous5> FeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous5>();
+        public System.Collections.Generic.ICollection<Anonymous5> FeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous5>();
     
         /// <summary>Details about any caps (maximum charges) that apply to a particular or group of fee/charge</summary>
         [Newtonsoft.Json.JsonProperty("FeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous6> FeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous6> FeeChargeCap { get; set; }
     
         public string ToJson() 
         {
@@ -3565,7 +3565,7 @@ namespace OpenBankingApi
         /// Read more: Market Segmentation http://www.investopedia.com/terms/m/marketsegmentation.asp#ixzz4gfEEalTd 
         /// With respect to PCA products, they are segmented in relation to different markets that they wish to focus on. </summary>
         [Newtonsoft.Json.JsonProperty("Segment", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public System.Collections.Generic.List<Anonymous7> Segment { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous7> Segment { get; set; }
     
         /// <summary>The maximum relevant charges that could accrue as defined fully in Part 7 of the CMA order</summary>
         [Newtonsoft.Json.JsonProperty("MonthlyMaximumCharge", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -3574,7 +3574,7 @@ namespace OpenBankingApi
     
         /// <summary>Optional additional notes to supplement the Core product details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         public string ToJson() 
         {
@@ -3594,7 +3594,7 @@ namespace OpenBankingApi
         /// <summary>The group of tiers or bands for which credit interest can be applied.</summary>
         [Newtonsoft.Json.JsonProperty("TierBandSet", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous8> TierBandSet { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous8>();
+        public System.Collections.Generic.ICollection<Anonymous8> TierBandSet { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous8>();
     
         public string ToJson() 
         {
@@ -3613,12 +3613,12 @@ namespace OpenBankingApi
     {
         /// <summary>Associated Notes about the overdraft rates</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Tier band set details</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftTierBandSet", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous9> OverdraftTierBandSet { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous9>();
+        public System.Collections.Generic.ICollection<Anonymous9> OverdraftTierBandSet { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous9>();
     
         public string ToJson() 
         {
@@ -3638,11 +3638,11 @@ namespace OpenBankingApi
         /// <summary>Other fees/charges details</summary>
         [Newtonsoft.Json.JsonProperty("FeeChargeDetail", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous10> FeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous10>();
+        public System.Collections.Generic.ICollection<Anonymous10> FeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous10>();
     
         /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge</summary>
         [Newtonsoft.Json.JsonProperty("FeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous11> FeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous11> FeeChargeCap { get; set; }
     
         public string ToJson() 
         {
@@ -3661,7 +3661,7 @@ namespace OpenBankingApi
     {
         /// <summary>Unambiguous identification of the account to which credit and debit entries are made.</summary>
         [Newtonsoft.Json.JsonProperty("Account", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBAccount3> Account { get; set; }
+        public System.Collections.Generic.ICollection<OBAccount3> Account { get; set; }
     
         public string ToJson() 
         {
@@ -3681,7 +3681,7 @@ namespace OpenBankingApi
         /// <summary>Set of elements used to define the balance details.</summary>
         [Newtonsoft.Json.JsonProperty("Balance", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<OBCashBalance1> Balance { get; set; } = new System.Collections.ObjectModel.Collection<OBCashBalance1>();
+        public System.Collections.Generic.ICollection<OBCashBalance1> Balance { get; set; } = new System.Collections.ObjectModel.Collection<OBCashBalance1>();
     
         public string ToJson() 
         {
@@ -3699,7 +3699,7 @@ namespace OpenBankingApi
     public partial class Data3 
     {
         [Newtonsoft.Json.JsonProperty("Beneficiary", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBBeneficiary3> Beneficiary { get; set; }
+        public System.Collections.Generic.ICollection<OBBeneficiary3> Beneficiary { get; set; }
     
         public string ToJson() 
         {
@@ -3746,7 +3746,7 @@ namespace OpenBankingApi
         /// <summary>Specifies the Open Banking account access data types. This is a list of the data clusters being consented by the PSU, and requested for authorisation with the ASPSP.</summary>
         [Newtonsoft.Json.JsonProperty("Permissions", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<OBExternalPermissions1Code> Permissions { get; set; } = new System.Collections.ObjectModel.Collection<OBExternalPermissions1Code>();
+        public System.Collections.Generic.ICollection<OBExternalPermissions1Code> Permissions { get; set; } = new System.Collections.ObjectModel.Collection<OBExternalPermissions1Code>();
     
         /// <summary>Specified date and time the permissions will expire.
         /// If this is not populated, the permissions will be open ended.
@@ -3789,7 +3789,7 @@ namespace OpenBankingApi
     {
         /// <summary>Account to or from which a cash entry is made.</summary>
         [Newtonsoft.Json.JsonProperty("DirectDebit", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBDirectDebit1> DirectDebit { get; set; }
+        public System.Collections.Generic.ICollection<OBDirectDebit1> DirectDebit { get; set; }
     
         public string ToJson() 
         {
@@ -3807,7 +3807,7 @@ namespace OpenBankingApi
     public partial class Data6 
     {
         [Newtonsoft.Json.JsonProperty("Offer", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBOffer1> Offer { get; set; }
+        public System.Collections.Generic.ICollection<OBOffer1> Offer { get; set; }
     
         public string ToJson() 
         {
@@ -3843,7 +3843,7 @@ namespace OpenBankingApi
     public partial class Data8 
     {
         [Newtonsoft.Json.JsonProperty("Product", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBProduct2> Product { get; set; }
+        public System.Collections.Generic.ICollection<OBProduct2> Product { get; set; }
     
         public string ToJson() 
         {
@@ -3861,7 +3861,7 @@ namespace OpenBankingApi
     public partial class Data9 
     {
         [Newtonsoft.Json.JsonProperty("ScheduledPayment", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBScheduledPayment2> ScheduledPayment { get; set; }
+        public System.Collections.Generic.ICollection<OBScheduledPayment2> ScheduledPayment { get; set; }
     
         public string ToJson() 
         {
@@ -3879,7 +3879,7 @@ namespace OpenBankingApi
     public partial class Data10 
     {
         [Newtonsoft.Json.JsonProperty("StandingOrder", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStandingOrder4> StandingOrder { get; set; }
+        public System.Collections.Generic.ICollection<OBStandingOrder4> StandingOrder { get; set; }
     
         public string ToJson() 
         {
@@ -3898,7 +3898,7 @@ namespace OpenBankingApi
     {
         /// <summary>Provides further details on a statement resource.</summary>
         [Newtonsoft.Json.JsonProperty("Statement", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBStatement1> Statement { get; set; }
+        public System.Collections.Generic.ICollection<OBStatement1> Statement { get; set; }
     
         public string ToJson() 
         {
@@ -3917,7 +3917,7 @@ namespace OpenBankingApi
     {
         /// <summary>Provides further details on an entry in the report.</summary>
         [Newtonsoft.Json.JsonProperty("Transaction", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<OBTransaction4> Transaction { get; set; }
+        public System.Collections.Generic.ICollection<OBTransaction4> Transaction { get; set; }
     
         public string ToJson() 
         {
@@ -4174,12 +4174,12 @@ namespace OpenBankingApi
     
         /// <summary>Optional additional notes to supplement the Tier Band Set details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Tier Band Details</summary>
         [Newtonsoft.Json.JsonProperty("TierBand", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous12> TierBand { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous12>();
+        public System.Collections.Generic.ICollection<Anonymous12> TierBand { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous12>();
     
         public string ToJson() 
         {
@@ -4227,16 +4227,16 @@ namespace OpenBankingApi
     
         /// <summary>Optional additional notes to supplement the overdraft Tier Band Set details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Provides overdraft details for a specific tier or band</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftTierBand", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous13> OverdraftTierBand { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous13>();
+        public System.Collections.Generic.ICollection<Anonymous13> OverdraftTierBand { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous13>();
     
         /// <summary>Overdraft fees and charges details</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeesCharges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous14> OverdraftFeesCharges { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous14> OverdraftFeesCharges { get; set; }
     
         public string ToJson() 
         {
@@ -4345,11 +4345,11 @@ namespace OpenBankingApi
     
         /// <summary>Optional additional notes to supplement the fee/charge details.</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Details about any caps (maximum charges) that apply to a particular or group of fee/charge</summary>
         [Newtonsoft.Json.JsonProperty("FeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous15> FeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous15> FeeChargeCap { get; set; }
     
         [Newtonsoft.Json.JsonProperty("OtherFeeCategoryType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public OtherFeeCategoryType OtherFeeCategoryType { get; set; }
@@ -4393,7 +4393,7 @@ namespace OpenBankingApi
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous16> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous16>();
+        public System.Collections.Generic.ICollection<Anonymous16> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous16>();
     
         /// <summary>Min Max type</summary>
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
@@ -4417,11 +4417,11 @@ namespace OpenBankingApi
     
         /// <summary>Free text for adding  extra details for fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous17> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous17> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
@@ -4517,12 +4517,12 @@ namespace OpenBankingApi
     
         /// <summary>Optional additional notes to supplement the Tier Band Set details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Tier Band Details</summary>
         [Newtonsoft.Json.JsonProperty("TierBand", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous18> TierBand { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous18>();
+        public System.Collections.Generic.ICollection<Anonymous18> TierBand { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous18>();
     
         public string ToJson() 
         {
@@ -4570,16 +4570,16 @@ namespace OpenBankingApi
     
         /// <summary>Optional additional notes to supplement the overdraft Tier Band Set details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Provides overdraft details for a specific tier or band</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftTierBand", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous19> OverdraftTierBand { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous19>();
+        public System.Collections.Generic.ICollection<Anonymous19> OverdraftTierBand { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous19>();
     
         /// <summary>Overdraft fees and charges details</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeesCharges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous20> OverdraftFeesCharges { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous20> OverdraftFeesCharges { get; set; }
     
         public string ToJson() 
         {
@@ -4637,7 +4637,7 @@ namespace OpenBankingApi
     
         /// <summary>Optional additional notes to supplement the fee/charge details.</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         [Newtonsoft.Json.JsonProperty("OtherFeeCategoryType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public OtherFeeCategoryType2 OtherFeeCategoryType { get; set; }
@@ -4660,7 +4660,7 @@ namespace OpenBankingApi
     
         /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge</summary>
         [Newtonsoft.Json.JsonProperty("FeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous21> FeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous21> FeeChargeCap { get; set; }
     
         /// <summary>Range or amounts or rates for which the fee/charge applies</summary>
         [Newtonsoft.Json.JsonProperty("FeeApplicableRange", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -4685,7 +4685,7 @@ namespace OpenBankingApi
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous22> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous22>();
+        public System.Collections.Generic.ICollection<Anonymous22> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous22>();
     
         /// <summary>Indicates that this is the minimum/ maximum fee/charge that can be applied by the financial institution</summary>
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
@@ -4709,11 +4709,11 @@ namespace OpenBankingApi
     
         /// <summary>Free text for adding  extra details for fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous23> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous23> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
@@ -4825,7 +4825,7 @@ namespace OpenBankingApi
     
         /// <summary>Optional additional notes to supplement the Tier Band details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Other interest rate types which are not available in the standard code list</summary>
         [Newtonsoft.Json.JsonProperty("OtherBankInterestType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -4926,11 +4926,11 @@ namespace OpenBankingApi
     
         /// <summary>Optional additional notes to supplement the Tier/band details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Overdraft fees and charges</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeesCharges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous24> OverdraftFeesCharges { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous24> OverdraftFeesCharges { get; set; }
     
         public string ToJson() 
         {
@@ -4950,12 +4950,12 @@ namespace OpenBankingApi
     {
         /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge. Capping can either be based on an amount (in gbp), an amount (in items) or a rate.</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous25> OverdraftFeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous25> OverdraftFeeChargeCap { get; set; }
     
         /// <summary>Details about the fees/charges</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeDetail", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous26> OverdraftFeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous26>();
+        public System.Collections.Generic.ICollection<Anonymous26> OverdraftFeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous26>();
     
         public string ToJson() 
         {
@@ -5157,7 +5157,7 @@ namespace OpenBankingApi
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous27> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous27>();
+        public System.Collections.Generic.ICollection<Anonymous27> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous27>();
     
         /// <summary>Min Max type</summary>
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
@@ -5181,11 +5181,11 @@ namespace OpenBankingApi
     
         /// <summary>Free text for adding  extra details for fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous28> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous28> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
@@ -5598,7 +5598,7 @@ namespace OpenBankingApi
     
         /// <summary>Optional additional notes to supplement the Tier Band details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Other interest rate types which are not available in the standard code list</summary>
         [Newtonsoft.Json.JsonProperty("OtherBankInterestType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5689,11 +5689,11 @@ namespace OpenBankingApi
     
         /// <summary>Optional additional notes to supplement the Tier/band details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Overdraft fees and charges</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeesCharges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous29> OverdraftFeesCharges { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous29> OverdraftFeesCharges { get; set; }
     
         public string ToJson() 
         {
@@ -5713,12 +5713,12 @@ namespace OpenBankingApi
     {
         /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous30> OverdraftFeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous30> OverdraftFeeChargeCap { get; set; }
     
         /// <summary>Details about the fees/charges</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeDetail", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous31> OverdraftFeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous31>();
+        public System.Collections.Generic.ICollection<Anonymous31> OverdraftFeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous31>();
     
         public string ToJson() 
         {
@@ -6085,7 +6085,7 @@ namespace OpenBankingApi
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous32> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous32>();
+        public System.Collections.Generic.ICollection<Anonymous32> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous32>();
     
         /// <summary>Indicates that this is the minimum/ maximum fee/charge that can be applied by the financial institution</summary>
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
@@ -6109,11 +6109,11 @@ namespace OpenBankingApi
     
         /// <summary>Free text for adding  extra details for fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous33> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous33> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
@@ -6487,12 +6487,12 @@ namespace OpenBankingApi
     {
         /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge. Capping can either be based on an amount (in gbp), an amount (in items) or a rate.</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous34> OverdraftFeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous34> OverdraftFeeChargeCap { get; set; }
     
         /// <summary>Details about the fees/charges</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeDetail", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous35> OverdraftFeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous35>();
+        public System.Collections.Generic.ICollection<Anonymous35> OverdraftFeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous35>();
     
         public string ToJson() 
         {
@@ -6513,7 +6513,7 @@ namespace OpenBankingApi
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous36> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous36>();
+        public System.Collections.Generic.ICollection<Anonymous36> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous36>();
     
         /// <summary>Min Max type</summary>
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
@@ -6537,11 +6537,11 @@ namespace OpenBankingApi
     
         /// <summary>Notes related to Overdraft fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous37> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous37> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
@@ -6606,11 +6606,11 @@ namespace OpenBankingApi
     
         /// <summary>Free text for capturing any other info related to Overdraft Fees Charge Details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge. Capping can either be based on an amount (in gbp), an amount (in items) or a rate.</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous38> OverdraftFeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous38> OverdraftFeeChargeCap { get; set; }
     
         /// <summary>Other Fee type which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -6968,12 +6968,12 @@ namespace OpenBankingApi
     {
         /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous39> OverdraftFeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous39> OverdraftFeeChargeCap { get; set; }
     
         /// <summary>Details about the fees/charges</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeDetail", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous40> OverdraftFeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous40>();
+        public System.Collections.Generic.ICollection<Anonymous40> OverdraftFeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous40>();
     
         public string ToJson() 
         {
@@ -6994,7 +6994,7 @@ namespace OpenBankingApi
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous41> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous41>();
+        public System.Collections.Generic.ICollection<Anonymous41> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous41>();
     
         /// <summary>Specifies for the overdraft control feature/benefit</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftControlIndicator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7022,11 +7022,11 @@ namespace OpenBankingApi
     
         /// <summary>Notes related to Overdraft fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous42> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous42> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
@@ -7087,7 +7087,7 @@ namespace OpenBankingApi
     
         /// <summary>Free text for capturing any other info related to Overdraft Fees Charge Details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Other Fee type which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7228,7 +7228,7 @@ namespace OpenBankingApi
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous43> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous43>();
+        public System.Collections.Generic.ICollection<Anonymous43> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous43>();
     
         /// <summary>Min Max type</summary>
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
@@ -7252,11 +7252,11 @@ namespace OpenBankingApi
     
         /// <summary>Notes related to Overdraft fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous44> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous44> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
@@ -7321,11 +7321,11 @@ namespace OpenBankingApi
     
         /// <summary>Free text for capturing any other info related to Overdraft Fees Charge Details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge. Capping can either be based on an amount (in gbp), an amount (in items) or a rate.</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous45> OverdraftFeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous45> OverdraftFeeChargeCap { get; set; }
     
         /// <summary>Other Fee type which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7654,7 +7654,7 @@ namespace OpenBankingApi
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous46> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous46>();
+        public System.Collections.Generic.ICollection<Anonymous46> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous46>();
     
         /// <summary>Min Max type</summary>
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
@@ -7678,11 +7678,11 @@ namespace OpenBankingApi
     
         /// <summary>Notes related to Overdraft fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous47> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous47> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
@@ -7835,7 +7835,7 @@ namespace OpenBankingApi
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous48> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous48>();
+        public System.Collections.Generic.ICollection<Anonymous48> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous48>();
     
         /// <summary>Specifies for the overdraft control feature/benefit</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftControlIndicator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7863,11 +7863,11 @@ namespace OpenBankingApi
     
         /// <summary>Notes related to Overdraft fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous49> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous49> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
@@ -7928,7 +7928,7 @@ namespace OpenBankingApi
     
         /// <summary>Free text for capturing any other info related to Overdraft Fees Charge Details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Other Fee type which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8401,7 +8401,7 @@ namespace OpenBankingApi
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous50> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous50>();
+        public System.Collections.Generic.ICollection<Anonymous50> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous50>();
     
         /// <summary>Specifies for the overdraft control feature/benefit</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftControlIndicator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8429,11 +8429,11 @@ namespace OpenBankingApi
     
         /// <summary>Notes related to Overdraft fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous51> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous51> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
@@ -8746,7 +8746,7 @@ namespace OpenBankingApi
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous52> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous52>();
+        public System.Collections.Generic.ICollection<Anonymous52> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous52>();
     
         /// <summary>Min Max type</summary>
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
@@ -8770,11 +8770,11 @@ namespace OpenBankingApi
     
         /// <summary>Notes related to Overdraft fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous53> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous53> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
@@ -9469,7 +9469,7 @@ namespace OpenBankingApi
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.List<Anonymous54> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous54>();
+        public System.Collections.Generic.ICollection<Anonymous54> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous54>();
     
         /// <summary>Specifies for the overdraft control feature/benefit</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftControlIndicator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9497,11 +9497,11 @@ namespace OpenBankingApi
     
         /// <summary>Notes related to Overdraft fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<string> Notes { get; set; }
+        public System.Collections.Generic.ICollection<string> Notes { get; set; }
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.List<Anonymous55> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<Anonymous55> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
