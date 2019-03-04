@@ -6,15 +6,18 @@
 // <author>Rico Suter, mail@rsuter.com</author>
 //-----------------------------------------------------------------------
 
-using System;
-using System.Diagnostics;
-using System.Reflection;
 using ApiGenerator.NSwagWrapper.Commands.CodeGeneration;
 using NConsole;
 using NJsonSchema;
 using NJsonSchema.Infrastructure;
 using NSwag;
 using NSwag.Commands.CodeGeneration;
+using System;
+using System.Diagnostics;
+using System.Linq;
+using System.Reflection;
+using ApiGenerator.NSwagWrapper.Commands.Document;
+using NSwag.Commands.Document;
 
 namespace ApiGenerator.NSwagWrapper.Commands
 {
@@ -48,12 +51,7 @@ namespace ApiGenerator.NSwagWrapper.Commands
             {
                 var processor = new CommandLineProcessor(_host);
 
-                // Add our derived NSwagWrapper.Commands:
-                processor.RegisterCommand(typeof(PreProcessedSwaggerToCSharpControllerCommand));
-                processor.RegisterCommand(typeof(PreProcessedSwaggerToCSharpClientCommand));
-
-                //TODO: add all original commands EXCEPT the above, if needed!
-                //processor.RegisterCommandsFromAssembly(typeof(PreProcessedSwaggerToCSharpControllerCommand).GetTypeInfo().Assembly);
+                RegisterCommands(processor);
 
                 var stopwatch = new Stopwatch();
                 stopwatch.Start();
@@ -70,6 +68,33 @@ namespace ApiGenerator.NSwagWrapper.Commands
 
             WaitWhenDebuggerAttached();
             return 0;
+        }
+
+        private static void RegisterCommands(CommandLineProcessor processor)
+        {
+            // Add our derived NSwagWrapper.Commands:
+            processor.RegisterCommand(typeof(PreProcessedSwaggerToCSharpControllerCommand));
+            processor.RegisterCommand(typeof(PreProcessedSwaggerToCSharpClientCommand));
+            processor.RegisterCommand(typeof(PreProcessedExecuteDocumentCommand));
+            return;
+
+            // Add all original commands EXCEPT the original versions of the above
+            foreach (var nswagCommandType in typeof(SwaggerToCSharpClientCommand).Assembly.GetTypes().Where(t =>
+            {
+                return t.IsAbstract == false
+                       && t.IsInterface == false
+                       && t != typeof(ExecuteDocumentCommand)
+                       && t != typeof(SwaggerToCSharpClientCommand)
+                       && t != typeof(SwaggerToCSharpControllerCommand)
+                       && t.CustomAttributes.Any(ca =>
+                       {
+                           return ca.AttributeType == typeof(CommandAttribute);
+                       })
+                       && typeof(IConsoleCommand).IsAssignableFrom(t);
+            }))
+            {
+                processor.RegisterCommand(nswagCommandType);
+            }
         }
 
         private void WriteBinDirectory()

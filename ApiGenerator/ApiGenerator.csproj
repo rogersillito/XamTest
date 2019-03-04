@@ -439,13 +439,16 @@
     <Compile Include="IProcessSwaggerDocuments.cs" />
     <Compile Include="NSwagWrapper\Commands\CodeGeneration\PreProcessedSwaggerToCSharpClientCommand.cs" />
     <Compile Include="NSwagWrapper\Commands\CodeGeneration\PreProcessedSwaggerToCSharpControllerCommand.cs" />
+    <Compile Include="NSwagWrapper\Commands\Document\PreProcessedExecuteDocumentCommand.cs" />
     <Compile Include="NSwagWrapper\Commands\NSwagCommandProcessor.cs" />
+    <Compile Include="NSwagWrapper\Commands\NSwagDocumentWithPreProcessing.cs" />
     <Compile Include="OpenBankingToNmslSwaggerDocumentPreProcessor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="OpenBankingApi_v3.1.0.nswag" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

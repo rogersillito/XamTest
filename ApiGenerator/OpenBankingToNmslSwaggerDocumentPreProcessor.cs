@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using ApiGenerator.NSwagWrapper.Commands;
 using ApiGenerator.NSwagWrapper.Commands.CodeGeneration;
 using NSwag;
 
@@ -10,6 +11,7 @@ namespace ApiGenerator
         public static void ApplyToCommands()
         {
             var docPreProcessor = new OpenBankingToNmslSwaggerDocumentPreProcessor();
+            NSwagDocumentWithPreProcessing.SetDocumentPreProcessor(docPreProcessor);
             PreProcessedSwaggerToCSharpControllerCommand.SetDocumentPreProcessor(docPreProcessor);
             PreProcessedSwaggerToCSharpClientCommand.SetDocumentPreProcessor(docPreProcessor);
         }

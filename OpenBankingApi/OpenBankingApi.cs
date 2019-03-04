@@ -9,242 +9,9 @@ namespace OpenBankingApi
     #pragma warning disable
 
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "12.0.14.0 (NJsonSchema v9.13.18.0 (Newtonsoft.Json v11.0.0.0))")]
-    [System.Web.Http.RoutePrefix("open-banking/v3.1/aisp")]
-    public abstract class ControllerBase : System.Web.Http.ApiController
+    public interface IController
     {
-        /// <summary>Create Account Access Consents</summary>
-        /// <param name="oBReadConsent1Param">Default</param>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Account Access Consents Created</returns>
-        [System.Web.Http.HttpPost, System.Web.Http.Route("account-access-consents")]
-        public abstract System.Threading.Tasks.Task<OBReadConsentResponse1> CreateAccountAccessConsents([System.Web.Http.FromBody] OBReadConsent1 oBReadConsent1Param, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Account Access Consents</summary>
-        /// <param name="consentId">ConsentId</param>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Account Access Consents Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("account-access-consents/{ConsentId}")]
-        public abstract System.Threading.Tasks.Task<OBReadConsentResponse1> GetAccountAccessConsentsConsentId(string consentId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Delete Account Access Consents</summary>
-        /// <param name="consentId">ConsentId</param>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Account Access Consents Deleted</returns>
-        [System.Web.Http.HttpDelete, System.Web.Http.Route("account-access-consents/{ConsentId}")]
-        public abstract System.Threading.Tasks.Task DeleteAccountAccessConsentsConsentId(string consentId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Accounts</summary>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Accounts Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts")]
-        public abstract System.Threading.Tasks.Task<OBReadAccount3> GetAccounts(string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Accounts</summary>
-        /// <param name="accountId">AccountId</param>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Accounts Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}")]
-        public abstract System.Threading.Tasks.Task<OBReadAccount3> GetAccountsAccountId(string accountId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Balances</summary>
-        /// <param name="accountId">AccountId</param>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Balances Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/balances")]
-        public abstract System.Threading.Tasks.Task<OBReadBalance1> GetAccountsAccountIdBalances(string accountId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Beneficiaries</summary>
-        /// <param name="accountId">AccountId</param>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Beneficiaries Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/beneficiaries")]
-        public abstract System.Threading.Tasks.Task<OBReadBeneficiary3> GetAccountsAccountIdBeneficiaries(string accountId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Direct Debits</summary>
-        /// <param name="accountId">AccountId</param>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Direct Debits Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/direct-debits")]
-        public abstract System.Threading.Tasks.Task<OBReadDirectDebit1> GetAccountsAccountIdDirectDebits(string accountId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Offers</summary>
-        /// <param name="accountId">AccountId</param>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Offers Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/offers")]
-        public abstract System.Threading.Tasks.Task<OBReadOffer1> GetAccountsAccountIdOffers(string accountId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Party</summary>
-        /// <param name="accountId">AccountId</param>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Party Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/party")]
-        public abstract System.Threading.Tasks.Task<OBReadParty1> GetAccountsAccountIdParty(string accountId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Products</summary>
-        /// <param name="accountId">AccountId</param>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Products Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/product")]
-        public abstract System.Threading.Tasks.Task<OBReadProduct2> GetAccountsAccountIdProduct(string accountId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Scheduled Payments</summary>
-        /// <param name="accountId">AccountId</param>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Scheduled Payments Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/scheduled-payments")]
-        public abstract System.Threading.Tasks.Task<OBReadScheduledPayment2> GetAccountsAccountIdScheduledPayments(string accountId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Standing Orders</summary>
-        /// <param name="accountId">AccountId</param>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Standing Orders Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/standing-orders")]
-        public abstract System.Threading.Tasks.Task<OBReadStandingOrder4> GetAccountsAccountIdStandingOrders(string accountId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Statements</summary>
-        /// <param name="accountId">AccountId</param>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="fromStatementDateTime">The UTC ISO 8601 Date Time to filter statements FROM
-        /// NB Time component is optional - set to 00:00:00 for just Date.
-        /// If the Date Time contains a timezone, the ASPSP must ignore the timezone component.</param>
-        /// <param name="toStatementDateTime">The UTC ISO 8601 Date Time to filter statements TO
-        /// NB Time component is optional - set to 00:00:00 for just Date.
-        /// If the Date Time contains a timezone, the ASPSP must ignore the timezone component.</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Statements Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/statements")]
-        public abstract System.Threading.Tasks.Task<OBReadStatement1> GetAccountsAccountIdStatements(string accountId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, System.DateTimeOffset? fromStatementDateTime, System.DateTimeOffset? toStatementDateTime, string x_customer_user_agent);
-    
-        /// <summary>Get Statements</summary>
-        /// <param name="statementId">StatementId</param>
-        /// <param name="accountId">AccountId</param>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Statements Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/statements/{StatementId}")]
-        public abstract System.Threading.Tasks.Task<OBReadStatement1> GetAccountsAccountIdStatementsStatementId(string statementId, string accountId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Statements</summary>
-        /// <param name="statementId">StatementId</param>
-        /// <param name="accountId">AccountId</param>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Statements Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/statements/{StatementId}/file")]
-        public abstract System.Threading.Tasks.Task<FileResponse> GetAccountsAccountIdStatementsStatementIdFile(string statementId, string accountId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
         /// <summary>Get Transactions</summary>
-        /// <param name="statementId">StatementId</param>
         /// <param name="accountId">AccountId</param>
         /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
         /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
@@ -253,10 +20,28 @@ namespace OpenBankingApi
         /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
         /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
         /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
+        /// <param name="fromBookingDateTime">The UTC ISO 8601 Date Time to filter transactions FROM
+        /// NB Time component is optional - set to 00:00:00 for just Date.
+        /// If the Date Time contains a timezone, the ASPSP must ignore the timezone component.</param>
+        /// <param name="toBookingDateTime">The UTC ISO 8601 Date Time to filter transactions TO
+        /// NB Time component is optional - set to 00:00:00 for just Date.
+        /// If the Date Time contains a timezone, the ASPSP must ignore the timezone component.</param>
         /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
         /// <returns>Transactions Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/statements/{StatementId}/transactions")]
-        public abstract System.Threading.Tasks.Task<OBReadTransaction4> GetAccountsAccountIdStatementsStatementIdTransactions(string statementId, string accountId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
+        System.Threading.Tasks.Task<OBReadTransaction4> GetAccountsAccountIdTransactionsAsync(string accountId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, System.DateTimeOffset? fromBookingDateTime, System.DateTimeOffset? toBookingDateTime, string x_customer_user_agent);
+    
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCode("NSwag", "12.0.14.0 (NJsonSchema v9.13.18.0 (Newtonsoft.Json v11.0.0.0))")]
+    [System.Web.Http.RoutePrefix("open-banking/v3.1/aisp")]
+    public partial class Controller : System.Web.Http.ApiController
+    {
+        private IController _implementation;
+    
+        public Controller(IController implementation)
+        {
+            _implementation = implementation;
+        }
     
         /// <summary>Get Transactions</summary>
         /// <param name="accountId">AccountId</param>
@@ -276,149 +61,10 @@ namespace OpenBankingApi
         /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
         /// <returns>Transactions Read</returns>
         [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/transactions")]
-        public abstract System.Threading.Tasks.Task<OBReadTransaction4> GetAccountsAccountIdTransactions(string accountId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, System.DateTimeOffset? fromBookingDateTime, System.DateTimeOffset? toBookingDateTime, string x_customer_user_agent);
-    
-        /// <summary>Get Balances</summary>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Balances Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("balances")]
-        public abstract System.Threading.Tasks.Task<OBReadBalance1> GetBalances(string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Beneficiaries</summary>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Beneficiaries Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("beneficiaries")]
-        public abstract System.Threading.Tasks.Task<OBReadBeneficiary3> GetBeneficiaries(string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Direct Debits</summary>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Direct Debits Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("direct-debits")]
-        public abstract System.Threading.Tasks.Task<OBReadDirectDebit1> GetDirectDebits(string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Offers</summary>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Offers Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("offers")]
-        public abstract System.Threading.Tasks.Task<OBReadOffer1> GetOffers(string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Party</summary>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Party Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("party")]
-        public abstract System.Threading.Tasks.Task<OBReadParty1> GetParty(string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Products</summary>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Products Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("products")]
-        public abstract System.Threading.Tasks.Task<OBReadProduct2> GetProducts(string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Scheduled Payments</summary>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Scheduled Payments Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("scheduled-payments")]
-        public abstract System.Threading.Tasks.Task<OBReadScheduledPayment2> GetScheduledPayments(string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Standing Orders</summary>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Standing Orders Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("standing-orders")]
-        public abstract System.Threading.Tasks.Task<OBReadStandingOrder4> GetStandingOrders(string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, string x_customer_user_agent);
-    
-        /// <summary>Get Statements</summary>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="fromStatementDateTime">The UTC ISO 8601 Date Time to filter statements FROM
-        /// NB Time component is optional - set to 00:00:00 for just Date.
-        /// If the Date Time contains a timezone, the ASPSP must ignore the timezone component.</param>
-        /// <param name="toStatementDateTime">The UTC ISO 8601 Date Time to filter statements TO
-        /// NB Time component is optional - set to 00:00:00 for just Date.
-        /// If the Date Time contains a timezone, the ASPSP must ignore the timezone component.</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Statements Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("statements")]
-        public abstract System.Threading.Tasks.Task<OBReadStatement1> GetStatements(string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, System.DateTimeOffset? fromStatementDateTime, System.DateTimeOffset? toStatementDateTime, string x_customer_user_agent);
-    
-        /// <summary>Get Transactions</summary>
-        /// <param name="x_fapi_financial_id">The unique id of the ASPSP to which the request is issued. The unique id will be issued by OB.</param>
-        /// <param name="x_fapi_customer_last_logged_time">The time when the PSU last logged in with the TPP. 
-        /// All dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: 
-        /// Sun, 10 Sep 2017 19:43:31 UTC</param>
-        /// <param name="x_fapi_customer_ip_address">The PSU's IP address if the PSU is currently logged in with the TPP.</param>
-        /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
-        /// <param name="authorization">An Authorisation Token as per https://tools.ietf.org/html/rfc6750</param>
-        /// <param name="fromBookingDateTime">The UTC ISO 8601 Date Time to filter transactions FROM
-        /// NB Time component is optional - set to 00:00:00 for just Date.
-        /// If the Date Time contains a timezone, the ASPSP must ignore the timezone component.</param>
-        /// <param name="toBookingDateTime">The UTC ISO 8601 Date Time to filter transactions TO
-        /// NB Time component is optional - set to 00:00:00 for just Date.
-        /// If the Date Time contains a timezone, the ASPSP must ignore the timezone component.</param>
-        /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
-        /// <returns>Transactions Read</returns>
-        [System.Web.Http.HttpGet, System.Web.Http.Route("transactions")]
-        public abstract System.Threading.Tasks.Task<OBReadTransaction4> GetTransactions(string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, System.DateTimeOffset? fromBookingDateTime, System.DateTimeOffset? toBookingDateTime, string x_customer_user_agent);
+        public System.Threading.Tasks.Task<OBReadTransaction4> GetAccountsAccountIdTransactions(string accountId, string x_fapi_financial_id, string x_fapi_customer_last_logged_time, string x_fapi_customer_ip_address, string x_fapi_interaction_id, string authorization, System.DateTimeOffset? fromBookingDateTime, System.DateTimeOffset? toBookingDateTime, string x_customer_user_agent)
+        {
+            return _implementation.GetAccountsAccountIdTransactionsAsync(accountId, x_fapi_financial_id, x_fapi_customer_last_logged_time, x_fapi_customer_ip_address, x_fapi_interaction_id, authorization, fromBookingDateTime, toBookingDateTime, x_customer_user_agent);
+        }
     
     }
     
@@ -10161,42 +9807,6 @@ namespace OpenBankingApi
             return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous55>(data);
         }
     
-    }
-
-    public partial class FileResponse : System.IDisposable
-    {
-        private System.IDisposable _client; 
-        private System.IDisposable _response; 
-
-        public int StatusCode { get; private set; }
-
-        public System.Collections.Generic.Dictionary<string, System.Collections.Generic.IEnumerable<string>> Headers { get; private set; }
-
-        public System.IO.Stream Stream { get; private set; }
-
-        public bool IsPartial
-        {
-            get { return StatusCode == 206; }
-        }
-
-        public FileResponse(int statusCode, System.Collections.Generic.Dictionary<string, System.Collections.Generic.IEnumerable<string>> headers, System.IO.Stream stream, System.IDisposable client, System.IDisposable response)
-        {
-            StatusCode = statusCode; 
-            Headers = headers; 
-            Stream = stream; 
-            _client = client; 
-            _response = response;
-        }
-
-        public void Dispose() 
-        {
-            if (Stream != null)
-                Stream.Dispose();
-            if (_response != null)
-                _response.Dispose();
-            if (_client != null)
-                _client.Dispose();
-        }
     }
 
     #pragma warning restore

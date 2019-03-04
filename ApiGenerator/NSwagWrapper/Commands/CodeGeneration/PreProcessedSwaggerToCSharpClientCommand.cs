@@ -17,7 +17,6 @@ using NSwag.CodeGeneration.CSharp;
 
 namespace ApiGenerator.NSwagWrapper.Commands.CodeGeneration
 {
-    //[Command(Name = "preprocessedswagger2csclient", Description = "Generates CSharp client code from a Swagger specification (with pre-processing).")]
     [Command(Name = "swagger2csclient", Description = "Generates CSharp client code from a Swagger specification (with pre-processing).")]
     public class PreProcessedSwaggerToCSharpClientCommand : NSwag.Commands.CodeGeneration.SwaggerToCSharpClientCommand
     {
