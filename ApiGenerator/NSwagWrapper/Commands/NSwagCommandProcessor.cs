@@ -76,7 +76,6 @@ namespace ApiGenerator.NSwagWrapper.Commands
             processor.RegisterCommand(typeof(PreProcessedSwaggerToCSharpControllerCommand));
             processor.RegisterCommand(typeof(PreProcessedSwaggerToCSharpClientCommand));
             processor.RegisterCommand(typeof(PreProcessedExecuteDocumentCommand));
-            return;
 
             // Add all original commands EXCEPT the original versions of the above
             foreach (var nswagCommandType in typeof(SwaggerToCSharpClientCommand).Assembly.GetTypes().Where(t =>

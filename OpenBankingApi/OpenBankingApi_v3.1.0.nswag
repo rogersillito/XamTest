@@ -81,7 +81,7 @@
       "enumNameGeneratorType": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "../../../OpenBankingApi.Client.cs"
+      "output": "OpenBankingApi.Client.cs"
     },
     "swaggerToCSharpController": {
       "controllerBaseClass": null,
@@ -133,7 +133,7 @@
       "enumNameGeneratorType": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "../../../OpenBankingApi.cs"
+      "output": "OpenBankingApi.cs"
     }
   }
 }
