@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using NSwag.Commands;
 using System.Linq;
 using System.Threading.Tasks;
+using NConsole;
+using NSwag.AssemblyLoader;
+using NSwag.Commands.CodeGeneration;
 using NSwag.Commands.SwaggerGeneration;
 using NSwag.Commands.SwaggerGeneration.AspNetCore;
 using NSwag.Commands.SwaggerGeneration.WebApi;
@@ -36,11 +39,24 @@ namespace ApiGenerator.NSwagWrapper.Commands
             foreach (var codeGenerator in CodeGenerators.Items.Where(c => !string.IsNullOrEmpty(c.OutputFilePath)))
             {
                 codeGenerator.Input = document;
+                TryInitializeTypeNameGenerators(codeGenerator);
                 await codeGenerator.RunAsync(null, null);
                 codeGenerator.Input = null;
             }
 
             return new SwaggerDocumentExecutionResult(null, null, true);
+        }
+
+        private void TryInitializeTypeNameGenerators(IConsoleCommand codeGenerator)
+        {
+            if (codeGenerator is SwaggerToCSharpControllerCommand controllerCommand)
+            {
+                controllerCommand?.InitializeCustomTypes(new AssemblyLoader());
+            }
+            if (codeGenerator is SwaggerToCSharpClientCommand clientCommand)
+            {
+                clientCommand?.InitializeCustomTypes(new AssemblyLoader());
+            }
         }
     }
 }

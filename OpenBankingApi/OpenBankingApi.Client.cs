@@ -4512,7 +4512,7 @@ namespace OpenBankingApi.Client
         /// Read more: Market Segmentation http://www.investopedia.com/terms/m/marketsegmentation.asp#ixzz4gfEEalTd 
         /// With respect to BCA products, they are segmented in relation to different markets that they wish to focus on. </summary>
         [Newtonsoft.Json.JsonProperty("Segment", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public System.Collections.Generic.ICollection<Anonymous2> Segment { get; set; }
+        public System.Collections.Generic.ICollection<BCA_ProductDetails_Segment> Segment { get; set; }
     
         /// <summary>The length/duration of the fee free period</summary>
         [Newtonsoft.Json.JsonProperty("FeeFreeLength", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -4545,7 +4545,7 @@ namespace OpenBankingApi.Client
         /// <summary>The group of tiers or bands for which credit interest can be applied.</summary>
         [Newtonsoft.Json.JsonProperty("TierBandSet", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous3> TierBandSet { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous3>();
+        public System.Collections.Generic.ICollection<BCA_CreditInterest_TierBandSet> TierBandSet { get; set; } = new System.Collections.ObjectModel.Collection<BCA_CreditInterest_TierBandSet>();
     
         public string ToJson() 
         {
@@ -4569,7 +4569,7 @@ namespace OpenBankingApi.Client
         /// <summary>Tier band set details</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftTierBandSet", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous4> OverdraftTierBandSet { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous4>();
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet> OverdraftTierBandSet { get; set; } = new System.Collections.ObjectModel.Collection<BCA_Overdraft_OverdraftTierBandSet>();
     
         public string ToJson() 
         {
@@ -4604,11 +4604,11 @@ namespace OpenBankingApi.Client
         /// <summary>Other fees/charges details</summary>
         [Newtonsoft.Json.JsonProperty("FeeChargeDetail", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous5> FeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous5>();
+        public System.Collections.Generic.ICollection<BCA_OtherFeesCharges_FeeChargeDetail> FeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<BCA_OtherFeesCharges_FeeChargeDetail>();
     
         /// <summary>Details about any caps (maximum charges) that apply to a particular or group of fee/charge</summary>
         [Newtonsoft.Json.JsonProperty("FeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous6> FeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<BCA_OtherFeesCharges_FeeChargeCap> FeeChargeCap { get; set; }
     
         public string ToJson() 
         {
@@ -4641,7 +4641,7 @@ namespace OpenBankingApi.Client
         /// Read more: Market Segmentation http://www.investopedia.com/terms/m/marketsegmentation.asp#ixzz4gfEEalTd 
         /// With respect to PCA products, they are segmented in relation to different markets that they wish to focus on. </summary>
         [Newtonsoft.Json.JsonProperty("Segment", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public System.Collections.Generic.ICollection<Anonymous7> Segment { get; set; }
+        public System.Collections.Generic.ICollection<PCA_ProductDetails_Segment> Segment { get; set; }
     
         /// <summary>The maximum relevant charges that could accrue as defined fully in Part 7 of the CMA order</summary>
         [Newtonsoft.Json.JsonProperty("MonthlyMaximumCharge", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -4670,7 +4670,7 @@ namespace OpenBankingApi.Client
         /// <summary>The group of tiers or bands for which credit interest can be applied.</summary>
         [Newtonsoft.Json.JsonProperty("TierBandSet", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous8> TierBandSet { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous8>();
+        public System.Collections.Generic.ICollection<PCA_CreditInterest_TierBandSet> TierBandSet { get; set; } = new System.Collections.ObjectModel.Collection<PCA_CreditInterest_TierBandSet>();
     
         public string ToJson() 
         {
@@ -4694,7 +4694,7 @@ namespace OpenBankingApi.Client
         /// <summary>Tier band set details</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftTierBandSet", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous9> OverdraftTierBandSet { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous9>();
+        public System.Collections.Generic.ICollection<PCA_Overdraft_OverdraftTierBandSet> OverdraftTierBandSet { get; set; } = new System.Collections.ObjectModel.Collection<PCA_Overdraft_OverdraftTierBandSet>();
     
         public string ToJson() 
         {
@@ -4714,11 +4714,11 @@ namespace OpenBankingApi.Client
         /// <summary>Other fees/charges details</summary>
         [Newtonsoft.Json.JsonProperty("FeeChargeDetail", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous10> FeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous10>();
+        public System.Collections.Generic.ICollection<PCA_OtherFeesCharges_FeeChargeDetail> FeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<PCA_OtherFeesCharges_FeeChargeDetail>();
     
         /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge</summary>
         [Newtonsoft.Json.JsonProperty("FeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous11> FeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<PCA_OtherFeesCharges_FeeChargeCap> FeeChargeCap { get; set; }
     
         public string ToJson() 
         {
@@ -5167,7 +5167,7 @@ namespace OpenBankingApi.Client
     /// Read more: Market Segmentation http://www.investopedia.com/terms/m/marketsegmentation.asp#ixzz4gfEEalTd 
     /// With respect to BCA products, they are segmented in relation to different markets that they wish to focus on. </summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum Anonymous2
+    public enum BCA_ProductDetails_Segment
     {
         [System.Runtime.Serialization.EnumMember(Value = @"ClientAccount")]
         ClientAccount = 0,
@@ -5220,7 +5220,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>The group of tiers or bands for which credit interest can be applied.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous3 
+    public partial class BCA_CreditInterest_TierBandSet 
     {
         /// <summary>The methodology of how credit interest is paid/applied. It can be:-
         /// 
@@ -5235,18 +5235,18 @@ namespace OpenBankingApi.Client
         [Newtonsoft.Json.JsonProperty("TierBandMethod", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public TierBandMethod TierBandMethod { get; set; }
+        public BCA_CreditInterest_TierBandSetTierBandMethod TierBandMethod { get; set; }
     
         /// <summary>Methods of calculating interest</summary>
         [Newtonsoft.Json.JsonProperty("CalculationMethod", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CalculationMethod? CalculationMethod { get; set; }
+        public BCA_CreditInterest_TierBandSetCalculationMethod? CalculationMethod { get; set; }
     
         /// <summary>Describes whether accrued interest is payable only to the BCA or to another bank account</summary>
         [Newtonsoft.Json.JsonProperty("Destination", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public Destination Destination { get; set; }
+        public BCA_CreditInterest_TierBandSetDestination Destination { get; set; }
     
         /// <summary>Optional additional notes to supplement the Tier Band Set details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5255,23 +5255,23 @@ namespace OpenBankingApi.Client
         /// <summary>Tier Band Details</summary>
         [Newtonsoft.Json.JsonProperty("TierBand", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous12> TierBand { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous12>();
+        public System.Collections.Generic.ICollection<BCA_CreditInterest_TierBandSet_TierBand> TierBand { get; set; } = new System.Collections.ObjectModel.Collection<BCA_CreditInterest_TierBandSet_TierBand>();
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous3 FromJson(string data)
+        public static BCA_CreditInterest_TierBandSet FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous3>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_CreditInterest_TierBandSet>(data);
         }
     
     }
     
     /// <summary>Tier band set details</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous4 
+    public partial class BCA_Overdraft_OverdraftTierBandSet 
     {
         /// <summary>The methodology of how overdraft is charged. It can be:
         /// 'Whole'  Where the same charge/rate is applied to the entirety of the overdraft balance (where charges are applicable). 
@@ -5280,12 +5280,12 @@ namespace OpenBankingApi.Client
         [Newtonsoft.Json.JsonProperty("TierBandMethod", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public TierBandMethod2 TierBandMethod { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSetTierBandMethod TierBandMethod { get; set; }
     
         /// <summary>An overdraft can either be 'committed' which means that the facility cannot be withdrawn without reasonable notification before it's agreed end date, or 'on demand' which means that the financial institution can demand repayment at any point in time.</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public OverdraftType? OverdraftType { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSetOverdraftType? OverdraftType { get; set; }
     
         /// <summary>Unique and unambiguous identification of a  Tier Band for a overdraft product.</summary>
         [Newtonsoft.Json.JsonProperty("Identification", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5308,20 +5308,20 @@ namespace OpenBankingApi.Client
         /// <summary>Provides overdraft details for a specific tier or band</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftTierBand", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous13> OverdraftTierBand { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous13>();
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand> OverdraftTierBand { get; set; } = new System.Collections.ObjectModel.Collection<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand>();
     
         /// <summary>Overdraft fees and charges details</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeesCharges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous14> OverdraftFeesCharges { get; set; }
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges> OverdraftFeesCharges { get; set; }
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous4 FromJson(string data)
+        public static BCA_Overdraft_OverdraftTierBandSet FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous4>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_Overdraft_OverdraftTierBandSet>(data);
         }
     
     }
@@ -5375,19 +5375,19 @@ namespace OpenBankingApi.Client
     
     /// <summary>Other fees/charges details</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous5 
+    public partial class BCA_OtherFeesCharges_FeeChargeDetail 
     {
         /// <summary>Categorisation of fees and charges into standard categories.</summary>
         [Newtonsoft.Json.JsonProperty("FeeCategory", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public FeeCategory FeeCategory { get; set; }
+        public BCA_OtherFeesCharges_FeeChargeDetailFeeCategory FeeCategory { get; set; }
     
         /// <summary>Fee/Charge Type</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public FeeType FeeType { get; set; }
+        public BCA_OtherFeesCharges_FeeChargeDetailFeeType FeeType { get; set; }
     
         /// <summary>Fee/charge which is usually negotiable rather than a fixed amount</summary>
         [Newtonsoft.Json.JsonProperty("NegotiableIndicator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5406,18 +5406,18 @@ namespace OpenBankingApi.Client
         /// <summary>Rate type for Fee/Charge (where it is charged in terms of a rate rather than an amount)</summary>
         [Newtonsoft.Json.JsonProperty("FeeRateType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public FeeRateType? FeeRateType { get; set; }
+        public BCA_OtherFeesCharges_FeeChargeDetailFeeRateType? FeeRateType { get; set; }
     
         /// <summary>How frequently the fee/charge is applied to the account</summary>
         [Newtonsoft.Json.JsonProperty("ApplicationFrequency", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public ApplicationFrequency ApplicationFrequency { get; set; }
+        public BCA_OtherFeesCharges_FeeChargeDetailApplicationFrequency ApplicationFrequency { get; set; }
     
         /// <summary>How frequently the fee/charge is calculated</summary>
         [Newtonsoft.Json.JsonProperty("CalculationFrequency", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CalculationFrequency? CalculationFrequency { get; set; }
+        public BCA_OtherFeesCharges_FeeChargeDetailCalculationFrequency? CalculationFrequency { get; set; }
     
         /// <summary>Optional additional notes to supplement the fee/charge details.</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5425,7 +5425,7 @@ namespace OpenBankingApi.Client
     
         /// <summary>Details about any caps (maximum charges) that apply to a particular or group of fee/charge</summary>
         [Newtonsoft.Json.JsonProperty("FeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous15> FeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<BCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap> FeeChargeCap { get; set; }
     
         [Newtonsoft.Json.JsonProperty("OtherFeeCategoryType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public OtherFeeCategoryType OtherFeeCategoryType { get; set; }
@@ -5455,27 +5455,27 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous5 FromJson(string data)
+        public static BCA_OtherFeesCharges_FeeChargeDetail FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous5>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_OtherFeesCharges_FeeChargeDetail>(data);
         }
     
     }
     
     /// <summary>Details about any caps (maximum charges) that apply to a particular or group of fee/charge</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous6 
+    public partial class BCA_OtherFeesCharges_FeeChargeCap 
     {
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous16> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous16>();
+        public System.Collections.Generic.ICollection<BCA_OtherFeesCharges_FeeChargeCap_FeeType> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<BCA_OtherFeesCharges_FeeChargeCap_FeeType>();
     
         /// <summary>Min Max type</summary>
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public MinMaxType MinMaxType { get; set; }
+        public BCA_OtherFeesCharges_FeeChargeCapMinMaxType MinMaxType { get; set; }
     
         /// <summary>fee/charges are captured dependent on the number of occurrences rather than capped at a particular amount</summary>
         [Newtonsoft.Json.JsonProperty("FeeCapOccurrence", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5489,7 +5489,7 @@ namespace OpenBankingApi.Client
         /// <summary>Period e.g. day, week, month etc. for which the fee/charge is capped</summary>
         [Newtonsoft.Json.JsonProperty("CappingPeriod", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CappingPeriod? CappingPeriod { get; set; }
+        public BCA_OtherFeesCharges_FeeChargeCapCappingPeriod? CappingPeriod { get; set; }
     
         /// <summary>Free text for adding  extra details for fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5497,16 +5497,16 @@ namespace OpenBankingApi.Client
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous17> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<BCA_OtherFeesCharges_FeeChargeCap_OtherFeeType> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous6 FromJson(string data)
+        public static BCA_OtherFeesCharges_FeeChargeCap FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous6>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_OtherFeesCharges_FeeChargeCap>(data);
         }
     
     }
@@ -5516,7 +5516,7 @@ namespace OpenBankingApi.Client
     /// Read more: Market Segmentation http://www.investopedia.com/terms/m/marketsegmentation.asp#ixzz4gfEEalTd 
     /// With respect to PCA products, they are segmented in relation to different markets that they wish to focus on. </summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum Anonymous7
+    public enum PCA_ProductDetails_Segment
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Basic")]
         Basic = 0,
@@ -5564,7 +5564,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>The group of tiers or bands for which credit interest can be applied.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous8 
+    public partial class PCA_CreditInterest_TierBandSet 
     {
         /// <summary>The methodology of how credit interest is charged. It can be:-
         /// 
@@ -5579,17 +5579,17 @@ namespace OpenBankingApi.Client
         [Newtonsoft.Json.JsonProperty("TierBandMethod", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public TierBandMethod3 TierBandMethod { get; set; }
+        public PCA_CreditInterest_TierBandSetTierBandMethod TierBandMethod { get; set; }
     
         /// <summary>Methods of calculating interest</summary>
         [Newtonsoft.Json.JsonProperty("CalculationMethod", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CalculationMethod2? CalculationMethod { get; set; }
+        public PCA_CreditInterest_TierBandSetCalculationMethod? CalculationMethod { get; set; }
     
         /// <summary>Describes whether accrued interest is payable only to the PCA or to another bank account</summary>
         [Newtonsoft.Json.JsonProperty("Destination", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public Destination2? Destination { get; set; }
+        public PCA_CreditInterest_TierBandSetDestination? Destination { get; set; }
     
         /// <summary>Optional additional notes to supplement the Tier Band Set details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5598,23 +5598,23 @@ namespace OpenBankingApi.Client
         /// <summary>Tier Band Details</summary>
         [Newtonsoft.Json.JsonProperty("TierBand", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous18> TierBand { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous18>();
+        public System.Collections.Generic.ICollection<PCA_CreditInterest_TierBandSet_TierBand> TierBand { get; set; } = new System.Collections.ObjectModel.Collection<PCA_CreditInterest_TierBandSet_TierBand>();
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous8 FromJson(string data)
+        public static PCA_CreditInterest_TierBandSet FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous8>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_CreditInterest_TierBandSet>(data);
         }
     
     }
     
     /// <summary>Tier band set details</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous9 
+    public partial class PCA_Overdraft_OverdraftTierBandSet 
     {
         /// <summary>The methodology of how overdraft is charged. It can be:
         /// 'Whole'  Where the same charge/rate is applied to the entirety of the overdraft balance (where charges are applicable). 
@@ -5623,12 +5623,12 @@ namespace OpenBankingApi.Client
         [Newtonsoft.Json.JsonProperty("TierBandMethod", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public TierBandMethod4 TierBandMethod { get; set; }
+        public PCA_Overdraft_OverdraftTierBandSetTierBandMethod TierBandMethod { get; set; }
     
         /// <summary>An overdraft can either be 'committed' which means that the facility cannot be withdrawn without reasonable notification before it's agreed end date, or 'on demand' which means that the financial institution can demand repayment at any point in time.</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public OverdraftType2? OverdraftType { get; set; }
+        public PCA_Overdraft_OverdraftTierBandSetOverdraftType? OverdraftType { get; set; }
     
         /// <summary>Unique and unambiguous identification of a  Tier Band for a overdraft product.</summary>
         [Newtonsoft.Json.JsonProperty("Identification", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5651,39 +5651,39 @@ namespace OpenBankingApi.Client
         /// <summary>Provides overdraft details for a specific tier or band</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftTierBand", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous19> OverdraftTierBand { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous19>();
+        public System.Collections.Generic.ICollection<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand> OverdraftTierBand { get; set; } = new System.Collections.ObjectModel.Collection<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand>();
     
         /// <summary>Overdraft fees and charges details</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeesCharges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous20> OverdraftFeesCharges { get; set; }
+        public System.Collections.Generic.ICollection<PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges> OverdraftFeesCharges { get; set; }
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous9 FromJson(string data)
+        public static PCA_Overdraft_OverdraftTierBandSet FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous9>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_Overdraft_OverdraftTierBandSet>(data);
         }
     
     }
     
     /// <summary>Other fees/charges details</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous10 
+    public partial class PCA_OtherFeesCharges_FeeChargeDetail 
     {
         /// <summary>Categorisation of fees and charges into standard categories.</summary>
         [Newtonsoft.Json.JsonProperty("FeeCategory", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public FeeCategory2 FeeCategory { get; set; }
+        public PCA_OtherFeesCharges_FeeChargeDetailFeeCategory FeeCategory { get; set; }
     
         /// <summary>Fee/Charge Type</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public FeeType2 FeeType { get; set; }
+        public PCA_OtherFeesCharges_FeeChargeDetailFeeType FeeType { get; set; }
     
         /// <summary>Fee Amount charged for a fee/charge (where it is charged in terms of an amount rather than a rate)</summary>
         [Newtonsoft.Json.JsonProperty("FeeAmount", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5698,18 +5698,18 @@ namespace OpenBankingApi.Client
         /// <summary>Rate type for Fee/Charge (where it is charged in terms of a rate rather than an amount)</summary>
         [Newtonsoft.Json.JsonProperty("FeeRateType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public FeeRateType2? FeeRateType { get; set; }
+        public PCA_OtherFeesCharges_FeeChargeDetailFeeRateType? FeeRateType { get; set; }
     
         /// <summary>How frequently the fee/charge is applied to the account</summary>
         [Newtonsoft.Json.JsonProperty("ApplicationFrequency", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public ApplicationFrequency2 ApplicationFrequency { get; set; }
+        public PCA_OtherFeesCharges_FeeChargeDetailApplicationFrequency ApplicationFrequency { get; set; }
     
         /// <summary>How frequently the fee/charge is calculated</summary>
         [Newtonsoft.Json.JsonProperty("CalculationFrequency", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CalculationFrequency2? CalculationFrequency { get; set; }
+        public PCA_OtherFeesCharges_FeeChargeDetailCalculationFrequency? CalculationFrequency { get; set; }
     
         /// <summary>Optional additional notes to supplement the fee/charge details.</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5736,7 +5736,7 @@ namespace OpenBankingApi.Client
     
         /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge</summary>
         [Newtonsoft.Json.JsonProperty("FeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous21> FeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<PCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap> FeeChargeCap { get; set; }
     
         /// <summary>Range or amounts or rates for which the fee/charge applies</summary>
         [Newtonsoft.Json.JsonProperty("FeeApplicableRange", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5747,27 +5747,27 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous10 FromJson(string data)
+        public static PCA_OtherFeesCharges_FeeChargeDetail FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous10>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_OtherFeesCharges_FeeChargeDetail>(data);
         }
     
     }
     
     /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous11 
+    public partial class PCA_OtherFeesCharges_FeeChargeCap 
     {
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous22> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous22>();
+        public System.Collections.Generic.ICollection<PCA_OtherFeesCharges_FeeChargeCap_FeeType> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<PCA_OtherFeesCharges_FeeChargeCap_FeeType>();
     
         /// <summary>Indicates that this is the minimum/ maximum fee/charge that can be applied by the financial institution</summary>
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public MinMaxType2 MinMaxType { get; set; }
+        public PCA_OtherFeesCharges_FeeChargeCapMinMaxType MinMaxType { get; set; }
     
         /// <summary>fee/charges are captured dependent on the number of occurrences rather than capped at a particular amount</summary>
         [Newtonsoft.Json.JsonProperty("FeeCapOccurrence", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5781,7 +5781,7 @@ namespace OpenBankingApi.Client
         /// <summary>Period e.g. day, week, month etc. for which the fee/charge is capped</summary>
         [Newtonsoft.Json.JsonProperty("CappingPeriod", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CappingPeriod2? CappingPeriod { get; set; }
+        public PCA_OtherFeesCharges_FeeChargeCapCappingPeriod? CappingPeriod { get; set; }
     
         /// <summary>Free text for adding  extra details for fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5789,22 +5789,22 @@ namespace OpenBankingApi.Client
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous23> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<PCA_OtherFeesCharges_FeeChargeCap_OtherFeeType> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous11 FromJson(string data)
+        public static PCA_OtherFeesCharges_FeeChargeCap FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous11>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_OtherFeesCharges_FeeChargeCap>(data);
         }
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum TierBandMethod
+    public enum BCA_CreditInterest_TierBandSetTierBandMethod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Banded")]
         Banded = 0,
@@ -5818,7 +5818,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CalculationMethod
+    public enum BCA_CreditInterest_TierBandSetCalculationMethod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Compound")]
         Compound = 0,
@@ -5829,7 +5829,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum Destination
+    public enum BCA_CreditInterest_TierBandSetDestination
     {
         [System.Runtime.Serialization.EnumMember(Value = @"PayAway")]
         PayAway = 0,
@@ -5841,7 +5841,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Tier Band Details</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous12 
+    public partial class BCA_CreditInterest_TierBandSet_TierBand 
     {
         /// <summary>Unique and unambiguous identification of a  Tier Band for a BCA.</summary>
         [Newtonsoft.Json.JsonProperty("Identification", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5862,24 +5862,24 @@ namespace OpenBankingApi.Client
         /// <summary>How often is credit interest calculated for the account.</summary>
         [Newtonsoft.Json.JsonProperty("CalculationFrequency", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CalculationFrequency3? CalculationFrequency { get; set; }
+        public BCA_CreditInterest_TierBandSet_TierBandCalculationFrequency? CalculationFrequency { get; set; }
     
         /// <summary>How often is interest applied to the BCA for this tier/band i.e. how often the financial institution pays accumulated interest to the customer's BCA.</summary>
         [Newtonsoft.Json.JsonProperty("ApplicationFrequency", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public ApplicationFrequency3 ApplicationFrequency { get; set; }
+        public BCA_CreditInterest_TierBandSet_TierBandApplicationFrequency ApplicationFrequency { get; set; }
     
         /// <summary>Amount on which Interest applied.</summary>
         [Newtonsoft.Json.JsonProperty("DepositInterestAppliedCoverage", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public DepositInterestAppliedCoverage? DepositInterestAppliedCoverage { get; set; }
+        public BCA_CreditInterest_TierBandSet_TierBandDepositInterestAppliedCoverage? DepositInterestAppliedCoverage { get; set; }
     
         /// <summary>Type of interest rate, Fixed or Variable</summary>
         [Newtonsoft.Json.JsonProperty("FixedVariableInterestRateType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public FixedVariableInterestRateType FixedVariableInterestRateType { get; set; }
+        public BCA_CreditInterest_TierBandSet_TierBandFixedVariableInterestRateType FixedVariableInterestRateType { get; set; }
     
         /// <summary>The annual equivalent rate (AER) is interest that is calculated under the assumption that any interest paid is combined with the original balance and the next interest payment will be based on the slightly higher account balance. Overall, this means that interest can be compounded several times in a year depending on the number of times that interest payments are made. 
         /// 
@@ -5892,7 +5892,7 @@ namespace OpenBankingApi.Client
         /// <summary>Interest rate types, other than AER, which financial institutions may use to describe the annual interest rate payable to the BCA.</summary>
         [Newtonsoft.Json.JsonProperty("BankInterestRateType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public BankInterestRateType? BankInterestRateType { get; set; }
+        public BCA_CreditInterest_TierBandSet_TierBandBankInterestRateType? BankInterestRateType { get; set; }
     
         /// <summary>Bank Interest for the BCA product</summary>
         [Newtonsoft.Json.JsonProperty("BankInterestRate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5920,15 +5920,15 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous12 FromJson(string data)
+        public static BCA_CreditInterest_TierBandSet_TierBand FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous12>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_CreditInterest_TierBandSet_TierBand>(data);
         }
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum TierBandMethod2
+    public enum BCA_Overdraft_OverdraftTierBandSetTierBandMethod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Banded")]
         Banded = 0,
@@ -5942,7 +5942,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum OverdraftType
+    public enum BCA_Overdraft_OverdraftTierBandSetOverdraftType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Committed")]
         Committed = 0,
@@ -5954,7 +5954,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Provides overdraft details for a specific tier or band</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous13 
+    public partial class BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand 
     {
         /// <summary>Unique and unambiguous identification of a  Tier Band for a overdraft.</summary>
         [Newtonsoft.Json.JsonProperty("Identification", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -5989,12 +5989,12 @@ namespace OpenBankingApi.Client
         /// <summary>Specifies the period of a fixed length overdraft agreement</summary>
         [Newtonsoft.Json.JsonProperty("AgreementPeriod", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public AgreementPeriod? AgreementPeriod { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBandAgreementPeriod? AgreementPeriod { get; set; }
     
         /// <summary>Refers to which interest rate is applied when interests are tiered. For example, if an overdraft balance is £2k and the interest tiers are:- 0-£500 0.1%, 500-1000 0.2%, 1000-10000 0.5%, then the applicable interest rate could either be 0.5% of the entire balance (since the account balance sits in the top interest tier) or (0.1%*500)+(0.2%*500)+(0.5%*1000). In the 1st situation, we say the interest is applied to the ‘Whole’ of the account balance,  and in the 2nd that it is ‘Tiered’.</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftInterestChargingCoverage", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public OverdraftInterestChargingCoverage? OverdraftInterestChargingCoverage { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBandOverdraftInterestChargingCoverage? OverdraftInterestChargingCoverage { get; set; }
     
         /// <summary>Indicates whether the advertised overdraft rate is guaranteed to be offered to a borrower by the bank e.g. if it’s part of a government scheme, or whether the rate may vary dependent on the applicant’s circumstances.</summary>
         [Newtonsoft.Json.JsonProperty("BankGuaranteedIndicator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -6006,47 +6006,47 @@ namespace OpenBankingApi.Client
     
         /// <summary>Overdraft fees and charges</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeesCharges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous24> OverdraftFeesCharges { get; set; }
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges> OverdraftFeesCharges { get; set; }
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous13 FromJson(string data)
+        public static BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous13>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand>(data);
         }
     
     }
     
     /// <summary>Overdraft fees and charges details</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous14 
+    public partial class BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges 
     {
         /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge. Capping can either be based on an amount (in gbp), an amount (in items) or a rate.</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous25> OverdraftFeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap> OverdraftFeeChargeCap { get; set; }
     
         /// <summary>Details about the fees/charges</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeDetail", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous26> OverdraftFeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous26>();
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail> OverdraftFeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail>();
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous14 FromJson(string data)
+        public static BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous14>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges>(data);
         }
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum FeeCategory
+    public enum BCA_OtherFeesCharges_FeeChargeDetailFeeCategory
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Other")]
         Other = 0,
@@ -6057,7 +6057,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum FeeType
+    public enum BCA_OtherFeesCharges_FeeChargeDetailFeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Other")]
         Other = 0,
@@ -6086,7 +6086,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum FeeRateType
+    public enum BCA_OtherFeesCharges_FeeChargeDetailFeeRateType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Gross")]
         Gross = 0,
@@ -6097,7 +6097,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum ApplicationFrequency
+    public enum BCA_OtherFeesCharges_FeeChargeDetailApplicationFrequency
     {
         [System.Runtime.Serialization.EnumMember(Value = @"OnClosing")]
         OnClosing = 0,
@@ -6162,7 +6162,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CalculationFrequency
+    public enum BCA_OtherFeesCharges_FeeChargeDetailCalculationFrequency
     {
         [System.Runtime.Serialization.EnumMember(Value = @"OnClosing")]
         OnClosing = 0,
@@ -6228,18 +6228,18 @@ namespace OpenBankingApi.Client
     
     /// <summary>Details about any caps (maximum charges) that apply to a particular or group of fee/charge</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous15 
+    public partial class BCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap 
     {
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous27> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous27>();
+        public System.Collections.Generic.ICollection<BCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap_FeeType> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<BCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap_FeeType>();
     
         /// <summary>Min Max type</summary>
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public MinMaxType3 MinMaxType { get; set; }
+        public BCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCapMinMaxType MinMaxType { get; set; }
     
         /// <summary>fee/charges are captured dependent on the number of occurrences rather than capped at a particular amount</summary>
         [Newtonsoft.Json.JsonProperty("FeeCapOccurrence", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -6253,7 +6253,7 @@ namespace OpenBankingApi.Client
         /// <summary>Period e.g. day, week, month etc. for which the fee/charge is capped</summary>
         [Newtonsoft.Json.JsonProperty("CappingPeriod", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CappingPeriod3? CappingPeriod { get; set; }
+        public BCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCapCappingPeriod? CappingPeriod { get; set; }
     
         /// <summary>Free text for adding  extra details for fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -6261,16 +6261,16 @@ namespace OpenBankingApi.Client
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous28> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<BCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap_OtherFeeType> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous15 FromJson(string data)
+        public static BCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous15>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap>(data);
         }
     
     }
@@ -6483,7 +6483,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Fee/charge type which is being capped</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum Anonymous16
+    public enum BCA_OtherFeesCharges_FeeChargeCap_FeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Other")]
         Other = 0,
@@ -6512,7 +6512,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum MinMaxType
+    public enum BCA_OtherFeesCharges_FeeChargeCapMinMaxType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Minimum")]
         Minimum = 0,
@@ -6523,7 +6523,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CappingPeriod
+    public enum BCA_OtherFeesCharges_FeeChargeCapCappingPeriod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Day")]
         Day = 0,
@@ -6547,7 +6547,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Other fee type code which is not available in the standard code set</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous17 
+    public partial class BCA_OtherFeesCharges_FeeChargeCap_OtherFeeType 
     {
         /// <summary>The four letter Mnemonic used within an XML file to identify a code</summary>
         [Newtonsoft.Json.JsonProperty("Code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -6572,15 +6572,15 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous17 FromJson(string data)
+        public static BCA_OtherFeesCharges_FeeChargeCap_OtherFeeType FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous17>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_OtherFeesCharges_FeeChargeCap_OtherFeeType>(data);
         }
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum TierBandMethod3
+    public enum PCA_CreditInterest_TierBandSetTierBandMethod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Tiered")]
         Tiered = 0,
@@ -6591,7 +6591,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CalculationMethod2
+    public enum PCA_CreditInterest_TierBandSetCalculationMethod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Compound")]
         Compound = 0,
@@ -6602,7 +6602,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum Destination2
+    public enum PCA_CreditInterest_TierBandSetDestination
     {
         [System.Runtime.Serialization.EnumMember(Value = @"PayAway")]
         PayAway = 0,
@@ -6614,7 +6614,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Tier Band Details</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous18 
+    public partial class PCA_CreditInterest_TierBandSet_TierBand 
     {
         /// <summary>Unique and unambiguous identification of a  Tier Band for a PCA.</summary>
         [Newtonsoft.Json.JsonProperty("Identification", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -6635,24 +6635,24 @@ namespace OpenBankingApi.Client
         /// <summary>How often is credit interest calculated for the account.</summary>
         [Newtonsoft.Json.JsonProperty("CalculationFrequency", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CalculationFrequency4? CalculationFrequency { get; set; }
+        public PCA_CreditInterest_TierBandSet_TierBandCalculationFrequency? CalculationFrequency { get; set; }
     
         /// <summary>How often is interest applied to the PCA for this tier/band i.e. how often the financial institution pays accumulated interest to the customer's PCA.</summary>
         [Newtonsoft.Json.JsonProperty("ApplicationFrequency", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public ApplicationFrequency4 ApplicationFrequency { get; set; }
+        public PCA_CreditInterest_TierBandSet_TierBandApplicationFrequency ApplicationFrequency { get; set; }
     
         /// <summary>Amount on which Interest applied.</summary>
         [Newtonsoft.Json.JsonProperty("DepositInterestAppliedCoverage", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public DepositInterestAppliedCoverage2? DepositInterestAppliedCoverage { get; set; }
+        public PCA_CreditInterest_TierBandSet_TierBandDepositInterestAppliedCoverage? DepositInterestAppliedCoverage { get; set; }
     
         /// <summary>Type of interest rate, Fixed or Variable</summary>
         [Newtonsoft.Json.JsonProperty("FixedVariableInterestRateType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public FixedVariableInterestRateType2 FixedVariableInterestRateType { get; set; }
+        public PCA_CreditInterest_TierBandSet_TierBandFixedVariableInterestRateType FixedVariableInterestRateType { get; set; }
     
         /// <summary>The annual equivalent rate (AER) is interest that is calculated under the assumption that any interest paid is combined with the original balance and the next interest payment will be based on the slightly higher account balance. Overall, this means that interest can be compounded several times in a year depending on the number of times that interest payments are made. 
         /// 
@@ -6665,7 +6665,7 @@ namespace OpenBankingApi.Client
         /// <summary>Interest rate types, other than AER, which financial institutions may use to describe the annual interest rate payable to the PCA.</summary>
         [Newtonsoft.Json.JsonProperty("BankInterestRateType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public BankInterestRateType2? BankInterestRateType { get; set; }
+        public PCA_CreditInterest_TierBandSet_TierBandBankInterestRateType? BankInterestRateType { get; set; }
     
         /// <summary>Bank Interest for the PCA product</summary>
         [Newtonsoft.Json.JsonProperty("BankInterestRate", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -6693,15 +6693,15 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous18 FromJson(string data)
+        public static PCA_CreditInterest_TierBandSet_TierBand FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous18>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_CreditInterest_TierBandSet_TierBand>(data);
         }
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum TierBandMethod4
+    public enum PCA_Overdraft_OverdraftTierBandSetTierBandMethod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Tiered")]
         Tiered = 0,
@@ -6715,7 +6715,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum OverdraftType2
+    public enum PCA_Overdraft_OverdraftTierBandSetOverdraftType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Committed")]
         Committed = 0,
@@ -6730,7 +6730,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Provides overdraft details for a specific tier or band</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous19 
+    public partial class PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand 
     {
         /// <summary>Unique and unambiguous identification of a  Tier Band for a overdraft.</summary>
         [Newtonsoft.Json.JsonProperty("Identification", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -6751,7 +6751,7 @@ namespace OpenBankingApi.Client
         /// <summary>Interest charged on whole amount or tiered/banded</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftInterestChargingCoverage", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public OverdraftInterestChargingCoverage2? OverdraftInterestChargingCoverage { get; set; }
+        public PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBandOverdraftInterestChargingCoverage? OverdraftInterestChargingCoverage { get; set; }
     
         /// <summary>Indicates that a bank provides the overdraft limit up to TierValueMIn to all customers automatically</summary>
         [Newtonsoft.Json.JsonProperty("BankGuaranteedIndicator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -6769,47 +6769,47 @@ namespace OpenBankingApi.Client
     
         /// <summary>Overdraft fees and charges</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeesCharges", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous29> OverdraftFeesCharges { get; set; }
+        public System.Collections.Generic.ICollection<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges> OverdraftFeesCharges { get; set; }
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous19 FromJson(string data)
+        public static PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous19>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand>(data);
         }
     
     }
     
     /// <summary>Overdraft fees and charges details</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous20 
+    public partial class PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges 
     {
         /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous30> OverdraftFeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap> OverdraftFeeChargeCap { get; set; }
     
         /// <summary>Details about the fees/charges</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeDetail", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous31> OverdraftFeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous31>();
+        public System.Collections.Generic.ICollection<PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail> OverdraftFeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail>();
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous20 FromJson(string data)
+        public static PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous20>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges>(data);
         }
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum FeeCategory2
+    public enum PCA_OtherFeesCharges_FeeChargeDetailFeeCategory
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Other")]
         Other = 0,
@@ -6820,7 +6820,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum FeeType2
+    public enum PCA_OtherFeesCharges_FeeChargeDetailFeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"ServiceCAccountFee")]
         ServiceCAccountFee = 0,
@@ -6837,7 +6837,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum FeeRateType2
+    public enum PCA_OtherFeesCharges_FeeChargeDetailFeeRateType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"LinkedBaseRate")]
         LinkedBaseRate = 0,
@@ -6854,7 +6854,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum ApplicationFrequency2
+    public enum PCA_OtherFeesCharges_FeeChargeDetailApplicationFrequency
     {
         [System.Runtime.Serialization.EnumMember(Value = @"AccountClosing")]
         AccountClosing = 0,
@@ -6919,7 +6919,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CalculationFrequency2
+    public enum PCA_OtherFeesCharges_FeeChargeDetailCalculationFrequency
     {
         [System.Runtime.Serialization.EnumMember(Value = @"AccountClosing")]
         AccountClosing = 0,
@@ -7156,18 +7156,18 @@ namespace OpenBankingApi.Client
     
     /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous21 
+    public partial class PCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap 
     {
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous32> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous32>();
+        public System.Collections.Generic.ICollection<PCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap_FeeType> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<PCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap_FeeType>();
     
         /// <summary>Indicates that this is the minimum/ maximum fee/charge that can be applied by the financial institution</summary>
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public MinMaxType4 MinMaxType { get; set; }
+        public PCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCapMinMaxType MinMaxType { get; set; }
     
         /// <summary>fee/charges are captured dependent on the number of occurrences rather than capped at a particular amount</summary>
         [Newtonsoft.Json.JsonProperty("FeeCapOccurrence", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7181,7 +7181,7 @@ namespace OpenBankingApi.Client
         /// <summary>Period e.g. day, week, month etc. for which the fee/charge is capped</summary>
         [Newtonsoft.Json.JsonProperty("CappingPeriod", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CappingPeriod4? CappingPeriod { get; set; }
+        public PCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCapCappingPeriod? CappingPeriod { get; set; }
     
         /// <summary>Free text for adding  extra details for fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7189,16 +7189,16 @@ namespace OpenBankingApi.Client
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous33> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<PCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap_OtherFeeType> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous21 FromJson(string data)
+        public static PCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous21>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap>(data);
         }
     
     }
@@ -7240,7 +7240,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Fee/charge type which is being capped</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum Anonymous22
+    public enum PCA_OtherFeesCharges_FeeChargeCap_FeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"ServiceCAccountFee")]
         ServiceCAccountFee = 0,
@@ -7257,7 +7257,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum MinMaxType2
+    public enum PCA_OtherFeesCharges_FeeChargeCapMinMaxType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Minimum")]
         Minimum = 0,
@@ -7268,7 +7268,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CappingPeriod2
+    public enum PCA_OtherFeesCharges_FeeChargeCapCappingPeriod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"AcademicTerm")]
         AcademicTerm = 0,
@@ -7295,7 +7295,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Other fee type code which is not available in the standard code set</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous23 
+    public partial class PCA_OtherFeesCharges_FeeChargeCap_OtherFeeType 
     {
         /// <summary>The four letter Mnemonic used within an XML file to identify a code</summary>
         [Newtonsoft.Json.JsonProperty("Code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7320,15 +7320,15 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous23 FromJson(string data)
+        public static PCA_OtherFeesCharges_FeeChargeCap_OtherFeeType FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous23>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_OtherFeesCharges_FeeChargeCap_OtherFeeType>(data);
         }
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CalculationFrequency3
+    public enum BCA_CreditInterest_TierBandSet_TierBandCalculationFrequency
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Daily")]
         Daily = 0,
@@ -7357,7 +7357,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum ApplicationFrequency3
+    public enum BCA_CreditInterest_TierBandSet_TierBandApplicationFrequency
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Daily")]
         Daily = 0,
@@ -7386,7 +7386,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum DepositInterestAppliedCoverage
+    public enum BCA_CreditInterest_TierBandSet_TierBandDepositInterestAppliedCoverage
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Banded")]
         Banded = 0,
@@ -7400,7 +7400,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum FixedVariableInterestRateType
+    public enum BCA_CreditInterest_TierBandSet_TierBandFixedVariableInterestRateType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Fixed")]
         Fixed = 0,
@@ -7411,7 +7411,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum BankInterestRateType
+    public enum BCA_CreditInterest_TierBandSet_TierBandBankInterestRateType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Gross")]
         Gross = 0,
@@ -7521,7 +7521,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum AgreementPeriod
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBandAgreementPeriod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Day")]
         Day = 0,
@@ -7544,7 +7544,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum OverdraftInterestChargingCoverage
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBandOverdraftInterestChargingCoverage
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Banded")]
         Banded = 0,
@@ -7559,43 +7559,43 @@ namespace OpenBankingApi.Client
     
     /// <summary>Overdraft fees and charges</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous24 
+    public partial class BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges 
     {
         /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge. Capping can either be based on an amount (in gbp), an amount (in items) or a rate.</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous34> OverdraftFeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap> OverdraftFeeChargeCap { get; set; }
     
         /// <summary>Details about the fees/charges</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeDetail", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous35> OverdraftFeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous35>();
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail> OverdraftFeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail>();
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous24 FromJson(string data)
+        public static BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous24>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges>(data);
         }
     
     }
     
     /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge. Capping can either be based on an amount (in gbp), an amount (in items) or a rate.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous25 
+    public partial class BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap 
     {
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous36> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous36>();
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap_FeeType> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap_FeeType>();
     
         /// <summary>Min Max type</summary>
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public MinMaxType5 MinMaxType { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCapMinMaxType MinMaxType { get; set; }
     
         /// <summary>Indicates whether the advertised overdraft rate is guaranteed to be offered to a borrower by the bank e.g. if it’s part of a government scheme, or whether the rate may vary dependent on the applicant’s circumstances.</summary>
         [Newtonsoft.Json.JsonProperty("FeeCapOccurrence", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7609,7 +7609,7 @@ namespace OpenBankingApi.Client
         /// <summary>Period e.g. day, week, month etc. for which the fee/charge is capped</summary>
         [Newtonsoft.Json.JsonProperty("CappingPeriod", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CappingPeriod5? CappingPeriod { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCapCappingPeriod? CappingPeriod { get; set; }
     
         /// <summary>Notes related to Overdraft fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7617,29 +7617,29 @@ namespace OpenBankingApi.Client
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous37> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap_OtherFeeType> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous25 FromJson(string data)
+        public static BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous25>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap>(data);
         }
     
     }
     
     /// <summary>Details about the fees/charges</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous26 
+    public partial class BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail 
     {
         /// <summary>Overdraft fee type</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public FeeType3 FeeType { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetailFeeType FeeType { get; set; }
     
         /// <summary>Indicates whether fee and charges are negotiable</summary>
         [Newtonsoft.Json.JsonProperty("NegotiableIndicator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7667,18 +7667,18 @@ namespace OpenBankingApi.Client
         /// <summary>Rate type for overdraft fee/charge (where it is charged in terms of a rate rather than an amount)</summary>
         [Newtonsoft.Json.JsonProperty("FeeRateType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public FeeRateType3? FeeRateType { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetailFeeRateType? FeeRateType { get; set; }
     
         /// <summary>Frequency at which the overdraft charge is applied to the account</summary>
         [Newtonsoft.Json.JsonProperty("ApplicationFrequency", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public ApplicationFrequency5 ApplicationFrequency { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetailApplicationFrequency ApplicationFrequency { get; set; }
     
         /// <summary>How often is the overdraft fee/charge calculated for the account.</summary>
         [Newtonsoft.Json.JsonProperty("CalculationFrequency", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CalculationFrequency5? CalculationFrequency { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetailCalculationFrequency? CalculationFrequency { get; set; }
     
         /// <summary>Free text for capturing any other info related to Overdraft Fees Charge Details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7686,7 +7686,7 @@ namespace OpenBankingApi.Client
     
         /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge. Capping can either be based on an amount (in gbp), an amount (in items) or a rate.</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous38> OverdraftFeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap> OverdraftFeeChargeCap { get; set; }
     
         /// <summary>Other Fee type which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7709,16 +7709,16 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous26 FromJson(string data)
+        public static BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous26>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail>(data);
         }
     
     }
     
     /// <summary>Fee/charge type which is being capped</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum Anonymous27
+    public enum BCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap_FeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Other")]
         Other = 0,
@@ -7747,7 +7747,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum MinMaxType3
+    public enum BCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCapMinMaxType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Minimum")]
         Minimum = 0,
@@ -7758,7 +7758,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CappingPeriod3
+    public enum BCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCapCappingPeriod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Day")]
         Day = 0,
@@ -7782,7 +7782,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Other fee type code which is not available in the standard code set</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous28 
+    public partial class BCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap_OtherFeeType 
     {
         /// <summary>The four letter Mnemonic used within an XML file to identify a code</summary>
         [Newtonsoft.Json.JsonProperty("Code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -7807,9 +7807,9 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous28 FromJson(string data)
+        public static BCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap_OtherFeeType FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous28>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap_OtherFeeType>(data);
         }
     
     }
@@ -7826,7 +7826,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CalculationFrequency4
+    public enum PCA_CreditInterest_TierBandSet_TierBandCalculationFrequency
     {
         [System.Runtime.Serialization.EnumMember(Value = @"PerAcademicTerm")]
         PerAcademicTerm = 0,
@@ -7858,7 +7858,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum ApplicationFrequency4
+    public enum PCA_CreditInterest_TierBandSet_TierBandApplicationFrequency
     {
         [System.Runtime.Serialization.EnumMember(Value = @"PerAcademicTerm")]
         PerAcademicTerm = 0,
@@ -7890,7 +7890,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum DepositInterestAppliedCoverage2
+    public enum PCA_CreditInterest_TierBandSet_TierBandDepositInterestAppliedCoverage
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Tiered")]
         Tiered = 0,
@@ -7901,7 +7901,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum FixedVariableInterestRateType2
+    public enum PCA_CreditInterest_TierBandSet_TierBandFixedVariableInterestRateType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Fixed")]
         Fixed = 0,
@@ -7912,7 +7912,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum BankInterestRateType2
+    public enum PCA_CreditInterest_TierBandSet_TierBandBankInterestRateType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"LinkedBaseRate")]
         LinkedBaseRate = 0,
@@ -8028,7 +8028,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum OverdraftInterestChargingCoverage2
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBandOverdraftInterestChargingCoverage
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Tiered")]
         Tiered = 0,
@@ -8040,37 +8040,37 @@ namespace OpenBankingApi.Client
     
     /// <summary>Overdraft fees and charges</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous29 
+    public partial class PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges 
     {
         /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous39> OverdraftFeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap> OverdraftFeeChargeCap { get; set; }
     
         /// <summary>Details about the fees/charges</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeDetail", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous40> OverdraftFeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous40>();
+        public System.Collections.Generic.ICollection<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail> OverdraftFeeChargeDetail { get; set; } = new System.Collections.ObjectModel.Collection<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail>();
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous29 FromJson(string data)
+        public static PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous29>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges>(data);
         }
     
     }
     
     /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous30 
+    public partial class PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap 
     {
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous41> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous41>();
+        public System.Collections.Generic.ICollection<PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap_FeeType> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap_FeeType>();
     
         /// <summary>Specifies for the overdraft control feature/benefit</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftControlIndicator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8080,7 +8080,7 @@ namespace OpenBankingApi.Client
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public MinMaxType6 MinMaxType { get; set; }
+        public PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCapMinMaxType MinMaxType { get; set; }
     
         /// <summary>fee/charges are captured dependent on the number of occurrences rather than capped at a particular amount</summary>
         [Newtonsoft.Json.JsonProperty("FeeCapOccurrence", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8094,7 +8094,7 @@ namespace OpenBankingApi.Client
         /// <summary>Period e.g. day, week, month etc. for which the fee/charge is capped</summary>
         [Newtonsoft.Json.JsonProperty("CappingPeriod", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CappingPeriod6? CappingPeriod { get; set; }
+        public PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCapCappingPeriod? CappingPeriod { get; set; }
     
         /// <summary>Notes related to Overdraft fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8102,29 +8102,29 @@ namespace OpenBankingApi.Client
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous42> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap_OtherFeeType> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous30 FromJson(string data)
+        public static PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous30>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap>(data);
         }
     
     }
     
     /// <summary>Details about the fees/charges</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous31 
+    public partial class PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail 
     {
         /// <summary>Overdraft fee type</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public FeeType4 FeeType { get; set; }
+        public PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetailFeeType FeeType { get; set; }
     
         /// <summary>Specifies for the overdraft control feature/benefit</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftControlIndicator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8148,18 +8148,18 @@ namespace OpenBankingApi.Client
         /// <summary>Rate type for overdraft fee/charge (where it is charged in terms of a rate rather than an amount)</summary>
         [Newtonsoft.Json.JsonProperty("FeeRateType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public FeeRateType4? FeeRateType { get; set; }
+        public PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetailFeeRateType? FeeRateType { get; set; }
     
         /// <summary>Frequency at which the overdraft charge is applied to the account</summary>
         [Newtonsoft.Json.JsonProperty("ApplicationFrequency", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public ApplicationFrequency6 ApplicationFrequency { get; set; }
+        public PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetailApplicationFrequency ApplicationFrequency { get; set; }
     
         /// <summary>How often is the overdraft fee/charge calculated for the account.</summary>
         [Newtonsoft.Json.JsonProperty("CalculationFrequency", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CalculationFrequency6? CalculationFrequency { get; set; }
+        public PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetailCalculationFrequency? CalculationFrequency { get; set; }
     
         /// <summary>Free text for capturing any other info related to Overdraft Fees Charge Details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8190,9 +8190,9 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous31 FromJson(string data)
+        public static PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous31>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail>(data);
         }
     
     }
@@ -8210,7 +8210,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Fee/charge type which is being capped</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum Anonymous32
+    public enum PCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap_FeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"ServiceCAccountFee")]
         ServiceCAccountFee = 0,
@@ -8227,7 +8227,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum MinMaxType4
+    public enum PCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCapMinMaxType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Minimum")]
         Minimum = 0,
@@ -8238,7 +8238,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CappingPeriod4
+    public enum PCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCapCappingPeriod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"AcademicTerm")]
         AcademicTerm = 0,
@@ -8265,7 +8265,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Other fee type code which is not available in the standard code set</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous33 
+    public partial class PCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap_OtherFeeType 
     {
         /// <summary>The four letter Mnemonic used within an XML file to identify a code</summary>
         [Newtonsoft.Json.JsonProperty("Code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8290,27 +8290,27 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous33 FromJson(string data)
+        public static PCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap_OtherFeeType FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous33>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_OtherFeesCharges_FeeChargeDetail_FeeChargeCap_OtherFeeType>(data);
         }
     
     }
     
     /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge. Capping can either be based on an amount (in gbp), an amount (in items) or a rate.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous34 
+    public partial class BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap 
     {
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous43> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous43>();
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap_FeeType> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap_FeeType>();
     
         /// <summary>Min Max type</summary>
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public MinMaxType7 MinMaxType { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCapMinMaxType MinMaxType { get; set; }
     
         /// <summary>Indicates whether the advertised overdraft rate is guaranteed to be offered to a borrower by the bank e.g. if it’s part of a government scheme, or whether the rate may vary dependent on the applicant’s circumstances.</summary>
         [Newtonsoft.Json.JsonProperty("FeeCapOccurrence", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8324,7 +8324,7 @@ namespace OpenBankingApi.Client
         /// <summary>Period e.g. day, week, month etc. for which the fee/charge is capped</summary>
         [Newtonsoft.Json.JsonProperty("CappingPeriod", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CappingPeriod7? CappingPeriod { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCapCappingPeriod? CappingPeriod { get; set; }
     
         /// <summary>Notes related to Overdraft fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8332,29 +8332,29 @@ namespace OpenBankingApi.Client
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous44> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap_OtherFeeType> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous34 FromJson(string data)
+        public static BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous34>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap>(data);
         }
     
     }
     
     /// <summary>Details about the fees/charges</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous35 
+    public partial class BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail 
     {
         /// <summary>Overdraft fee type</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public FeeType5 FeeType { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetailFeeType FeeType { get; set; }
     
         /// <summary>Indicates whether fee and charges are negotiable</summary>
         [Newtonsoft.Json.JsonProperty("NegotiableIndicator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8382,18 +8382,18 @@ namespace OpenBankingApi.Client
         /// <summary>Rate type for overdraft fee/charge (where it is charged in terms of a rate rather than an amount)</summary>
         [Newtonsoft.Json.JsonProperty("FeeRateType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public FeeRateType5? FeeRateType { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetailFeeRateType? FeeRateType { get; set; }
     
         /// <summary>Frequency at which the overdraft charge is applied to the account</summary>
         [Newtonsoft.Json.JsonProperty("ApplicationFrequency", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public ApplicationFrequency7 ApplicationFrequency { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetailApplicationFrequency ApplicationFrequency { get; set; }
     
         /// <summary>How often is the overdraft fee/charge calculated for the account.</summary>
         [Newtonsoft.Json.JsonProperty("CalculationFrequency", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CalculationFrequency7? CalculationFrequency { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetailCalculationFrequency? CalculationFrequency { get; set; }
     
         /// <summary>Free text for capturing any other info related to Overdraft Fees Charge Details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8401,7 +8401,7 @@ namespace OpenBankingApi.Client
     
         /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge. Capping can either be based on an amount (in gbp), an amount (in items) or a rate.</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftFeeChargeCap", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous45> OverdraftFeeChargeCap { get; set; }
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap> OverdraftFeeChargeCap { get; set; }
     
         /// <summary>Other Fee type which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8424,16 +8424,16 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous35 FromJson(string data)
+        public static BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous35>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail>(data);
         }
     
     }
     
     /// <summary>Overdraft fee type</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum Anonymous36
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap_FeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"ArrangedOverdraft")]
         ArrangedOverdraft = 0,
@@ -8474,7 +8474,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum MinMaxType5
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCapMinMaxType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Minimum")]
         Minimum = 0,
@@ -8485,7 +8485,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CappingPeriod5
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCapCappingPeriod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Day")]
         Day = 0,
@@ -8509,7 +8509,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Other fee type code which is not available in the standard code set</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous37 
+    public partial class BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap_OtherFeeType 
     {
         /// <summary>The four letter Mnemonic used within an XML file to identify a code</summary>
         [Newtonsoft.Json.JsonProperty("Code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8534,15 +8534,15 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous37 FromJson(string data)
+        public static BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap_OtherFeeType FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous37>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap_OtherFeeType>(data);
         }
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum FeeType3
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetailFeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"ArrangedOverdraft")]
         ArrangedOverdraft = 0,
@@ -8583,7 +8583,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum FeeRateType3
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetailFeeRateType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Gross")]
         Gross = 0,
@@ -8594,7 +8594,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum ApplicationFrequency5
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetailApplicationFrequency
     {
         [System.Runtime.Serialization.EnumMember(Value = @"OnClosing")]
         OnClosing = 0,
@@ -8659,7 +8659,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CalculationFrequency5
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetailCalculationFrequency
     {
         [System.Runtime.Serialization.EnumMember(Value = @"OnClosing")]
         OnClosing = 0,
@@ -8725,18 +8725,18 @@ namespace OpenBankingApi.Client
     
     /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge. Capping can either be based on an amount (in gbp), an amount (in items) or a rate.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous38 
+    public partial class BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap 
     {
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous46> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous46>();
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_FeeType> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_FeeType>();
     
         /// <summary>Min Max type</summary>
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public MinMaxType8 MinMaxType { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCapMinMaxType MinMaxType { get; set; }
     
         /// <summary>Indicates whether the advertised overdraft rate is guaranteed to be offered to a borrower by the bank e.g. if it’s part of a government scheme, or whether the rate may vary dependent on the applicant’s circumstances.</summary>
         [Newtonsoft.Json.JsonProperty("FeeCapOccurrence", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8750,7 +8750,7 @@ namespace OpenBankingApi.Client
         /// <summary>Period e.g. day, week, month etc. for which the fee/charge is capped</summary>
         [Newtonsoft.Json.JsonProperty("CappingPeriod", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CappingPeriod8? CappingPeriod { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCapCappingPeriod? CappingPeriod { get; set; }
     
         /// <summary>Notes related to Overdraft fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8758,16 +8758,16 @@ namespace OpenBankingApi.Client
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous47> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_OtherFeeType> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous38 FromJson(string data)
+        public static BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous38>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap>(data);
         }
     
     }
@@ -8906,12 +8906,12 @@ namespace OpenBankingApi.Client
     
     /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous39 
+    public partial class PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap 
     {
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous48> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous48>();
+        public System.Collections.Generic.ICollection<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap_FeeType> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap_FeeType>();
     
         /// <summary>Specifies for the overdraft control feature/benefit</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftControlIndicator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8921,7 +8921,7 @@ namespace OpenBankingApi.Client
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public MinMaxType9 MinMaxType { get; set; }
+        public PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCapMinMaxType MinMaxType { get; set; }
     
         /// <summary>fee/charges are captured dependent on the number of occurrences rather than capped at a particular amount</summary>
         [Newtonsoft.Json.JsonProperty("FeeCapOccurrence", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8935,7 +8935,7 @@ namespace OpenBankingApi.Client
         /// <summary>Period e.g. day, week, month etc. for which the fee/charge is capped</summary>
         [Newtonsoft.Json.JsonProperty("CappingPeriod", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CappingPeriod9? CappingPeriod { get; set; }
+        public PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCapCappingPeriod? CappingPeriod { get; set; }
     
         /// <summary>Notes related to Overdraft fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8943,29 +8943,29 @@ namespace OpenBankingApi.Client
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous49> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap_OtherFeeType> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous39 FromJson(string data)
+        public static PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous39>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap>(data);
         }
     
     }
     
     /// <summary>Details about the fees/charges</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous40 
+    public partial class PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail 
     {
         /// <summary>Overdraft fee type</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public FeeType6 FeeType { get; set; }
+        public PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetailFeeType FeeType { get; set; }
     
         /// <summary>Specifies for the overdraft control feature/benefit</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftControlIndicator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -8989,18 +8989,18 @@ namespace OpenBankingApi.Client
         /// <summary>Rate type for overdraft fee/charge (where it is charged in terms of a rate rather than an amount)</summary>
         [Newtonsoft.Json.JsonProperty("FeeRateType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public FeeRateType6? FeeRateType { get; set; }
+        public PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetailFeeRateType? FeeRateType { get; set; }
     
         /// <summary>Frequency at which the overdraft charge is applied to the account</summary>
         [Newtonsoft.Json.JsonProperty("ApplicationFrequency", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public ApplicationFrequency8 ApplicationFrequency { get; set; }
+        public PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetailApplicationFrequency ApplicationFrequency { get; set; }
     
         /// <summary>How often is the overdraft fee/charge calculated for the account.</summary>
         [Newtonsoft.Json.JsonProperty("CalculationFrequency", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CalculationFrequency8? CalculationFrequency { get; set; }
+        public PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetailCalculationFrequency? CalculationFrequency { get; set; }
     
         /// <summary>Free text for capturing any other info related to Overdraft Fees Charge Details</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9031,16 +9031,16 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous40 FromJson(string data)
+        public static PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous40>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail>(data);
         }
     
     }
     
     /// <summary>Overdraft fee type</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum Anonymous41
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap_FeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"ArrangedOverdraft")]
         ArrangedOverdraft = 0,
@@ -9081,7 +9081,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum MinMaxType6
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCapMinMaxType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Minimum")]
         Minimum = 0,
@@ -9092,7 +9092,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CappingPeriod6
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCapCappingPeriod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"AcademicTerm")]
         AcademicTerm = 0,
@@ -9119,7 +9119,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Other fee type code which is not available in the standard code set</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous42 
+    public partial class PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap_OtherFeeType 
     {
         /// <summary>The four letter Mnemonic used within an XML file to identify a code</summary>
         [Newtonsoft.Json.JsonProperty("Code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9144,15 +9144,15 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous42 FromJson(string data)
+        public static PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap_OtherFeeType FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous42>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeCap_OtherFeeType>(data);
         }
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum FeeType4
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetailFeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"ArrangedOverdraft")]
         ArrangedOverdraft = 0,
@@ -9193,7 +9193,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum FeeRateType4
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetailFeeRateType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"LinkedBaseRate")]
         LinkedBaseRate = 0,
@@ -9210,7 +9210,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum ApplicationFrequency6
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetailApplicationFrequency
     {
         [System.Runtime.Serialization.EnumMember(Value = @"AccountClosing")]
         AccountClosing = 0,
@@ -9275,7 +9275,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CalculationFrequency6
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetailCalculationFrequency
     {
         [System.Runtime.Serialization.EnumMember(Value = @"AccountClosing")]
         AccountClosing = 0,
@@ -9477,7 +9477,7 @@ namespace OpenBankingApi.Client
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous50> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous50>();
+        public System.Collections.Generic.ICollection<PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_FeeType> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_FeeType>();
     
         /// <summary>Specifies for the overdraft control feature/benefit</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftControlIndicator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9509,7 +9509,7 @@ namespace OpenBankingApi.Client
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous51> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_OtherFeeType> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
@@ -9525,7 +9525,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Overdraft fee type</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum Anonymous43
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap_FeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"ArrangedOverdraft")]
         ArrangedOverdraft = 0,
@@ -9566,7 +9566,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum MinMaxType7
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCapMinMaxType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Minimum")]
         Minimum = 0,
@@ -9577,7 +9577,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CappingPeriod7
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCapCappingPeriod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Day")]
         Day = 0,
@@ -9601,7 +9601,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Other fee type code which is not available in the standard code set</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous44 
+    public partial class BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap_OtherFeeType 
     {
         /// <summary>The four letter Mnemonic used within an XML file to identify a code</summary>
         [Newtonsoft.Json.JsonProperty("Code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9626,15 +9626,15 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous44 FromJson(string data)
+        public static BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap_OtherFeeType FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous44>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap_OtherFeeType>(data);
         }
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum FeeType5
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetailFeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"ArrangedOverdraft")]
         ArrangedOverdraft = 0,
@@ -9675,7 +9675,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum FeeRateType5
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetailFeeRateType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Gross")]
         Gross = 0,
@@ -9686,7 +9686,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum ApplicationFrequency7
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetailApplicationFrequency
     {
         [System.Runtime.Serialization.EnumMember(Value = @"OnClosing")]
         OnClosing = 0,
@@ -9751,7 +9751,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CalculationFrequency7
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetailCalculationFrequency
     {
         [System.Runtime.Serialization.EnumMember(Value = @"OnClosing")]
         OnClosing = 0,
@@ -9817,18 +9817,18 @@ namespace OpenBankingApi.Client
     
     /// <summary>Details about any caps (maximum charges) that apply to a particular fee/charge. Capping can either be based on an amount (in gbp), an amount (in items) or a rate.</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous45 
+    public partial class BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap 
     {
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous52> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous52>();
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_FeeType> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_FeeType>();
     
         /// <summary>Min Max type</summary>
         [Newtonsoft.Json.JsonProperty("MinMaxType", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public MinMaxType10 MinMaxType { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCapMinMaxType MinMaxType { get; set; }
     
         /// <summary>Indicates whether the advertised overdraft rate is guaranteed to be offered to a borrower by the bank e.g. if it’s part of a government scheme, or whether the rate may vary dependent on the applicant’s circumstances.</summary>
         [Newtonsoft.Json.JsonProperty("FeeCapOccurrence", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9842,7 +9842,7 @@ namespace OpenBankingApi.Client
         /// <summary>Period e.g. day, week, month etc. for which the fee/charge is capped</summary>
         [Newtonsoft.Json.JsonProperty("CappingPeriod", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         [Newtonsoft.Json.JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
-        public CappingPeriod10? CappingPeriod { get; set; }
+        public BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCapCappingPeriod? CappingPeriod { get; set; }
     
         /// <summary>Notes related to Overdraft fee charge cap</summary>
         [Newtonsoft.Json.JsonProperty("Notes", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -9850,16 +9850,16 @@ namespace OpenBankingApi.Client
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous53> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_OtherFeeType> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous45 FromJson(string data)
+        public static BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous45>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap>(data);
         }
     
     }
@@ -9998,7 +9998,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Overdraft fee type</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum Anonymous46
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_FeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"ArrangedOverdraft")]
         ArrangedOverdraft = 0,
@@ -10039,7 +10039,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum MinMaxType8
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCapMinMaxType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Minimum")]
         Minimum = 0,
@@ -10050,7 +10050,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CappingPeriod8
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCapCappingPeriod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Day")]
         Day = 0,
@@ -10074,7 +10074,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Other fee type code which is not available in the standard code set</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous47 
+    public partial class BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_OtherFeeType 
     {
         /// <summary>The four letter Mnemonic used within an XML file to identify a code</summary>
         [Newtonsoft.Json.JsonProperty("Code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10099,16 +10099,16 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous47 FromJson(string data)
+        public static BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_OtherFeeType FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous47>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_OtherFeeType>(data);
         }
     
     }
     
     /// <summary>Overdraft fee type</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum Anonymous48
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap_FeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"ArrangedOverdraft")]
         ArrangedOverdraft = 0,
@@ -10149,7 +10149,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum MinMaxType9
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCapMinMaxType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Minimum")]
         Minimum = 0,
@@ -10160,7 +10160,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CappingPeriod9
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCapCappingPeriod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"AcademicTerm")]
         AcademicTerm = 0,
@@ -10187,7 +10187,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Other fee type code which is not available in the standard code set</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous49 
+    public partial class PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap_OtherFeeType 
     {
         /// <summary>The four letter Mnemonic used within an XML file to identify a code</summary>
         [Newtonsoft.Json.JsonProperty("Code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10212,15 +10212,15 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous49 FromJson(string data)
+        public static PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap_OtherFeeType FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous49>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeCap_OtherFeeType>(data);
         }
     
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum FeeType6
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetailFeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"ArrangedOverdraft")]
         ArrangedOverdraft = 0,
@@ -10261,7 +10261,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum FeeRateType6
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetailFeeRateType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"LinkedBaseRate")]
         LinkedBaseRate = 0,
@@ -10278,7 +10278,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum ApplicationFrequency8
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetailApplicationFrequency
     {
         [System.Runtime.Serialization.EnumMember(Value = @"AccountClosing")]
         AccountClosing = 0,
@@ -10343,7 +10343,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CalculationFrequency8
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetailCalculationFrequency
     {
         [System.Runtime.Serialization.EnumMember(Value = @"AccountClosing")]
         AccountClosing = 0,
@@ -10545,7 +10545,7 @@ namespace OpenBankingApi.Client
         /// <summary>Fee/charge type which is being capped</summary>
         [Newtonsoft.Json.JsonProperty("FeeType", Required = Newtonsoft.Json.Required.Always, ItemConverterType = typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
         [System.ComponentModel.DataAnnotations.Required]
-        public System.Collections.Generic.ICollection<Anonymous54> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<Anonymous54>();
+        public System.Collections.Generic.ICollection<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_FeeType> FeeType { get; set; } = new System.Collections.ObjectModel.Collection<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_FeeType>();
     
         /// <summary>Specifies for the overdraft control feature/benefit</summary>
         [Newtonsoft.Json.JsonProperty("OverdraftControlIndicator", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10577,7 +10577,7 @@ namespace OpenBankingApi.Client
     
         /// <summary>Other fee type code which is not available in the standard code set</summary>
         [Newtonsoft.Json.JsonProperty("OtherFeeType", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public System.Collections.Generic.ICollection<Anonymous55> OtherFeeType { get; set; }
+        public System.Collections.Generic.ICollection<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_OtherFeeType> OtherFeeType { get; set; }
     
         public string ToJson() 
         {
@@ -10593,7 +10593,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Overdraft fee type</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum Anonymous50
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_FeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"ArrangedOverdraft")]
         ArrangedOverdraft = 0,
@@ -10672,7 +10672,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Other fee type code which is not available in the standard code set</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous51 
+    public partial class PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_OtherFeeType 
     {
         /// <summary>The four letter Mnemonic used within an XML file to identify a code</summary>
         [Newtonsoft.Json.JsonProperty("Code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10697,16 +10697,16 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous51 FromJson(string data)
+        public static PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_OtherFeeType FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous51>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_Overdraft_OverdraftTierBandSet_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_OtherFeeType>(data);
         }
     
     }
     
     /// <summary>Overdraft fee type</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum Anonymous52
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_FeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"ArrangedOverdraft")]
         ArrangedOverdraft = 0,
@@ -10747,7 +10747,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum MinMaxType10
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCapMinMaxType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Minimum")]
         Minimum = 0,
@@ -10758,7 +10758,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum CappingPeriod10
+    public enum BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCapCappingPeriod
     {
         [System.Runtime.Serialization.EnumMember(Value = @"Day")]
         Day = 0,
@@ -10782,7 +10782,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Other fee type code which is not available in the standard code set</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous53 
+    public partial class BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_OtherFeeType 
     {
         /// <summary>The four letter Mnemonic used within an XML file to identify a code</summary>
         [Newtonsoft.Json.JsonProperty("Code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10807,16 +10807,16 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous53 FromJson(string data)
+        public static BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_OtherFeeType FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous53>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_OtherFeeType>(data);
         }
     
     }
     
     /// <summary>Overdraft fee type</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public enum Anonymous54
+    public enum PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_FeeType
     {
         [System.Runtime.Serialization.EnumMember(Value = @"ArrangedOverdraft")]
         ArrangedOverdraft = 0,
@@ -10895,7 +10895,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Other fee type code which is not available in the standard code set</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class Anonymous55 
+    public partial class PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_OtherFeeType 
     {
         /// <summary>The four letter Mnemonic used within an XML file to identify a code</summary>
         [Newtonsoft.Json.JsonProperty("Code", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
@@ -10920,9 +10920,9 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static Anonymous55 FromJson(string data)
+        public static PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_OtherFeeType FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<Anonymous55>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA_Overdraft_OverdraftTierBandSet_OverdraftTierBand_OverdraftFeesCharges_OverdraftFeeChargeDetail_OverdraftFeeChargeCap_OtherFeeType>(data);
         }
     
     }
