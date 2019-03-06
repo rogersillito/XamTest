@@ -8,110 +8,54 @@ using System.Text.RegularExpressions;
 
 namespace ApiGenerator.TypeNameGenerators
 {
-    //public class ParentPathFallbackBasedTypeNameGenerator : DefaultTypeNameGenerator
-    public class TypeNameGenerator : ITypeNameGenerator
+    //public class ParentSchemaFallbackBasedTypeNameGenerator : DefaultTypeNameGenerator
+    public class TypeNameGenerator : DefaultTypeNameGenerator
     {
-        // TODO: Expose as options to UI and cmd line?
-
-        /// <summary>Gets or sets the reserved names.</summary>
-        public IEnumerable<string> ReservedTypeNames { get; set; } = new List<string> { "object" };
-
-        /// <summary>Gets the name mappings.</summary>
-        public IDictionary<string, string> TypeNameMappings { get; } = new Dictionary<string, string>();
-
-        /// <summary>Generates the type name for the given schema respecting the reserved type names.</summary>
-        /// <param name="schema">The schema.</param>
-        /// <param name="typeNameHint">The type name hint.</param>
-        /// <param name="reservedTypeNames">The reserved type names.</param>
-        /// <returns>The type name.</returns>
-        private string Base_Generate(JsonSchema4 schema, string typeNameHint, IEnumerable<string> reservedTypeNames)
-        {
-            if (string.IsNullOrEmpty(typeNameHint) && !string.IsNullOrEmpty(schema.DocumentPath))
-                typeNameHint = schema.DocumentPath.Replace("\\", "/").Split('/').Last();
-
-            typeNameHint = (typeNameHint ?? "")
-                .Replace("[", " Of ")
-                .Replace("]", " ")
-                .Replace("<", " Of ")
-                .Replace(">", " ")
-                .Replace(",", " And ")
-                .Replace("  ", " ");
-
-            var parts = typeNameHint.Split(' ');
-            typeNameHint = string.Join(string.Empty, parts.Select(p => Generate(schema, p)));
-
-            var typeName = Generate(schema, typeNameHint);
-            if (string.IsNullOrEmpty(typeName) || reservedTypeNames.Contains(typeName))
-                typeName = GenerateAnonymousTypeName(typeNameHint, reservedTypeNames);
-
-            return typeName;
-        }
-
-        /// <summary>Generates the type name for the given schema.</summary>
-        /// <param name="schema">The schema.</param>
-        /// <param name="typeNameHint">The type name hint.</param>
-        /// <returns>The type name.</returns>
-        protected virtual string Generate(JsonSchema4 schema, string typeNameHint)
-        {
-            if (string.IsNullOrEmpty(typeNameHint) &&
-                string.IsNullOrEmpty(schema.Title) == false &&
-                Regex.IsMatch(schema.Title, "^[a-zA-Z0-9_]*$"))
-            {
-                typeNameHint = schema.Title;
-            }
-
-            var lastSegment = typeNameHint?.Split('.').Last();
-            return ConversionUtilities.ConvertToUpperCamelCase(lastSegment ?? "Anonymous", true);
-        }
-
-        private string GenerateAnonymousTypeName(string typeNameHint, IEnumerable<string> reservedTypeNames)
-        {
-            if (!string.IsNullOrEmpty(typeNameHint))
-            {
-                if (TypeNameMappings.ContainsKey(typeNameHint))
-                    typeNameHint = TypeNameMappings[typeNameHint];
-
-                typeNameHint = typeNameHint.Split('.').Last();
-
-                if (!reservedTypeNames.Contains(typeNameHint) && !ReservedTypeNames.Contains(typeNameHint))
-                    return typeNameHint;
-
-                var count = 1;
-                do
-                {
-                    count++;
-                } while (reservedTypeNames.Contains(typeNameHint + count));
-
-                return typeNameHint + count;
-            }
-
-            return GenerateAnonymousTypeName("Anonymous", reservedTypeNames);
-        }
-
+        //TODO: replace the virtual Generate method versions with the commented override to run that naming implementation
 
         // Favour NUMERICALLY-INCREMENTED naming when there are duplicates
-        public virtual string GenerateV2(JsonSchema4 schema, string typeNameHint, IEnumerable<string> reservedTypeNames)
+        // BUT loses some top-level names as referred to in Open Banking Spec
+        // (e.g. OBBCAData1 -> BCA: https://openbanking.atlassian.net/wiki/spaces/DZ/pages/937820288/Products+v3.1)
+        //public override string Generate(JsonSchema4 schema, string typeNameHint, IEnumerable<string> reservedTypeNames)
+        public virtual string GenerateV3(JsonSchema4 schema, string typeNameHint, IEnumerable<string> reservedTypeNames)
         {
             var providedTypeNameHint = typeNameHint;
             typeNameHint = GenerateNameFromFirstNamedParent(schema);
-            var typeName = Base_Generate(schema, typeNameHint ?? providedTypeNameHint, reservedTypeNames);
+            var typeName = base.Generate(schema, typeNameHint ?? providedTypeNameHint, reservedTypeNames);
 
             Debug.WriteLine($"{typeName}\t{typeNameHint}\t{providedTypeNameHint}");
             return typeName;
         }
 
         // Favour PARENT-CONTEXTUALIZED, CONCATENATED naming when there are duplicates
-        public virtual string Generate(JsonSchema4 schema, string typeNameHint, IEnumerable<string> reservedTypeNames)
+        //public override string Generate(JsonSchema4 schema, string typeNameHint, IEnumerable<string> reservedTypeNames)
+        public virtual string Generatev2(JsonSchema4 schema, string typeNameHint, IEnumerable<string> reservedTypeNames)
         {
-            var typeName = Base_Generate(schema, typeNameHint, reservedTypeNames);
+            var typeName = base.Generate(schema, typeNameHint, reservedTypeNames);
 
             if (AnonymousTypeNamePattern.IsMatch(typeName))
             {
                 typeNameHint = GenerateNameFromFirstNamedParent(schema);
-                typeName = Base_Generate(schema, typeNameHint, reservedTypeNames);
+                typeName = base.Generate(schema, typeNameHint, reservedTypeNames);
             }
             Debug.WriteLine($"{typeName}\t{typeNameHint}");
             return typeName;
+        }
+
+        // This gives us very long, SNAIL-CASED type names...
+        //public override string Generate(JsonSchema4 schema, string typeNameHint, IEnumerable<string> reservedTypeNames)
+        public virtual string GenerateV1(JsonSchema4 schema, string typeNameHint, IEnumerable<string> reservedTypeNames)
+        {
+            var typeName = base.Generate(schema, typeNameHint, reservedTypeNames);
+
+             if (!AnonymousTypeNamePattern.IsMatch(typeName))
+                return typeName;
+
+             var nameFromParents = GenerateNameFromParents(schema);
+
+             Debug.WriteLine(nameFromParents);
+
+             return nameFromParents;
         }
 
         string GenerateNameFromFirstNamedParent(dynamic schema)
@@ -129,6 +73,7 @@ namespace ApiGenerator.TypeNameGenerators
             return nameFromParents;
         }
 
+        // gives us very long, snail-cased types...
         protected virtual string GenerateNameFromParents(dynamic schema)
         {
             string TraverseParents(dynamic schema1)
@@ -151,8 +96,8 @@ namespace ApiGenerator.TypeNameGenerators
             generatedName = SnailCaseCleanupPattern.Replace(generatedName, "_");
             return generatedName;
         }
-
         private static readonly Regex SnailCaseCleanupPattern = new Regex("_+", RegexOptions.Compiled);
+
         private static readonly Regex AnonymousTypeNamePattern = new Regex("^Anonymous[0-9]+$", RegexOptions.Compiled);
     }
 }
