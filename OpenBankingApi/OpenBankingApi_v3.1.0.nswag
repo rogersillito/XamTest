@@ -85,7 +85,7 @@
     },
     "swaggerToCSharpController": {
       "controllerBaseClass": null,
-      "controllerStyle": "Abstract",
+      "controllerStyle": "Partial",
       "useCancellationToken": false,
       "aspNetNamespace": "System.Web.Http",
       "routeNamingStrategy": "None",
