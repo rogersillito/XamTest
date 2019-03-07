@@ -1404,7 +1404,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class BCA 
+    public partial class OBBCAData1 
     {
         [Newtonsoft.Json.JsonProperty("ProductDetails", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public ProductDetails ProductDetails { get; set; }
@@ -1426,9 +1426,9 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static BCA FromJson(string data)
+        public static OBBCAData1 FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<BCA>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<OBBCAData1>(data);
         }
     
     }
@@ -2213,7 +2213,7 @@ namespace OpenBankingApi.Client
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class PCA 
+    public partial class OBPCAData1 
     {
         [Newtonsoft.Json.JsonProperty("ProductDetails", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public ProductDetails2 ProductDetails { get; set; }
@@ -2235,9 +2235,9 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static PCA FromJson(string data)
+        public static OBPCAData1 FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<PCA>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<OBPCAData1>(data);
         }
     
     }
@@ -2450,10 +2450,10 @@ namespace OpenBankingApi.Client
         public OBOtherProductType1 OtherProductType { get; set; }
     
         [Newtonsoft.Json.JsonProperty("BCA", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public BCA BCA { get; set; }
+        public OBBCAData1 BCA { get; set; }
     
         [Newtonsoft.Json.JsonProperty("PCA", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public PCA PCA { get; set; }
+        public OBPCAData1 PCA { get; set; }
     
         public string ToJson() 
         {
@@ -2480,7 +2480,7 @@ namespace OpenBankingApi.Client
     
         [Newtonsoft.Json.JsonProperty("Meta", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public MetaData Meta { get; set; } = new MetaData();
+        public Meta Meta { get; set; } = new Meta();
     
         public string ToJson() 
         {
@@ -2507,7 +2507,7 @@ namespace OpenBankingApi.Client
     
         [Newtonsoft.Json.JsonProperty("Meta", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public MetaData Meta { get; set; } = new MetaData();
+        public Meta Meta { get; set; } = new Meta();
     
         public string ToJson() 
         {
@@ -2534,7 +2534,7 @@ namespace OpenBankingApi.Client
     
         [Newtonsoft.Json.JsonProperty("Meta", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public MetaData Meta { get; set; } = new MetaData();
+        public Meta Meta { get; set; } = new Meta();
     
         public string ToJson() 
         {
@@ -2588,7 +2588,7 @@ namespace OpenBankingApi.Client
     
         [Newtonsoft.Json.JsonProperty("Meta", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public MetaData Meta { get; set; } = new MetaData();
+        public Meta Meta { get; set; } = new Meta();
     
         public string ToJson() 
         {
@@ -2659,7 +2659,7 @@ namespace OpenBankingApi.Client
     
         [Newtonsoft.Json.JsonProperty("Meta", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public MetaData Meta { get; set; } = new MetaData();
+        public Meta Meta { get; set; } = new Meta();
     
         public string ToJson() 
         {
@@ -2686,7 +2686,7 @@ namespace OpenBankingApi.Client
     
         [Newtonsoft.Json.JsonProperty("Meta", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public MetaData Meta { get; set; } = new MetaData();
+        public Meta Meta { get; set; } = new Meta();
     
         public string ToJson() 
         {
@@ -2713,7 +2713,7 @@ namespace OpenBankingApi.Client
     
         [Newtonsoft.Json.JsonProperty("Meta", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public MetaData Meta { get; set; } = new MetaData();
+        public Meta Meta { get; set; } = new Meta();
     
         public string ToJson() 
         {
@@ -2740,7 +2740,7 @@ namespace OpenBankingApi.Client
     
         [Newtonsoft.Json.JsonProperty("Meta", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public MetaData Meta { get; set; } = new MetaData();
+        public Meta Meta { get; set; } = new Meta();
     
         public string ToJson() 
         {
@@ -2767,7 +2767,7 @@ namespace OpenBankingApi.Client
     
         [Newtonsoft.Json.JsonProperty("Meta", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public MetaData Meta { get; set; } = new MetaData();
+        public Meta Meta { get; set; } = new Meta();
     
         public string ToJson() 
         {
@@ -2794,7 +2794,7 @@ namespace OpenBankingApi.Client
     
         [Newtonsoft.Json.JsonProperty("Meta", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public MetaData Meta { get; set; } = new MetaData();
+        public Meta Meta { get; set; } = new Meta();
     
         public string ToJson() 
         {
@@ -2821,7 +2821,7 @@ namespace OpenBankingApi.Client
     
         [Newtonsoft.Json.JsonProperty("Meta", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public MetaData Meta { get; set; } = new MetaData();
+        public Meta Meta { get; set; } = new Meta();
     
         public string ToJson() 
         {
@@ -2848,7 +2848,7 @@ namespace OpenBankingApi.Client
     
         [Newtonsoft.Json.JsonProperty("Meta", Required = Newtonsoft.Json.Required.Always)]
         [System.ComponentModel.DataAnnotations.Required]
-        public MetaData Meta { get; set; } = new MetaData();
+        public Meta Meta { get; set; } = new Meta();
     
         public string ToJson() 
         {
@@ -4465,7 +4465,7 @@ namespace OpenBankingApi.Client
     
     /// <summary>Meta Data relevant to the payload</summary>
     [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "9.13.18.0 (Newtonsoft.Json v11.0.0.0)")]
-    public partial class MetaData 
+    public partial class Meta 
     {
         [Newtonsoft.Json.JsonProperty("TotalPages", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public int? TotalPages { get; set; }
@@ -4481,9 +4481,9 @@ namespace OpenBankingApi.Client
             return Newtonsoft.Json.JsonConvert.SerializeObject(this);
         }
     
-        public static MetaData FromJson(string data)
+        public static Meta FromJson(string data)
         {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<MetaData>(data);
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<Meta>(data);
         }
     
     }

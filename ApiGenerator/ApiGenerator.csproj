@@ -446,7 +446,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypeNameGenerators\MyDefaultTypeNameGenerator.cs" />
-    <Compile Include="TypeNameGenerators\TypeNameGenerator.cs" />
+    <Compile Include="TypeNameGenerators\ParentSchemaFallbackBasedTypeNameGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
