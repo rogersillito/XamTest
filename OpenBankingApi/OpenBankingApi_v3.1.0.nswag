@@ -84,16 +84,16 @@
       "output": "OpenBankingApi.Client.cs"
     },
     "swaggerToCSharpController": {
-      "controllerBaseClass": null,
+      "controllerBaseClass": "Microsoft.AspNetCore.Mvc.Controller",
       "controllerStyle": "Partial",
       "useCancellationToken": false,
-      "aspNetNamespace": "System.Web.Http",
-      "routeNamingStrategy": "None",
+      "aspNetNamespace": "Microsoft.AspNetCore.Mvc",
+      "routeNamingStrategy": "OperationId",
       "className": "{controller}",
       "operationGenerationMode": "MultipleClientsFromOperationId",
       "additionalNamespaceUsages": [],
       "additionalContractNamespaceUsages": [],
-      "generateOptionalParameters": false,
+      "generateOptionalParameters": true,
       "generateJsonMethods": true,
       "enforceFlagEnums": false,
       "parameterArrayType": "System.Collections.Generic.IEnumerable",
@@ -104,7 +104,7 @@
       "wrapResponseMethods": [],
       "generateResponseClasses": true,
       "responseClass": "SwaggerResponse",
-      "namespace": "OpenBankingApi",
+      "namespace": "OpenBankingApi.Controllers",
       "requiredPropertiesMustBeDefined": true,
       "dateType": "System.DateTimeOffset",
       "jsonConverters": null,
@@ -133,7 +133,7 @@
       "enumNameGeneratorType": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "OpenBankingApi.cs"
+      "output": "Controllers/OpenBankingApi.cs"
     }
   }
 }
