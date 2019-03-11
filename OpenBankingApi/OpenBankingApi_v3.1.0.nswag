@@ -84,11 +84,11 @@
       "output": "OpenBankingApi.Client.cs"
     },
     "swaggerToCSharpController": {
-      "controllerBaseClass": "Microsoft.AspNetCore.Mvc.Controller",
+      "controllerBaseClass": null,
       "controllerStyle": "Partial",
       "useCancellationToken": false,
-      "aspNetNamespace": "Microsoft.AspNetCore.Mvc",
-      "routeNamingStrategy": "OperationId",
+      "aspNetNamespace": "System.Web.Http",
+      "routeNamingStrategy": "None",
       "className": "{controller}",
       "operationGenerationMode": "MultipleClientsFromOperationId",
       "additionalNamespaceUsages": [],

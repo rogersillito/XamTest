@@ -104,8 +104,8 @@ namespace OpenBankingApi.Controllers
     }
     
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "12.0.14.0 (NJsonSchema v9.13.18.0 (Newtonsoft.Json v11.0.0.0))")]
-    [Microsoft.AspNetCore.Mvc.RoutePrefix("open-banking/v3.1/aisp")]
-    public partial class Controller : Microsoft.AspNetCore.Mvc.Controller
+    [System.Web.Http.RoutePrefix("open-banking/v3.1/aisp")]
+    public partial class Controller : System.Web.Http.ApiController
     {
         private IController _implementation;
     
@@ -124,7 +124,7 @@ namespace OpenBankingApi.Controllers
         /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
         /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
         /// <returns>Accounts Read</returns>
-        [Microsoft.AspNetCore.Mvc.HttpGet, Microsoft.AspNetCore.Mvc.Route("accounts", Name = "GetAccounts")]
+        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts")]
         public System.Threading.Tasks.Task<OBReadAccount3> GetAccounts(string x_fapi_financial_id, string authorization, string x_fapi_customer_last_logged_time = null, string x_fapi_customer_ip_address = null, string x_fapi_interaction_id = null, string x_customer_user_agent = null)
         {
             return _implementation.GetAccountsAsync(x_fapi_financial_id, authorization, x_fapi_customer_last_logged_time, x_fapi_customer_ip_address, x_fapi_interaction_id, x_customer_user_agent);
@@ -141,7 +141,7 @@ namespace OpenBankingApi.Controllers
         /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
         /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
         /// <returns>Accounts Read</returns>
-        [Microsoft.AspNetCore.Mvc.HttpGet, Microsoft.AspNetCore.Mvc.Route("accounts/{AccountId}", Name = "GetAccountsAccountId")]
+        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}")]
         public System.Threading.Tasks.Task<OBReadAccount3> GetAccountsAccountId(string accountId, string x_fapi_financial_id, string authorization, string x_fapi_customer_last_logged_time = null, string x_fapi_customer_ip_address = null, string x_fapi_interaction_id = null, string x_customer_user_agent = null)
         {
             return _implementation.GetAccountsAccountIdAsync(accountId, x_fapi_financial_id, authorization, x_fapi_customer_last_logged_time, x_fapi_customer_ip_address, x_fapi_interaction_id, x_customer_user_agent);
@@ -158,7 +158,7 @@ namespace OpenBankingApi.Controllers
         /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
         /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
         /// <returns>Balances Read</returns>
-        [Microsoft.AspNetCore.Mvc.HttpGet, Microsoft.AspNetCore.Mvc.Route("accounts/{AccountId}/balances", Name = "GetAccountsAccountIdBalances")]
+        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/balances")]
         public System.Threading.Tasks.Task<OBReadBalance1> GetAccountsAccountIdBalances(string accountId, string x_fapi_financial_id, string authorization, string x_fapi_customer_last_logged_time = null, string x_fapi_customer_ip_address = null, string x_fapi_interaction_id = null, string x_customer_user_agent = null)
         {
             return _implementation.GetAccountsAccountIdBalancesAsync(accountId, x_fapi_financial_id, authorization, x_fapi_customer_last_logged_time, x_fapi_customer_ip_address, x_fapi_interaction_id, x_customer_user_agent);
@@ -181,7 +181,7 @@ namespace OpenBankingApi.Controllers
         /// If the Date Time contains a timezone, the ASPSP must ignore the timezone component.</param>
         /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
         /// <returns>Statements Read</returns>
-        [Microsoft.AspNetCore.Mvc.HttpGet, Microsoft.AspNetCore.Mvc.Route("accounts/{AccountId}/statements", Name = "GetAccountsAccountIdStatements")]
+        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/statements")]
         public System.Threading.Tasks.Task<OBReadStatement1> GetAccountsAccountIdStatements(string accountId, string x_fapi_financial_id, string authorization, string x_fapi_customer_last_logged_time = null, string x_fapi_customer_ip_address = null, string x_fapi_interaction_id = null, System.DateTimeOffset? fromStatementDateTime = null, System.DateTimeOffset? toStatementDateTime = null, string x_customer_user_agent = null)
         {
             return _implementation.GetAccountsAccountIdStatementsAsync(accountId, x_fapi_financial_id, authorization, x_fapi_customer_last_logged_time, x_fapi_customer_ip_address, x_fapi_interaction_id, fromStatementDateTime, toStatementDateTime, x_customer_user_agent);
@@ -199,7 +199,7 @@ namespace OpenBankingApi.Controllers
         /// <param name="x_fapi_interaction_id">An RFC4122 UID used as a correlation id.</param>
         /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
         /// <returns>Statements Read</returns>
-        [Microsoft.AspNetCore.Mvc.HttpGet, Microsoft.AspNetCore.Mvc.Route("accounts/{AccountId}/statements/{StatementId}", Name = "GetAccountsAccountIdStatementsStatementId")]
+        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/statements/{StatementId}")]
         public System.Threading.Tasks.Task<OBReadStatement1> GetAccountsAccountIdStatementsStatementId(string statementId, string accountId, string x_fapi_financial_id, string authorization, string x_fapi_customer_last_logged_time = null, string x_fapi_customer_ip_address = null, string x_fapi_interaction_id = null, string x_customer_user_agent = null)
         {
             return _implementation.GetAccountsAccountIdStatementsStatementIdAsync(statementId, accountId, x_fapi_financial_id, authorization, x_fapi_customer_last_logged_time, x_fapi_customer_ip_address, x_fapi_interaction_id, x_customer_user_agent);
@@ -222,7 +222,7 @@ namespace OpenBankingApi.Controllers
         /// If the Date Time contains a timezone, the ASPSP must ignore the timezone component.</param>
         /// <param name="x_customer_user_agent">Indicates the user-agent that the PSU is using.</param>
         /// <returns>Transactions Read</returns>
-        [Microsoft.AspNetCore.Mvc.HttpGet, Microsoft.AspNetCore.Mvc.Route("accounts/{AccountId}/transactions", Name = "GetAccountsAccountIdTransactions")]
+        [System.Web.Http.HttpGet, System.Web.Http.Route("accounts/{AccountId}/transactions")]
         public System.Threading.Tasks.Task<OBReadTransaction4> GetAccountsAccountIdTransactions(string accountId, string x_fapi_financial_id, string authorization, string x_fapi_customer_last_logged_time = null, string x_fapi_customer_ip_address = null, string x_fapi_interaction_id = null, System.DateTimeOffset? fromBookingDateTime = null, System.DateTimeOffset? toBookingDateTime = null, string x_customer_user_agent = null)
         {
             return _implementation.GetAccountsAccountIdTransactionsAsync(accountId, x_fapi_financial_id, authorization, x_fapi_customer_last_logged_time, x_fapi_customer_ip_address, x_fapi_interaction_id, fromBookingDateTime, toBookingDateTime, x_customer_user_agent);
