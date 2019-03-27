@@ -15,7 +15,7 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -72,6 +72,7 @@
     <AndroidAsset Include="Assets\Circus.ttf" />
     <AndroidAsset Include="Assets\sourcesanspro-bold.ttf" />
     <AndroidAsset Include="Assets\sourcesanspro-semibold.ttf" />
+    <AndroidAsset Include="Assets\Dynatrace.properties" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -112,4 +113,31 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Target Name="DynatraceInstrumentation" AfterTargets="_BuildApkEmbed" Condition="Exists('@(ApkFiles)')">
+    <PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
+      <PathSeparator>/</PathSeparator>
+      <Instrumentor>instrument.sh</Instrumentor>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
+      <PathSeparator>\</PathSeparator>
+      <Instrumentor>instrument.cmd</Instrumentor>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(ProjectDir)Assets$(PathSeparator)Dynatrace.properties')" Text="Properties File is not available!" />
+    <Error Condition="!Exists('%(ApkFiles.Identity)')" Text="APK File(s) is (are) not available!" />
+    <Error Condition="!Exists('$(ProjectDir)%(ApkFiles.Identity)')" Text="APK File(s) is (are) not available!" />
+    <ItemGroup>
+      <FilteredReferencesNuGet Include="@(_ReferencesFromNuGetPackages)" Condition="$([System.String]::new('%(_ReferencesFromNuGetPackages.FullPath)').Contains('Dynatrace.OneAgent.Android.dll'))" />
+      <FilteredReferences Include="@(Reference)" Condition="$([System.String]::new('%(Reference.HintPath)').Contains('Dynatrace.OneAgent'))" />
+    </ItemGroup>
+    <PropertyGroup>
+      <AgentDir Condition="'@(FilteredReferences)' != ''">@(FilteredReferences->'%(HintPath)')</AgentDir>
+      <AgentDir Condition="'@(FilteredReferencesNuGet)' != ''">@(FilteredReferencesNuGet->'%(FullPath)')</AgentDir>
+      <AgentDir Condition="'$(AgentDir.IndexOf(&quot;;&quot;))' != -1">$(AgentDir.Substring(0, $(AgentDir.IndexOf(";"))))</AgentDir>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(AgentDir.Substring(0, $(AgentDir.LastIndexOf(&quot;$(PathSeparator)lib&quot;))))$(PathSeparator)tools$(PathSeparator)$(Instrumentor)')" Text="Agent component directory not found!" />
+    <Exec Command="&#xD;&#xA;     &quot;$(AgentDir.Substring(0, $(AgentDir.LastIndexOf(&quot;$(PathSeparator)lib&quot;))))$(PathSeparator)tools$(PathSeparator)$(Instrumentor)&quot; apk=&quot;$(ProjectDir)%(ApkFiles.Identity)&quot; prop=&quot;$(ProjectDir)Assets$(PathSeparator)Dynatrace.properties&quot;&#xD;&#xA;" />
+    <Copy SourceFiles="@(ApkFiles)" DestinationFolder="$(IntermediateOutputPath)android$(PathSeparator)bin$(PathSeparator)orginal$(PathSeparator)" />
+    <Copy SourceFiles="$(IntermediateOutputPath)android$(PathSeparator)bin$(PathSeparator)%(ApkFiles.Filename)$(PathSeparator)dist$(PathSeparator)%(ApkFiles.Filename).apk" DestinationFolder="$(IntermediateOutputPath)android$(PathSeparator)bin$(PathSeparator)" />
+    <RemoveDir Directories="$(IntermediateOutputPath)android$(PathSeparator)bin$(PathSeparator)%(ApkFiles.Filename)" />
+  </Target>
 </Project>

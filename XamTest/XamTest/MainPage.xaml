@@ -62,10 +62,11 @@
                         Mode=OneWayToSource}"
                 VerticalOptions="CenterAndExpand" />
 
-<StackLayout Orientation="Horizontal">
-        <Button Text="Add Thing" Clicked="Button_OnClicked" />
-        <Button Text="Transactions" Command="{Binding NavigateTransactions}" />
-</StackLayout>
+        <StackLayout Orientation="Horizontal">
+                <Button Text="Add Thing" Clicked="Button_OnClicked" />
+                <Button Text="Transactions" Command="{Binding NavigateTransactions}" />
+                <Button Text="Dog" Command="{Binding NavigateDog}" />
+        </StackLayout>
 
     </StackLayout>
 

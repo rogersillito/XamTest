@@ -21,6 +21,8 @@ namespace App3.Droid
             base.OnCreate(savedInstanceState);
 
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Xamarin.Forms.DependencyService.Register<Dynatrace.Dynatrace>();
+            Xamarin.Forms.DependencyService.Register<Dynatrace.Action>();
             LoadApplication(new App());
         }
     }

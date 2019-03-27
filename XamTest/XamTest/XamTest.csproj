@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Dynatrace.OneAgent.Xamarin" Version="7.2.3" />
     <PackageReference Include="Microsoft.Azure.Mobile.Client" Version="4.1.1" />
     <PackageReference Include="NBuilder" Version="6.0.0" />
     <PackageReference Include="Xamarin.Forms" Version="3.5.0.129452" />
@@ -35,6 +36,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="AddSomething.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Dog.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Transactions.xaml">

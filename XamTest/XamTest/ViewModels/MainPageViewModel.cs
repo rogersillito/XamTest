@@ -11,7 +11,14 @@ namespace XamTest.ViewModels
         {
             AddThing = new Command(DoAddThing);
             NavigateTransactions = new Command(DoNavigateTransactions);
+            NavigateDog = new Command(DoNavigateDog);
         }
+
+        private void DoNavigateDog()
+        {
+            Navigation.PushAsync(new NavigationPage(new Dog()));
+        }
+
 
         private void DoNavigateTransactions()
         {
@@ -28,6 +35,7 @@ namespace XamTest.ViewModels
 
         public Command AddThing { get; }
         public Command NavigateTransactions { get; set; }
+        public Command NavigateDog { get; set; }
 
         private Test1 _test1 = new Test1 { OtherTest1 = new Test1 { SomeProp = "XYZ" } };
         public Test1 Test1

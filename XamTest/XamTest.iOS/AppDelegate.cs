@@ -19,7 +19,10 @@ namespace XamTest.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            Xamarin.Forms.DependencyService.Register<Dynatrace.Dynatrace>();
+            Xamarin.Forms.DependencyService.Register<Dynatrace.Action>();
             LoadApplication(new App());
+            DynatraceIOS.Dynatrace.Start();
 
             return base.FinishedLaunching(app, options);
         }

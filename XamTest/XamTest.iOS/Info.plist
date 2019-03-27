@@ -40,5 +40,11 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>XSLaunchImageAssets</key>
 	<string>Assets.xcassets/LaunchImages.launchimage</string>
+  <key>DTXAgentEnvironment</key>
+  <string>bf86882dic</string>
+  <key>DTXApplicationID</key>
+  <string>e5afc40b-16c1-4a1b-80c6-509e8cb5151d</string>
+  <key>DTXClusterURL</key>
+  <string>https://bf.dynatrace.com</string>
 </dict>
 </plist>
