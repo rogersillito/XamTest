@@ -18,6 +18,7 @@
                Text="{Binding MyAge}"
                VerticalOptions="CenterAndExpand" />
             <Label x:Name="test1Label"
+               AutomationId="Test1Label"
                HorizontalOptions="Center"
                Text="{Binding Path=Test1.OtherTest1.SomeProp}"
                VerticalOptions="CenterAndExpand" />
