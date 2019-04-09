@@ -17,7 +17,9 @@ namespace XamTest.UITest
                     .StartApp();
             }
 
-            return ConfigureApp.iOS.StartApp();
+            return ConfigureApp.iOS
+                .DeviceIdentifier("7CAA2ADE-619D-43C9-BF0D-02045EE5F28A") // iPhone Xʀ (12.2)
+                .StartApp();
         }
     }
 }
