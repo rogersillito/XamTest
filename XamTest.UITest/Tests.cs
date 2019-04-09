@@ -29,18 +29,15 @@ namespace XamTest.UITest
         public void Test1LabelIsDisplayed()
         {
             var views = _app.Query(x => x.Marked("Test1Label"));
-            views.Length.Should(Be.EqualTo(1));
-            views[0].Text.Should(Be.EqualTo("XYZ"));
+            Assert.That(views.Length == 1);
+            Assert.That(views[0].Text == "XYZ");
         }
 
+        [Ignore]
         [Test]
-        public void WelcomeTextIsDisplayed()
+        public void FireUpTheRepl()
         {
             _app.Repl();
-            //AppResult[] results = app.WaitForElement(c => c.Marked("Welcome to Xamarin.Forms!"));
-            //app.Screenshot("Welcome screen.");
-
-            //Assert.IsTrue(results.Any());
         }
     }
 }
