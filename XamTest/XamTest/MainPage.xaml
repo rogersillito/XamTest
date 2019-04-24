@@ -20,6 +20,7 @@
             <Label x:Name="test1Label"
                AutomationId="Test1Label"
                HorizontalOptions="Center"
+               FontAttributes="Bold"
                Text="{Binding Path=Test1.OtherTest1.SomeProp}"
                VerticalOptions="CenterAndExpand" />
             <Label x:Name="angleLabel"
