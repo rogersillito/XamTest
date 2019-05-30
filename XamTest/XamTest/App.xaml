@@ -6,13 +6,13 @@
         <StyleSheet Source="/Assets/styles.css" />
         <ResourceDictionary>
 
-            <Style TargetType="Label">
+            <!--<Style TargetType="Label">
                 <Setter Property="FontSize" Value="Small" />
                 <Setter Property="FontFamily">
                     <OnPlatform x:TypeArguments="x:String">
                         <OnPlatform.Platforms>
                             <On Platform="iOS" Value="Source Sans Pro Semibold" />
-                            <On Platform="Android" Value="sourcesanspro-semibold.ttf#Source Sans Pro old" />
+                            <On Platform="Android" Value="sourcesanspro-semibold.ttf#Source Sans Pro Semibold" />
                         </OnPlatform.Platforms>
                     </OnPlatform>
                 </Setter>
@@ -28,7 +28,7 @@
                         </Setter>
                     </Trigger>
                 </Style.Triggers>
-            </Style>
+            </Style>-->
 
             <Style x:Key="rotatingLabel" TargetType="Label">
                 <Setter Property="FontFamily">
